@@ -4,6 +4,7 @@ import {
   Marker,
   NavigationControl,
   ScaleControl,
+  type StyleSpecification,
 } from 'maplibre-gl'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { CloseIcon, LocationIcon, ResetIcon, TimeIcon } from '../icons'
@@ -25,8 +26,32 @@ interface MapPanelProps {
 
 const ROUTE_SOURCE_ID = 'ride-routes'
 const ROUTE_HIT_ID = 'ride-route-hit'
+const DEFAULT_MAP_STYLE: StyleSpecification = {
+  version: 8,
+  sources: {
+    openStreetMap: {
+      type: 'raster',
+      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+      tileSize: 256,
+      maxzoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+    },
+  },
+  layers: [
+    {
+      id: 'open-street-map',
+      type: 'raster',
+      source: 'openStreetMap',
+      paint: {
+        'raster-opacity': 0.78,
+        'raster-saturation': -0.55,
+      },
+    },
+  ],
+}
 const MAP_STYLE =
-  import.meta.env.VITE_MAP_STYLE_URL || 'https://tiles.openfreemap.org/styles/positron'
+  import.meta.env.VITE_MAP_STYLE_URL || DEFAULT_MAP_STYLE
 
 function getCombinedBounds(routes: RideRoute[]): [[number, number], [number, number]] {
   const west = Math.min(...routes.map((route) => route.bounds[0][0]))
@@ -285,7 +310,7 @@ export function MapPanel({
       setMapReady(true)
     }
 
-    map.once('style.load', handleLoad)
+    map.once('load', handleLoad)
     map.once('error', (event) => {
       if (!map.isStyleLoaded() && event.error) {
         setMapFailed(true)
