@@ -4,12 +4,16 @@ import {
   Marker,
   NavigationControl,
   ScaleControl,
+  setWorkerUrl,
   type StyleSpecification,
 } from 'maplibre-gl'
+import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { CloseIcon, LocationIcon, ResetIcon, TimeIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, TimelineEntry } from '../types'
+
+setWorkerUrl(mapLibreWorkerUrl)
 
 interface MapPanelProps {
   routes: RideRoute[]

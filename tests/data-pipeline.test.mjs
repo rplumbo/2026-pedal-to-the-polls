@@ -409,7 +409,8 @@ test("generated app data is normalized, chronological, and public-safe", async (
         route.geometry.coordinates.length === route.source.renderedPointCount &&
         route.source.renderedPointCount > 1 &&
         route.source.renderedPointCount <= route.source.sourcePointCount &&
-        ["track", "sparse-cue-route"].includes(route.geometryQuality) &&
+        route.geometryQuality === "track" &&
+        route.source.sourceGeometry === "track" &&
         route.distanceMiles > 100
     )
   );

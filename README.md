@@ -33,7 +33,10 @@ The app never parses GPX or planning notes in a visitor’s browser. `scripts/sy
 - `data/event-overrides.json` contains curated public copy and approximate location hints for the current legacy spreadsheet.
 - `public/data/app-data.json` is generated; do not edit it by hand.
 
-The current Week 1 and Week 2 GPX exports contain sparse turn cues rather than detailed tracks. They work at the statewide scale, but can cut corners when zoomed in. Re-export those two routes from Ride with GPS as **GPX Track** files when detailed versions are available, replace the files without renaming them, and run `npm run data:sync`.
+All six current route files are dense **GPX Track** exports. When updating a
+route, export it from Ride with GPS in that format, replace the existing file
+without renaming it, and run `npm run check`. The generated web geometry is
+simplified with an 8-meter maximum tolerance to keep the static payload small.
 
 ## Update the schedule in Google Sheets
 
