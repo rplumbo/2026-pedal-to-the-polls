@@ -257,7 +257,6 @@ function App() {
             <div className="schedule-controls__heading">
               <div>
                 <span className="eyebrow">The journey</span>
-                <h2>Choose a route leg</h2>
               </div>
             </div>
 
