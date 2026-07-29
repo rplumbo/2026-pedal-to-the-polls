@@ -33,6 +33,24 @@ function writeHash(eventId: string | null, routeId: string | null) {
   window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${hash ? `#${hash}` : ''}`)
 }
 
+function centerRoutePickerButton(button: HTMLButtonElement) {
+  const picker = button.closest<HTMLElement>('.route-chips')
+  if (!picker) return
+
+  const pickerRect = picker.getBoundingClientRect()
+  const buttonRect = button.getBoundingClientRect()
+  picker.scrollTo({
+    left:
+      picker.scrollLeft +
+      buttonRect.left -
+      pickerRect.left -
+      (pickerRect.width - buttonRect.width) / 2,
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth',
+  })
+}
+
 function LoadingState() {
   return (
     <main className="loading-state" aria-live="polite">
@@ -263,7 +281,10 @@ function App() {
                   type="button"
                   key={route.id}
                   className={selectedRouteId === route.id ? 'is-active' : ''}
-                  onClick={() => handleSelectRoute(route.id)}
+                  onClick={(event) => {
+                    handleSelectRoute(route.id)
+                    centerRoutePickerButton(event.currentTarget)
+                  }}
                   aria-pressed={selectedRouteId === route.id}
                   aria-label={`${route.leg}: ${route.title}`}
                   title={route.title}
