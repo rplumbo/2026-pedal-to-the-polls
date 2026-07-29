@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:gpxdata="http://www.cluetrust.com/XML/GPXDATA/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="http://ridewithgps.com/" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.cluetrust.com/XML/GPXDATA/1/0 http://www.cluetrust.com/Schemas/gpxdata10.xsd">
+  <metadata>
+    <name>Ely to Grand Rapids (Week 1)</name>
+    <link href="https://ridewithgps.com/routes/54523859">
+      <text>Ely to Grand Rapids (Week 1)</text>
+    </link>
+    <time>2026-04-05T08:04:42Z</time>
+  </metadata>
+  <rte>
+    <name>Ely to Grand Rapids (Week 1)</name>
+    <rtept lat="47.90325" lon="-91.86687">
+      <name>Right</name>
+      <cmt>Turn right onto North Central Avenue</cmt>
+    </rtept>
+    <rtept lat="47.90233" lon="-91.86692">
+      <name>Left</name>
+      <cmt>Turn left onto East Chapman Street</cmt>
+    </rtept>
+    <rtept lat="47.90222" lon="-91.8569">
+      <name>Right</name>
+      <cmt>Turn right onto South 7th Avenue East</cmt>
+    </rtept>
+    <rtept lat="47.9013" lon="-91.8569">
+      <name>Left</name>
+      <cmt>Turn left onto East Harvey Street</cmt>
+    </rtept>
+    <rtept lat="47.90125" lon="-91.841">
+      <name>Right</name>
+      <cmt>Turn right onto North Shore</cmt>
+    </rtept>
+    <rtept lat="47.66103" lon="-91.60106">
+      <name>Right</name>
+      <cmt>Turn right onto Highway 2</cmt>
+    </rtept>
+    <rtept lat="47.39176" lon="-91.64777">
+      <name>Right</name>
+      <cmt>Turn right onto National Forest Hwy 11</cmt>
+    </rtept>
+    <rtept lat="47.38764" lon="-91.65957">
+      <name>Left</name>
+      <cmt>Turn left onto Highway 2</cmt>
+    </rtept>
+    <rtept lat="47.04446" lon="-91.66739">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="47.03876" lon="-91.66758">
+      <name>Sharp Right</name>
+      <cmt>Turn sharp right</cmt>
+    </rtept>
+    <rtept lat="47.03062" lon="-91.68185">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="47.03062" lon="-91.68185">
+      <name>Sharp Left</name>
+      <cmt>Turn sharp left</cmt>
+    </rtept>
+    <rtept lat="47.02562" lon="-91.68126">
+      <name>Right</name>
+      <cmt>Turn right onto 7th Avenue</cmt>
+    </rtept>
+    <rtept lat="47.02003" lon="-91.69727">
+      <name>Left</name>
+      <cmt>Turn left onto Scenic Drive</cmt>
+    </rtept>
+    <rtept lat="46.84667" lon="-91.99052">
+      <name>Slight Left</name>
+      <cmt>Keep left</cmt>
+    </rtept>
+    <rtept lat="46.83735" lon="-92.00579">
+      <name>Slight Left</name>
+      <cmt>Turn slight left onto South 61st Avenue East</cmt>
+    </rtept>
+    <rtept lat="46.83887" lon="-92.00608">
+      <name>Sharp Left</name>
+      <cmt>Turn sharp left onto The Lakewalk</cmt>
+    </rtept>
+    <rtept lat="46.81039" lon="-92.06025">
+      <name>Sharp Left</name>
+      <cmt>Turn sharp left onto The Lakewalk</cmt>
+    </rtept>
+    <rtept lat="46.80469" lon="-92.06423">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.80254" lon="-92.0684">
+      <name>Right</name>
+      <cmt>Turn right onto The Lakewalk</cmt>
+    </rtept>
+    <rtept lat="46.79283" lon="-92.08941">
+      <name>Slight Right</name>
+      <cmt>Keep right onto The Lakewalk</cmt>
+    </rtept>
+    <rtept lat="46.78704" lon="-92.09449">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.78627" lon="-92.09547">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.78605" lon="-92.09546">
+      <name>Straight</name>
+      <cmt>Continue onto Canal Park Drive</cmt>
+    </rtept>
+    <rtept lat="46.78591" lon="-92.09546">
+      <name>Right</name>
+      <cmt>Turn right onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.785" lon="-92.09659">
+      <name>Straight</name>
+      <cmt>Continue</cmt>
+    </rtept>
+    <rtept lat="46.78484" lon="-92.09699">
+      <name>Straight</name>
+      <cmt>Continue onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.78357" lon="-92.09843">
+      <name>Right</name>
+      <cmt>Turn right onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.78044" lon="-92.10232">
+      <name>Right</name>
+      <cmt>Turn right onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.77891" lon="-92.10437">
+      <name>Right</name>
+      <cmt>Turn right onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.77347" lon="-92.11449">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.77357" lon="-92.11463">
+      <name>Right</name>
+      <cmt>Turn right onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.77158" lon="-92.11817">
+      <name>Straight</name>
+      <cmt>Continue onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.76917" lon="-92.12131">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.76882" lon="-92.12073">
+      <name>Right</name>
+      <cmt>Turn right onto West Michigan Street</cmt>
+    </rtept>
+    <rtept lat="46.76874" lon="-92.12083">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.76874" lon="-92.12083">
+      <name>Left</name>
+      <cmt>Turn left onto West Michigan Street</cmt>
+    </rtept>
+    <rtept lat="46.76847" lon="-92.12118">
+      <name>Right</name>
+      <cmt>Turn right onto South 19th Avenue West</cmt>
+    </rtept>
+    <rtept lat="46.76884" lon="-92.12175">
+      <name>Left</name>
+      <cmt>Turn left onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.74634" lon="-92.14752">
+      <name>Right</name>
+      <cmt>Turn right onto Cross City Trail</cmt>
+    </rtept>
+    <rtept lat="46.73246" lon="-92.16578">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.7327" lon="-92.16911">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.73298" lon="-92.17208">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.73133" lon="-92.17215">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.73134" lon="-92.17886">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.73126" lon="-92.17893">
+      <name>Right</name>
+      <cmt>Turn right onto Raleigh Street</cmt>
+    </rtept>
+    <rtept lat="46.73126" lon="-92.18004">
+      <name>Slight Left</name>
+      <cmt>Keep left onto Grand Avenue</cmt>
+    </rtept>
+    <rtept lat="46.72287" lon="-92.19186">
+      <name>Left</name>
+      <cmt>Turn left onto South 75th Avenue West</cmt>
+    </rtept>
+    <rtept lat="46.72248" lon="-92.191">
+      <name>Right</name>
+      <cmt>Turn right onto Willard Munger State Trail</cmt>
+    </rtept>
+    <rtept lat="46.7107" lon="-92.20638">
+      <name>Straight</name>
+      <cmt>Continue onto Willard Munger State Trail</cmt>
+    </rtept>
+    <rtept lat="46.70578" lon="-92.21272">
+      <name>Slight Right</name>
+      <cmt>Keep right onto Willard Munger State Trail</cmt>
+    </rtept>
+    <rtept lat="46.6627" lon="-92.42471">
+      <name>Right</name>
+      <cmt>Turn right onto County Highway 1</cmt>
+    </rtept>
+    <rtept lat="46.66332" lon="-92.42491">
+      <name>Left</name>
+      <cmt>Turn left onto North Avenue</cmt>
+    </rtept>
+    <rtept lat="46.66338" lon="-92.42764">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.67229" lon="-92.42826">
+      <name>Sharp Left</name>
+      <cmt>Turn sharp left onto County Road 3</cmt>
+    </rtept>
+    <rtept lat="46.70665" lon="-92.44914">
+      <name>Slight Right</name>
+      <cmt>Keep right onto 14th Street</cmt>
+    </rtept>
+    <rtept lat="46.70687" lon="-92.44902">
+      <name>Straight</name>
+      <cmt>At roundabout, take exit 2 onto 14th Street</cmt>
+    </rtept>
+    <rtept lat="46.72157" lon="-92.44904">
+      <name>Left</name>
+      <cmt>Turn left onto Cloquet Avenue bike lane</cmt>
+    </rtept>
+    <rtept lat="46.72176" lon="-92.45583">
+      <name>Slight Left</name>
+      <cmt>Keep left onto Cloquet Avenue bike lane</cmt>
+    </rtept>
+    <rtept lat="46.72181" lon="-92.45604">
+      <name>Slight Left</name>
+      <cmt>Keep left onto Cloquet Avenue</cmt>
+    </rtept>
+    <rtept lat="46.72193" lon="-92.46225">
+      <name>Slight Left</name>
+      <cmt>Turn slight left onto Avenue D</cmt>
+    </rtept>
+    <rtept lat="46.72081" lon="-92.46735">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="46.71921" lon="-92.46668">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="46.71795" lon="-92.47894">
+      <name>Left</name>
+      <cmt>Turn left onto Birch Street</cmt>
+    </rtept>
+    <rtept lat="46.71429" lon="-92.47898">
+      <name>Right</name>
+      <cmt>Turn right onto Big Lake Road</cmt>
+    </rtept>
+    <rtept lat="46.72177" lon="-92.61634">
+      <name>Right</name>
+      <cmt>Turn right onto Ditchbank Road</cmt>
+    </rtept>
+    <rtept lat="46.72171" lon="-92.63772">
+      <name>Right</name>
+      <cmt>Turn right onto Ditchbank Road</cmt>
+    </rtept>
+    <rtept lat="46.72253" lon="-92.67065">
+      <name>Right</name>
+      <cmt>Turn right onto Ditchbank Road</cmt>
+    </rtept>
+    <rtept lat="46.73646" lon="-92.67027">
+      <name>Left</name>
+      <cmt>Turn left onto State Forest Road</cmt>
+    </rtept>
+    <rtept lat="46.7372" lon="-92.81945">
+      <name>Right</name>
+      <cmt>Turn right onto State Forest Road</cmt>
+    </rtept>
+    <rtept lat="46.74459" lon="-92.81946">
+      <name>Left</name>
+      <cmt>Turn left onto Twp 157</cmt>
+    </rtept>
+    <rtept lat="46.74464" lon="-92.84081">
+      <name>Right</name>
+      <cmt>Turn right onto State Forest Road</cmt>
+    </rtept>
+    <rtept lat="46.75585" lon="-92.84048">
+      <name>Left</name>
+      <cmt>Turn left onto Heikkila Road</cmt>
+    </rtept>
+    <rtept lat="46.76175" lon="-92.88291">
+      <name>Right</name>
+      <cmt>Turn right onto State Highway 73</cmt>
+    </rtept>
+    <rtept lat="46.92049" lon="-92.91121">
+      <name>Left</name>
+      <cmt>Turn left onto Elm Street</cmt>
+    </rtept>
+    <rtept lat="46.92377" lon="-92.91506">
+      <name>Right</name>
+      <cmt>Turn right onto Elm Street</cmt>
+    </rtept>
+    <rtept lat="46.92516" lon="-92.91484">
+      <name>Left</name>
+      <cmt>Turn left onto Railroad Street</cmt>
+    </rtept>
+    <rtept lat="46.92696" lon="-92.91705">
+      <name>Left</name>
+      <cmt>Turn left onto West 7th Avenue</cmt>
+    </rtept>
+    <rtept lat="46.92696" lon="-92.92201">
+      <name>Right</name>
+      <cmt>Turn right onto Ash Street</cmt>
+    </rtept>
+    <rtept lat="46.92945" lon="-92.92172">
+      <name>Left</name>
+      <cmt>Turn left onto United States Route 2</cmt>
+    </rtept>
+    <rtept lat="46.93535" lon="-92.92865">
+      <name>Right</name>
+      <cmt>Turn right onto Saint Vincent Road</cmt>
+    </rtept>
+    <rtept lat="46.95298" lon="-92.95298">
+      <name>Sharp Left</name>
+      <cmt>Turn sharp left onto Savanna Road</cmt>
+    </rtept>
+    <rtept lat="46.94898" lon="-92.95269">
+      <name>Sharp Right</name>
+      <cmt>Turn sharp right onto United States Route 2</cmt>
+    </rtept>
+    <rtept lat="47.00896" lon="-93.06856">
+      <name>Slight Left</name>
+      <cmt>Keep left onto State Highway 200</cmt>
+    </rtept>
+    <rtept lat="47.00428" lon="-93.26103">
+      <name>Straight</name>
+      <cmt>Continue onto 198th Avenue</cmt>
+    </rtept>
+    <rtept lat="47.00074" lon="-93.26752">
+      <name>Right</name>
+      <cmt>Turn right onto State Highway 200</cmt>
+    </rtept>
+    <rtept lat="47.00502" lon="-93.29446">
+      <name>Right</name>
+      <cmt>Turn right onto Great River Road</cmt>
+    </rtept>
+    <rtept lat="47.2293" lon="-93.51761">
+      <name>Slight Left</name>
+      <cmt>Keep left onto CR 3</cmt>
+    </rtept>
+    <rtept lat="47.22937" lon="-93.51797">
+      <name>Slight Right</name>
+      <cmt>Keep right onto River Road</cmt>
+    </rtept>
+    <rtept lat="47.23051" lon="-93.52104">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="47.23366" lon="-93.52375">
+      <name>Left</name>
+      <cmt>Turn left onto Northeast 3rd Avenue</cmt>
+    </rtept>
+    <rtept lat="47.23385" lon="-93.52584">
+      <name>Sharp Left</name>
+      <cmt>Turn sharp left</cmt>
+    </rtept>
+    <rtept lat="47.23344" lon="-93.52558">
+      <name>Slight Right</name>
+      <cmt>Keep right</cmt>
+    </rtept>
+    <rtept lat="47.23344" lon="-93.52558">
+      <name>Slight Left</name>
+      <cmt>Turn slight left</cmt>
+    </rtept>
+    <rtept lat="47.23385" lon="-93.52584">
+      <name>Sharp Right</name>
+      <cmt>Turn sharp right onto Northeast 2nd Street</cmt>
+    </rtept>
+    <rtept lat="47.23458" lon="-93.52375">
+      <name>Slight Right</name>
+      <cmt>Keep right onto Northeast 3rd Avenue</cmt>
+    </rtept>
+    <rtept lat="47.24426" lon="-93.5237">
+      <name>Right</name>
+      <cmt>Turn right onto Northeast 3rd Avenue</cmt>
+    </rtept>
+    <rtept lat="47.24563" lon="-93.5229">
+      <name>Slight Right</name>
+      <cmt>Keep right onto Northeast 3rd Avenue</cmt>
+    </rtept>
+    <rtept lat="47.24605" lon="-93.52312">
+      <name>Slight Right</name>
+      <cmt>Keep right onto Ridgewood Road</cmt>
+    </rtept>
+    <rtept lat="47.24633" lon="-93.52275">
+      <name>Left</name>
+      <cmt>Turn left onto Fairgrounds Road</cmt>
+    </rtept>
+    <rtept lat="47.24869" lon="-93.52295">
+      <name>Right</name>
+      <cmt>Turn right onto Mesabi Trail</cmt>
+    </rtept>
+    <rtept lat="47.26787" lon="-93.50635">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="47.26753" lon="-93.50729">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="47.26849" lon="-93.5086">
+      <name>End</name>
+      <cmt>End of route</cmt>
+    </rtept>
+  </rte>
+</gpx>

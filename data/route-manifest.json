@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "routes": [
+    {
+      "id": "ely-grand-rapids",
+      "order": 1,
+      "title": "Ely to Grand Rapids (Week 1)",
+      "chapter": "Chapter 1",
+      "file": "Ely_to_Grand_Rapids_(Week_1).gpx",
+      "startDate": "2026-09-23",
+      "endDate": "2026-09-30",
+      "color": "#006D77",
+      "sourceUrl": "https://ridewithgps.com/routes/54523859"
+    },
+    {
+      "id": "grand-rapids-detroit-lakes",
+      "order": 2,
+      "title": "Grand Rapids to Detroit Lakes (Week 2)",
+      "chapter": "Chapter 2",
+      "file": "Grand_Rapids_to_Detroit_Lakes_(Week_2).gpx",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-05",
+      "color": "#D97706",
+      "sourceUrl": "https://ridewithgps.com/routes/54523973"
+    },
+    {
+      "id": "detroit-lakes-saint-cloud",
+      "order": 3,
+      "title": "Moorhead to Saint Cloud (Week 3)",
+      "chapter": "Chapter 3",
+      "file": "Moorhead_to_Saint_Cloud_(Week_3).gpx",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-11",
+      "color": "#7C3AED",
+      "sourceUrl": "https://ridewithgps.com/routes/54524018"
+    },
+    {
+      "id": "saint-cloud-mankato",
+      "order": 4,
+      "title": "Saint Cloud to Mankato (Week 4)",
+      "chapter": "Chapter 4",
+      "file": "Saint_Cloud_to_Mankato(Week_4).gpx",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-15",
+      "color": "#C2415D",
+      "sourceUrl": "https://ridewithgps.com/routes/54524153"
+    },
+    {
+      "id": "mankato-winona",
+      "order": 5,
+      "title": "Mankato to Winona",
+      "chapter": "Chapter 5",
+      "file": "Mankato_to_Winona.gpx",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-20",
+      "color": "#2563EB",
+      "sourceUrl": "https://ridewithgps.com/routes/56067057"
+    },
+    {
+      "id": "winona-stillwater",
+      "order": 6,
+      "title": "Winona to Stillwater (Week 6)",
+      "chapter": "Chapter 6",
+      "file": "Winona_to_Stillwater_(Week_6).gpx",
+      "startDate": "2026-10-21",
+      "endDate": "2026-11-01",
+      "color": "#15803D",
+      "sourceUrl": "https://ridewithgps.com/routes/54524214"
+    }
+  ]
+}

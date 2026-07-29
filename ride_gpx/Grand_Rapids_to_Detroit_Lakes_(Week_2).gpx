@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:gpxdata="http://www.cluetrust.com/XML/GPXDATA/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="http://ridewithgps.com/" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.cluetrust.com/XML/GPXDATA/1/0 http://www.cluetrust.com/Schemas/gpxdata10.xsd">
+  <metadata>
+    <name>Grand Rapids to Detroit Lakes (Week 2)</name>
+    <link href="https://ridewithgps.com/routes/54523973">
+      <text>Grand Rapids to Detroit Lakes (Week 2)</text>
+    </link>
+    <time>2026-04-05T08:17:56Z</time>
+  </metadata>
+  <rte>
+    <name>Grand Rapids to Detroit Lakes (Week 2)</name>
+    <rtept lat="47.23697" lon="-93.52833">
+      <name>Left</name>
+      <cmt>Turn left onto Northwest 5th Street</cmt>
+    </rtept>
+    <rtept lat="47.23703" lon="-93.55421">
+      <name>Left</name>
+      <cmt>Turn left onto Northwest 17th Avenue</cmt>
+    </rtept>
+    <rtept lat="47.23696" lon="-93.55421">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="47.24055" lon="-93.56705">
+      <name>Left</name>
+      <cmt>Turn left onto Tioga Trail</cmt>
+    </rtept>
+    <rtept lat="47.23865" lon="-93.58713">
+      <name>Right</name>
+      <cmt>Turn right onto CR 76</cmt>
+    </rtept>
+    <rtept lat="47.23881" lon="-93.58712">
+      <name>Left</name>
+      <cmt>Turn left onto CR 63</cmt>
+    </rtept>
+    <rtept lat="47.22529" lon="-93.75604">
+      <name>Right</name>
+      <cmt>Turn right onto MN 6</cmt>
+    </rtept>
+    <rtept lat="47.24308" lon="-93.74459">
+      <name>Left</name>
+      <cmt>Turn left onto CR 11</cmt>
+    </rtept>
+    <rtept lat="47.32124" lon="-93.74518">
+      <name>Left</name>
+      <cmt>Turn left onto US 2, MN 6</cmt>
+    </rtept>
+    <rtept lat="47.33963" lon="-93.81418">
+      <name>Right</name>
+      <cmt>Turn right onto MN 46</cmt>
+    </rtept>
+    <rtept lat="47.43571" lon="-94.01464">
+      <name>Left</name>
+      <cmt>Turn left onto CH 9</cmt>
+    </rtept>
+    <rtept lat="47.34273" lon="-94.17733">
+      <name>Right</name>
+      <cmt>Turn right onto US 2</cmt>
+    </rtept>
+    <rtept lat="47.34527" lon="-94.2089">
+      <name>Slight Right</name>
+      <cmt>Keep right</cmt>
+    </rtept>
+    <rtept lat="47.35198" lon="-94.26777">
+      <name>Right</name>
+      <cmt>Turn right onto West Winnie Road Northeast</cmt>
+    </rtept>
+    <rtept lat="47.40643" lon="-94.4799">
+      <name>Left</name>
+      <cmt>Turn left onto CR 10</cmt>
+    </rtept>
+    <rtept lat="47.40574" lon="-94.47989">
+      <name>Right</name>
+      <cmt>Turn right onto Forest Route 2171</cmt>
+    </rtept>
+    <rtept lat="47.38542" lon="-94.50531">
+      <name>Right</name>
+      <cmt>Turn right</cmt>
+    </rtept>
+    <rtept lat="47.38618" lon="-94.50676">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="47.38559" lon="-94.50886">
+      <name>Slight Right</name>
+      <cmt>Keep right</cmt>
+    </rtept>
+    <rtept lat="47.38567" lon="-94.50933">
+      <name>Slight Right</name>
+      <cmt>Turn slight right onto Migizi Trail</cmt>
+    </rtept>
+    <rtept lat="47.38598" lon="-94.51033">
+      <name>Left</name>
+      <cmt>Turn left onto Migizi Trail</cmt>
+    </rtept>
+    <rtept lat="47.37909" lon="-94.52265">
+      <name>Left</name>
+      <cmt>Turn left onto Migizi Trail</cmt>
+    </rtept>
+    <rtept lat="47.38063" lon="-94.59162">
+      <name>Left</name>
+      <cmt>Turn left onto CR 206</cmt>
+    </rtept>
+    <rtept lat="47.3776" lon="-94.60759">
+      <name>Right</name>
+      <cmt>Turn right onto Heartland Trail</cmt>
+    </rtept>
+    <rtept lat="47.37762" lon="-94.61182">
+      <name>Slight Left</name>
+      <cmt>Turn slight left onto Heartland Trail</cmt>
+    </rtept>
+    <rtept lat="47.36656" lon="-94.61553">
+      <name>Right</name>
+      <cmt>Turn right onto 156th Street Northwest</cmt>
+    </rtept>
+    <rtept lat="47.36683" lon="-94.82437">
+      <name>Right</name>
+      <cmt>Turn right onto Paul Bunyan State Trail</cmt>
+    </rtept>
+    <rtept lat="47.45988" lon="-94.86655">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="47.46717" lon="-94.87876">
+      <name>Slight Left</name>
+      <cmt>Keep left</cmt>
+    </rtept>
+    <rtept lat="47.46866" lon="-94.88271">
+      <name>Right</name>
+      <cmt>Turn right onto Minnesota Avenue Northwest</cmt>
+    </rtept>
+    <rtept lat="47.47264" lon="-94.88273">
+      <name>Right</name>
+      <cmt>Turn right onto 5th Street Northwest</cmt>
+    </rtept>
+    <rtept lat="47.47264" lon="-94.88273">
+      <name>Left</name>
+      <cmt>Turn left onto Minnesota Avenue Northwest</cmt>
+    </rtept>
+    <rtept lat="47.46866" lon="-94.88271">
+      <name>Left</name>
+      <cmt>Turn left</cmt>
+    </rtept>
+    <rtept lat="47.45988" lon="-94.86655">
+      <name>Right</name>
+      <cmt>Turn right onto Paul Bunyan State Trail</cmt>
+    </rtept>
+    <rtept lat="47.29302" lon="-94.79129">
+      <name>Straight</name>
+      <cmt>Continue onto Paul Bunyan State Trail</cmt>
+    </rtept>
+    <rtept lat="47.12412" lon="-94.61284">
+      <name>Straight</name>
+      <cmt>Continue onto Heartland Trail</cmt>
+    </rtept>
+    <rtept lat="47.03397" lon="-94.66429">
+      <name>Straight</name>
+      <cmt>Continue onto Heartland Trail</cmt>
+    </rtept>
+    <rtept lat="46.9232" lon="-95.05846">
+      <name>Left</name>
+      <cmt>Turn left onto Park Avenue North</cmt>
+    </rtept>
+    <rtept lat="46.92215" lon="-95.05846">
+      <name>Right</name>
+      <cmt>Turn right onto 1st Street West</cmt>
+    </rtept>
+    <rtept lat="46.92214" lon="-95.06006">
+      <name>Left</name>
+      <cmt>Turn left onto Main Avenue South</cmt>
+    </rtept>
+    <rtept lat="46.92002" lon="-95.06008">
+      <name>Right</name>
+      <cmt>Turn right onto 3rd Street West</cmt>
+    </rtept>
+    <rtept lat="46.91687" lon="-95.06302">
+      <name>Left</name>
+      <cmt>Turn left onto 6th Street West</cmt>
+    </rtept>
+    <rtept lat="46.9169" lon="-95.06152">
+      <name>Right</name>
+      <cmt>Turn right onto Pleasant Avenue South</cmt>
+    </rtept>
+    <rtept lat="46.90737" lon="-95.06135">
+      <name>Left</name>
+      <cmt>Turn left onto Industrial Park Road</cmt>
+    </rtept>
+    <rtept lat="46.90739" lon="-95.05908">
+      <name>Slight Right</name>
+      <cmt>Keep right onto Industrial Park Road</cmt>
+    </rtept>
+    <rtept lat="46.9073" lon="-95.05864">
+      <name>Straight</name>
+      <cmt>At roundabout, take exit 1 onto Park Avenue South</cmt>
+    </rtept>
+    <rtept lat="46.90624" lon="-95.05875">
+      <name>Slight Right</name>
+      <cmt>Turn slight right onto US 71</cmt>
+    </rtept>
+    <rtept lat="46.90395" lon="-95.05934">
+      <name>Left</name>
+      <cmt>Turn left onto Albert Avenue South</cmt>
+    </rtept>
+    <rtept lat="46.90383" lon="-95.05833">
+      <name>Right</name>
+      <cmt>Turn right onto Albert Avenue South</cmt>
+    </rtept>
+    <rtept lat="46.89263" lon="-95.05827">
+      <name>Right</name>
+      <cmt>Turn right onto 160th Street</cmt>
+    </rtept>
+    <rtept lat="46.8926" lon="-95.06194">
+      <name>Left</name>
+      <cmt>Turn left onto US 71</cmt>
+    </rtept>
+    <rtept lat="46.86335" lon="-95.07049">
+      <name>Right</name>
+      <cmt>Turn right onto County 14</cmt>
+    </rtept>
+    <rtept lat="46.86198" lon="-95.26819">
+      <name>Left</name>
+      <cmt>Turn left onto County Highway 47</cmt>
+    </rtept>
+    <rtept lat="46.80354" lon="-95.26819">
+      <name>Right</name>
+      <cmt>Turn right onto Johnson Street</cmt>
+    </rtept>
+    <rtept lat="46.8031" lon="-95.39405">
+      <name>Left</name>
+      <cmt>Turn left onto County Highway 43</cmt>
+    </rtept>
+    <rtept lat="46.75963" lon="-95.39399">
+      <name>Right</name>
+      <cmt>Turn right onto State Highway 87</cmt>
+    </rtept>
+    <rtept lat="46.72644" lon="-95.70273">
+      <name>Right</name>
+      <cmt>Turn right onto Maple Avenue West</cmt>
+    </rtept>
+    <rtept lat="46.72647" lon="-95.70278">
+      <name>Left</name>
+      <cmt>Turn left onto Heartland Trail</cmt>
+    </rtept>
+    <rtept lat="46.7952" lon="-95.80624">
+      <name>Slight Left</name>
+      <cmt>Turn slight left onto Heartland Trail</cmt>
+    </rtept>
+    <rtept lat="46.81571" lon="-95.84118">
+      <name>Right</name>
+      <cmt>Turn right onto McKinley Avenue</cmt>
+    </rtept>
+    <rtept lat="46.81701" lon="-95.84166">
+      <name>Left</name>
+      <cmt>Turn left onto Holmes Street East</cmt>
+    </rtept>
+    <rtept lat="46.81726" lon="-95.84534">
+      <name>Right</name>
+      <cmt>Turn right onto Washington Avenue</cmt>
+    </rtept>
+    <rtept lat="46.81932" lon="-95.84526">
+      <name>Left</name>
+      <cmt>Turn left onto US 10</cmt>
+    </rtept>
+    <rtept lat="46.81984" lon="-95.84644">
+      <name>End</name>
+      <cmt>End of route</cmt>
+    </rtept>
+  </rte>
+</gpx>

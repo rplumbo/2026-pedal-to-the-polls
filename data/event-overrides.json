@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "eventsByStartDate": {
+    "2026-09-23": {
+      "id": "ely-ride-launch",
+      "published": true,
+      "status": "confirmed",
+      "title": "Pedal to the Polls ride launch",
+      "description": "Join riders and Boundary Waters supporters in Ely as the journey gets underway.",
+      "city": "Ely",
+      "locationHint": [-91.86687, 47.90325]
+    },
+    "2026-09-24": {
+      "id": "two-harbors-heck-fest",
+      "published": true,
+      "status": "tentative",
+      "title": "Heck Fest community stop",
+      "description": "A Pedal to the Polls gathering near Two Harbors during Heck Fest. Details will be shared as they are confirmed.",
+      "venue": "Castle Danger",
+      "city": "Two Harbors",
+      "locationHint": [-91.67073, 47.02271]
+    },
+    "2026-09-27": {
+      "id": "duluth-community-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Duluth community gathering",
+      "description": "Gather with riders and supporters in Duluth to celebrate public lands and the Boundary Waters. Details will be shared as they are confirmed.",
+      "city": "Duluth",
+      "locationHint": [-92.10049, 46.78667]
+    },
+    "2026-09-28": {
+      "id": "cloquet-community-action",
+      "published": true,
+      "status": "confirmed",
+      "title": "Cloquet community action stop",
+      "description": "Meet the riders for a community canvass in Cloquet.",
+      "city": "Cloquet",
+      "locationHint": [-92.45936, 46.72161]
+    },
+    "2026-09-30": {
+      "id": "grand-rapids-gathering",
+      "published": true,
+      "status": "confirmed",
+      "title": "Grand Rapids gathering",
+      "description": "Meet the ride for a community gathering in Grand Rapids.",
+      "venue": "Klockow Brewing",
+      "city": "Grand Rapids",
+      "locationHint": [-93.53021, 47.23717]
+    },
+    "2026-10-03": {
+      "id": "bemidji-community-action",
+      "published": true,
+      "status": "confirmed",
+      "title": "Bemidji community action stop",
+      "description": "Join riders for a community canvass in Bemidji.",
+      "city": "Bemidji",
+      "locationHint": [-94.88028, 47.47356]
+    },
+    "2026-10-05": {
+      "id": "detroit-lakes-community-stop",
+      "published": true,
+      "status": "tentative",
+      "title": "Detroit Lakes community stop",
+      "description": "Meet the ride in Detroit Lakes. Event details will be shared as they are confirmed.",
+      "city": "Detroit Lakes",
+      "locationHint": [-95.84533, 46.81718]
+    },
+    "2026-10-06": {
+      "id": "moorhead-community-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Moorhead community gathering",
+      "description": "Meet the riders for a community gathering in Moorhead. Details will be shared as they are confirmed.",
+      "venue": "Swing Barrel",
+      "city": "Moorhead",
+      "locationHint": [-96.7678, 46.87385]
+    },
+    "2026-10-07": {
+      "id": "fergus-falls-community-stop",
+      "published": true,
+      "status": "tentative",
+      "title": "Fergus Falls community stop",
+      "description": "Meet the ride in Fergus Falls. Event details will be shared as they are confirmed.",
+      "city": "Fergus Falls",
+      "locationHint": [-96.07756, 46.28302]
+    },
+    "2026-10-10": {
+      "id": "saint-cloud-community-action",
+      "published": true,
+      "status": "confirmed",
+      "title": "Saint Cloud community action stop",
+      "description": "Join riders for a community canvass in Saint Cloud.",
+      "city": "Saint Cloud",
+      "locationHint": [-94.16324, 45.55795]
+    },
+    "2026-10-15": {
+      "id": "mankato-community-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Mankato community gathering",
+      "description": "Gather with riders and Boundary Waters supporters in Mankato. Details will be shared as they are confirmed.",
+      "city": "Mankato",
+      "locationHint": [-93.9994, 44.16358]
+    },
+    "2026-10-17": {
+      "id": "northfield-college-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Northfield college gathering",
+      "description": "A community event connecting the ride with students and supporters in Northfield. Details will be shared as they are confirmed.",
+      "city": "Northfield",
+      "locationHint": [-93.1616, 44.4583]
+    },
+    "2026-10-19": {
+      "id": "rochester-community-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Rochester community gathering",
+      "description": "Gather with riders and Boundary Waters supporters in Rochester. Details will be shared as they are confirmed.",
+      "city": "Rochester",
+      "locationHint": [-92.4802, 44.0121]
+    },
+    "2026-10-20": {
+      "id": "winona-community-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Winona community gathering",
+      "description": "Gather with riders and Boundary Waters supporters in Winona. Details will be shared as they are confirmed.",
+      "city": "Winona",
+      "locationHint": [-91.66635, 44.05539]
+    },
+    "2026-10-22": {
+      "id": "lake-city-library-gathering",
+      "published": true,
+      "status": "confirmed",
+      "title": "Lake City library gathering",
+      "description": "Meet the riders for an evening community gathering in Lake City.",
+      "timeLabel": "6:30 p.m.",
+      "venue": "Lake City Public Library",
+      "city": "Lake City",
+      "locationHint": [-92.26684, 44.44974]
+    },
+    "2026-10-24": {
+      "id": "lakeville-community-action",
+      "published": true,
+      "status": "confirmed",
+      "title": "Lakeville community action stop",
+      "description": "Join riders for a community canvass in Lakeville.",
+      "city": "Lakeville",
+      "locationHint": [-93.24272, 44.64969]
+    },
+    "2026-10-25": {
+      "id": "chanhassen-community-action",
+      "published": true,
+      "status": "confirmed",
+      "title": "Chanhassen community action stop",
+      "description": "Join riders for a community canvass in Chanhassen.",
+      "city": "Chanhassen",
+      "locationHint": [-93.53079, 44.86191]
+    },
+    "2026-10-26": {
+      "id": "lake-minnetonka-community-gathering",
+      "published": true,
+      "status": "tentative",
+      "title": "Lake Minnetonka community gathering",
+      "description": "Meet the ride in the Minnetonka and Excelsior area. Details will be shared as they are confirmed.",
+      "venue": "Back Channel",
+      "city": "Minnetonka / Excelsior",
+      "locationHint": [-93.56635, 44.9033]
+    },
+    "2026-10-27": {
+      "id": "coon-rapids-gotv",
+      "published": true,
+      "status": "confirmed",
+      "title": "Coon Rapids get-out-the-vote event",
+      "description": "Join the riders for a get-out-the-vote gathering in Coon Rapids.",
+      "city": "Coon Rapids",
+      "locationHint": [-93.30301, 45.17324]
+    },
+    "2026-10-29": {
+      "id": "saint-paul-community-gathering",
+      "published": true,
+      "status": "confirmed",
+      "title": "Saint Paul community gathering",
+      "description": "Gather with riders and Boundary Waters supporters for a ride update and get-out-the-vote event in Saint Paul.",
+      "city": "Saint Paul",
+      "locationHint": [-93.08996, 44.9537]
+    },
+    "2026-11-01": {
+      "id": "stillwater-ride-finale",
+      "published": true,
+      "status": "tentative",
+      "title": "Pedal to the Polls finale",
+      "description": "Celebrate the end of the journey with riders and Boundary Waters supporters in downtown Stillwater. Final details will be shared as they are confirmed.",
+      "city": "Stillwater",
+      "locationHint": [-92.80604, 45.056]
+    }
+  }
+}

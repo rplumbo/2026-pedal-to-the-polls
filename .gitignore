@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.local
+.env.*.local
+*.log
+
+# Spreadsheet exports are private by default. This curated snapshot is public.
+*.csv
+!data/timeline-public.csv
