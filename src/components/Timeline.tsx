@@ -6,6 +6,7 @@ import type { RideRoute, TimelineEntry } from '../types'
 interface TimelineProps {
   routes: RideRoute[]
   entries: TimelineEntry[]
+  selectedRouteId: string | null
   selectedEventId: string | null
   onSelectEvent: (eventId: string) => void
   onSelectRoute: (routeId: string) => void
@@ -34,7 +35,7 @@ function TimelineCard({
         <time dateTime={entry.startDate}>
           {formatDateRange(entry.startDate, entry.endDate)}
         </time>
-        <span className="timeline-card__day">Leg {entry.order}</span>
+        <span className="timeline-card__day">Day {entry.order}</span>
       </div>
 
       <div className="timeline-card__route">
@@ -51,16 +52,11 @@ function TimelineCard({
       {entry.event && (
         <div className="timeline-card__event">
           <div className="timeline-card__event-heading">
-            <span
-              className={`event-number event-number--${entry.event.status}`}
-              aria-hidden="true"
-            >
+            <span className="event-number" aria-hidden="true">
               {entry.event.number}
             </span>
             <div>
-              <span className={`status-label status-label--${entry.event.status}`}>
-                {entry.event.status === 'confirmed' ? 'Community event' : 'Tentative stop'}
-              </span>
+              <span className="status-label">Event stop</span>
               <h3>{entry.event.title}</h3>
             </div>
           </div>
@@ -135,6 +131,7 @@ function TimelineCard({
 export function Timeline({
   routes,
   entries,
+  selectedRouteId,
   selectedEventId,
   onSelectEvent,
   onSelectRoute,
@@ -179,7 +176,7 @@ export function Timeline({
       <div className="timeline-empty">
         <RouteIcon />
         <h2>No ride days match this view.</h2>
-        <p>Choose another route chapter or show the full schedule.</p>
+        <p>Choose another route leg or show the full schedule.</p>
       </div>
     )
   }
@@ -187,7 +184,14 @@ export function Timeline({
   return (
     <ol className="timeline" aria-label="Ride schedule">
       {groups.map(({ route, entries: groupEntries }) => (
-        <li className="timeline-group" key={route.id}>
+        <li
+          className={`timeline-group${
+            selectedRouteId && selectedRouteId !== route.id
+              ? ' is-deemphasized'
+              : ''
+          }`}
+          key={route.id}
+        >
           <h2 className="timeline-group__title">
             <button
               type="button"
@@ -202,7 +206,7 @@ export function Timeline({
                 {route.order}
               </span>
               <span>
-                <small>{route.chapter}</small>
+                <small>{route.leg}</small>
                 <strong>{route.title}</strong>
                 <em>{formatDateRange(route.dateRange.startDate, route.dateRange.endDate)}</em>
               </span>

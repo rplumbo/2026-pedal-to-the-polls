@@ -77,6 +77,67 @@ test("legacy ride date labels normalize to explicit 2026 ranges", () => {
   );
 });
 
+test("legacy Event Stop values publish every Yes and TBD row", () => {
+  const csv = [
+    "Date,From,To,Miles (approx),Event Stop?",
+    '"Wednesday, Sept 23rd",Ely,Finland,38,Yes',
+    '"Thursday, Sept 24th",Finland,Two Harbors,34,TBD',
+    '"Sunday, Sept 27th",Two Harbors,Duluth,28,No'
+  ].join("\n");
+  const manifest = {
+    routes: [
+      {
+        id: "fixture-route",
+        startDate: "2026-09-23",
+        endDate: "2026-09-30"
+      }
+    ]
+  };
+  const overrides = {
+    eventsByStartDate: {
+      "2026-09-23": {
+        id: "finland-event",
+        published: false,
+        status: "tentative",
+        city: "Finland",
+        locationHint: [-91.7, 47.4]
+      },
+      "2026-09-24": {
+        id: "two-harbors-event",
+        published: false,
+        status: "confirmed",
+        city: "Two Harbors",
+        locationHint: [-91.67, 47.02]
+      }
+    }
+  };
+  const timeline = buildTimeline({
+    csv,
+    manifest,
+    overrides,
+    geometryByRouteId: new Map([
+      [
+        "fixture-route",
+        [
+          [-91.9, 47.9],
+          [-91.6, 47],
+          [-92.1, 46.8]
+        ]
+      ]
+    ]),
+    warnings: []
+  });
+
+  assert.deepEqual(
+    timeline.map((entry) => entry.eventStatus),
+    ["confirmed", "tentative", "none"]
+  );
+  assert.deepEqual(
+    timeline.flatMap((entry) => (entry.event ? [entry.event.id] : [])),
+    ["finland-event", "two-harbors-event"]
+  );
+});
+
 test("GPX parser supports dense tracks and sparse route cues without XML entities", () => {
   const track = parseGpx(
     '<?xml version="1.0"?><gpx><trk><trkseg><trkpt lat="46" lon="-94"></trkpt><trkpt lat="46.1" lon="-94.1"></trkpt></trkseg></trk></gpx>',
@@ -325,6 +386,11 @@ test("generated app data is normalized, chronological, and public-safe", async (
     data.routes.map((route) => route.order),
     [1, 2, 3, 4, 5, 6]
   );
+  assert.deepEqual(
+    data.routes.map((route) => route.leg),
+    ["Leg 1", "Leg 2", "Leg 3", "Leg 4", "Leg 5", "Leg 6"]
+  );
+  assert.ok(data.routes.every((route) => !("chapter" in route)));
   assert.ok(
     data.routes.every(
       (route) =>

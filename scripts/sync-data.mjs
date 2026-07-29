@@ -782,7 +782,7 @@ function validateManifest(manifest) {
     }
     orders.add(route.order);
     assertPublicCopy(route.title, `Route ${route.id} title`, 100);
-    assertPublicCopy(route.chapter, `Route ${route.id} chapter`, 60);
+    assertPublicCopy(route.leg, `Route ${route.id} leg`, 60);
     if (
       path.basename(route.file) !== route.file ||
       !route.file.toLowerCase().endsWith(".gpx")
@@ -830,7 +830,7 @@ async function loadRoutes(manifest) {
       id: entry.id,
       order: entry.order,
       title: entry.title,
-      chapter: entry.chapter,
+      leg: entry.leg,
       dateRange: {
         startDate: entry.startDate,
         endDate: entry.endDate
@@ -1121,13 +1121,7 @@ export function buildTimeline({
     const sourceStatus = normalizeEventStatus(
       hasStructuredStatus ? structuredStatusValue : legacyStatusValue
     );
-    const initialStatus = hasStructuredStatus
-      ? sourceStatus
-      : sourceStatus === "none"
-        ? "none"
-        : override.status
-          ? normalizeEventStatus(override.status)
-          : sourceStatus;
+    const initialStatus = sourceStatus;
     if (
       hasPublishedColumn &&
       structuredPublished === undefined &&
@@ -1139,9 +1133,7 @@ export function buildTimeline({
     }
     const isPublished = hasPublishedColumn
       ? structuredPublished ?? false
-      : sourceStatus === "none"
-        ? false
-        : (override.published ?? initialStatus !== "none");
+      : sourceStatus !== "none";
 
     let event = null;
     let eventStatus = "none";

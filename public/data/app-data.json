@@ -7,7 +7,7 @@
     "startDate": "2026-09-23",
     "endDate": "2026-11-01",
     "dateRange": "September 23 – November 1, 2026",
-    "generatedAt": "2026-07-29T21:02:59.958Z",
+    "generatedAt": "2026-07-29T21:46:34.750Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -26,8 +26,8 @@
     "routeCount": 6,
     "timelineEntryCount": 32,
     "eventCount": 21,
-    "confirmedEventCount": 10,
-    "tentativeEventCount": 11,
+    "confirmedEventCount": 19,
+    "tentativeEventCount": 2,
     "campaignMiles": 1215,
     "campaignDays": 35,
     "routeDistanceMiles": 1116.6,
@@ -38,7 +38,7 @@
       "id": "ely-grand-rapids",
       "order": 1,
       "title": "Ely to Grand Rapids (Week 1)",
-      "chapter": "Chapter 1",
+      "leg": "Leg 1",
       "dateRange": {
         "startDate": "2026-09-23",
         "endDate": "2026-09-30"
@@ -489,7 +489,7 @@
       "id": "grand-rapids-detroit-lakes",
       "order": 2,
       "title": "Grand Rapids to Detroit Lakes (Week 2)",
-      "chapter": "Chapter 2",
+      "leg": "Leg 2",
       "dateRange": {
         "startDate": "2026-10-01",
         "endDate": "2026-10-05"
@@ -780,7 +780,7 @@
       "id": "detroit-lakes-saint-cloud",
       "order": 3,
       "title": "Moorhead to Saint Cloud (Week 3)",
-      "chapter": "Chapter 3",
+      "leg": "Leg 3",
       "dateRange": {
         "startDate": "2026-10-06",
         "endDate": "2026-10-11"
@@ -3215,7 +3215,7 @@
       "id": "saint-cloud-mankato",
       "order": 4,
       "title": "Saint Cloud to Mankato (Week 4)",
-      "chapter": "Chapter 4",
+      "leg": "Leg 4",
       "dateRange": {
         "startDate": "2026-10-12",
         "endDate": "2026-10-15"
@@ -4654,7 +4654,7 @@
       "id": "mankato-winona",
       "order": 5,
       "title": "Mankato to Winona",
-      "chapter": "Chapter 5",
+      "leg": "Leg 5",
       "dateRange": {
         "startDate": "2026-10-16",
         "endDate": "2026-10-20"
@@ -7581,7 +7581,7 @@
       "id": "winona-stillwater",
       "order": 6,
       "title": "Winona to Stillwater (Week 6)",
-      "chapter": "Chapter 6",
+      "leg": "Leg 6",
       "dateRange": {
         "startDate": "2026-10-21",
         "endDate": "2026-11-01"
@@ -13657,7 +13657,7 @@
       "miles": 34,
       "milesLabel": "34 miles",
       "district": "SD 3",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "two-harbors-heck-fest",
         "number": 2,
@@ -13672,7 +13672,7 @@
           47.02562
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -13688,7 +13688,7 @@
       "miles": 28,
       "milesLabel": "28 miles",
       "district": "SD 8",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "duluth-community-gathering",
         "number": 3,
@@ -13703,7 +13703,7 @@
           46.784805
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -13899,7 +13899,7 @@
       "miles": 50,
       "milesLabel": "50 miles",
       "district": "SD 4",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "moorhead-community-gathering",
         "number": 8,
@@ -13914,7 +13914,7 @@
           46.87505
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -14020,7 +14020,7 @@
       "miles": 120,
       "milesLabel": "120 miles over 3 days",
       "district": "SD 18",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "mankato-community-gathering",
         "number": 11,
@@ -14035,7 +14035,7 @@
           44.16667
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -14065,7 +14065,7 @@
       "miles": 15,
       "milesLabel": "15 miles",
       "district": "58A",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "northfield-college-gathering",
         "number": 12,
@@ -14080,7 +14080,7 @@
           44.458301
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -14110,7 +14110,7 @@
       "miles": 20,
       "milesLabel": "20 miles",
       "district": "SD 25",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "rochester-community-gathering",
         "number": 13,
@@ -14125,7 +14125,7 @@
           44.0254
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -14141,7 +14141,7 @@
       "miles": 50,
       "milesLabel": "50 miles",
       "district": "26A",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "winona-community-gathering",
         "number": 14,
@@ -14156,7 +14156,7 @@
           44.059322
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -14293,7 +14293,7 @@
       "miles": 15,
       "milesLabel": "15 miles",
       "district": "45A",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "lake-minnetonka-community-gathering",
         "number": 18,
@@ -14308,7 +14308,7 @@
           44.90211
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     },
@@ -14400,7 +14400,7 @@
       "miles": 25,
       "milesLabel": "25 miles",
       "district": "SD 41",
-      "eventStatus": "tentative",
+      "eventStatus": "confirmed",
       "event": {
         "id": "stillwater-ride-finale",
         "number": 21,
@@ -14415,7 +14415,7 @@
           45.055786
         ],
         "coordinateSource": "route-approximate",
-        "status": "tentative",
+        "status": "confirmed",
         "url": null
       }
     }

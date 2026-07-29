@@ -324,33 +324,6 @@ summary:focus-visible {
   line-height: 1.15;
 }
 
-.view-toggle {
-  display: flex;
-  flex: none;
-  padding: 3px;
-  background: #e8e2d6;
-  border: 1px solid #d7d0c3;
-  border-radius: 5px;
-}
-
-.view-toggle button {
-  min-height: 30px;
-  padding: 5px 9px;
-  color: #62716d;
-  font-size: 0.68rem;
-  font-weight: 800;
-  background: transparent;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.view-toggle button.is-active {
-  color: var(--pine);
-  background: var(--white);
-  box-shadow: 0 1px 4px rgba(32, 52, 46, 0.12);
-}
-
 .route-chips {
   display: flex;
   gap: 7px;
@@ -417,6 +390,19 @@ summary:focus-visible {
 
 .timeline-group + .timeline-group {
   margin-top: 32px;
+}
+
+.timeline-group {
+  transition: opacity 160ms ease;
+}
+
+.timeline-group.is-deemphasized {
+  opacity: 0.42;
+}
+
+.timeline-group.is-deemphasized:hover,
+.timeline-group.is-deemphasized:focus-within {
+  opacity: 0.75;
 }
 
 .timeline-group__title {
@@ -652,12 +638,6 @@ summary:focus-visible {
   border-radius: 50% 50% 50% 4px;
 }
 
-.event-number--tentative {
-  color: var(--pine);
-  background: #f7e5b8;
-  border: 1px dashed #9c6b17;
-}
-
 .status-label {
   display: block;
   margin-bottom: 2px;
@@ -666,10 +646,6 @@ summary:focus-visible {
   font-weight: 850;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-}
-
-.status-label--tentative {
-  color: #94630d;
 }
 
 .timeline-card__event h3 {
@@ -967,11 +943,6 @@ summary:focus-visible {
   border-radius: 50%;
 }
 
-.key-dot--tentative {
-  background: #f7e5b8;
-  border: 1px dashed #855909;
-}
-
 .map-marker {
   display: grid;
   width: 42px;
@@ -1000,15 +971,6 @@ summary:focus-visible {
   background: var(--pine);
   border: 2px solid var(--white);
   border-radius: 50% 50% 50% 4px;
-}
-
-.map-marker--tentative {
-  color: var(--pine);
-}
-
-.map-marker--tentative span {
-  background: #f5db9f;
-  border: 2px dashed #765011;
 }
 
 .map-marker:hover,
@@ -1073,11 +1035,6 @@ summary:focus-visible {
   text-transform: uppercase;
   background: var(--lake);
   border-radius: 2px;
-}
-
-.status-badge--tentative {
-  color: #714b08;
-  background: #f6dfaa;
 }
 
 .map-event-card h2 {
@@ -1430,19 +1387,6 @@ summary:focus-visible {
 
   .mobile-view-switcher svg {
     display: none;
-  }
-
-  .schedule-controls__heading {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .view-toggle {
-    align-self: stretch;
-  }
-
-  .view-toggle button {
-    flex: 1;
   }
 }
 

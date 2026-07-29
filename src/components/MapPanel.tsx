@@ -78,10 +78,6 @@ function fitMap(
   })
 }
 
-function routeBounds(route: RideRoute): [[number, number], [number, number]] {
-  return route.bounds
-}
-
 export function MapPanel({
   routes,
   timeline,
@@ -283,7 +279,7 @@ export function MapPanel({
       for (const entry of eventEntries) {
         const button = document.createElement('button')
         button.type = 'button'
-        button.className = `map-marker map-marker--${entry.event.status}`
+        button.className = 'map-marker'
         button.dataset.eventId = entry.event.id
         button.setAttribute(
           'aria-label',
@@ -348,12 +344,10 @@ export function MapPanel({
       return
     }
 
-    if (selectedRoute) {
-      fitMap(map, routeBounds(selectedRoute), window.innerWidth < 760)
-    } else if (!selectedEventId) {
+    if (!selectedEventId) {
       fitMap(map, getCombinedBounds(routes), window.innerWidth < 760)
     }
-  }, [mapReady, routes, selectedEventId, selectedRoute, selectedRouteId])
+  }, [mapReady, routes, selectedEventId, selectedRouteId])
 
   useEffect(() => {
     const map = mapRef.current
@@ -394,7 +388,7 @@ export function MapPanel({
       <div className="map-toolbar">
         <div>
           <span className="map-toolbar__eyebrow">
-            {selectedRoute ? selectedRoute.chapter : 'Full route'}
+            {selectedRoute ? selectedRoute.leg : 'Full route'}
           </span>
           <strong>{selectedRoute ? selectedRoute.title : 'Across Minnesota'}</strong>
         </div>
@@ -405,8 +399,7 @@ export function MapPanel({
       </div>
 
       <div className="map-key" aria-label="Map marker key">
-        <span><i className="key-dot key-dot--confirmed" /> Confirmed</span>
-        <span><i className="key-dot key-dot--tentative" /> Tentative</span>
+        <span><i className="key-dot" /> Event stop</span>
       </div>
 
       {mapFailed && (
@@ -427,9 +420,7 @@ export function MapPanel({
             <span className="sr-only">Close event details</span>
           </button>
           <div className="event-card__topline">
-            <span className={`status-badge status-badge--${selectedEntry.event.status}`}>
-              {selectedEntry.event.status === 'confirmed' ? 'Confirmed event' : 'Tentative stop'}
-            </span>
+            <span className="status-badge">Event stop</span>
             <time dateTime={selectedEntry.startDate}>
               {formatDateRange(selectedEntry.startDate, selectedEntry.endDate)}
             </time>

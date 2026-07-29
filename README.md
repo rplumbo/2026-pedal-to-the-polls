@@ -1,8 +1,8 @@
 # 2026 Pedal to the Polls
 
-A single-page route map and chronological event guide for a six-chapter, 1,215-mile ride across Minnesota in support of the Boundary Waters.
+A single-page route map and chronological event guide for a six-leg, 1,215-mile ride across Minnesota in support of the Boundary Waters.
 
-The site is intentionally serverless and short-lived. It uses React, TypeScript, Vite, [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/), [OpenFreeMap](https://openfreemap.org/), and GitHub Pages. There are no API keys, databases, paid services, or application servers.
+The site is intentionally serverless and short-lived. It uses React, TypeScript, Vite, [MapLibre GL JS](https://maplibre.org/maplibre-gl-js/docs/), [OpenStreetMap](https://www.openstreetmap.org/), and GitHub Pages. There are no API keys, databases, paid services, or application servers.
 
 ## Run it locally
 
@@ -47,32 +47,18 @@ The lowest-maintenance production workflow is a dedicated, public-facing Google 
 
 If the Sheet cannot be fetched or fails validation, the workflow stops and the last successful Pages deployment stays live.
 
-Recommended public-sheet columns:
+The current simple spreadsheet format is the recommended maintenance workflow:
 
 | Column | Required | Notes |
 | --- | --- | --- |
-| `Timeline ID` | Recommended | Stable lowercase slug, such as `day-2026-09-23-ely-finland` |
-| `Start Date` | Yes | ISO date: `2026-09-23` |
-| `End Date` | Optional | ISO date; defaults to the start date |
-| `Route ID` | Recommended | One of the IDs in `data/route-manifest.json` |
+| `Date` | Yes | The existing 2026 date or date-range label |
 | `From` | Yes | Public start-place label |
 | `To` | Yes | Public end-place label |
-| `Miles` | Optional | Number, or a label like `120 over 3 days` |
-| `District` | Optional | Public legislative-district label |
-| `Event Status` | Yes | `confirmed`, `tentative`, or `none` |
-| `Published` | Yes for events | `true` or `false` |
-| `Event ID` | Recommended | Stable lowercase slug |
-| `Event Title` | Recommended | Public title; no internal instructions |
-| `Event Description` | Recommended | Public-facing description |
-| `Event Time` | Optional | Display text, for example `6:30 p.m.` |
-| `Event Venue` | Optional | Public venue name |
-| `Event Address` | Optional | Public street address |
-| `Event City` | Required for events | City or area shown in the app |
-| `Latitude` | Recommended | Must be paired with longitude |
-| `Longitude` | Recommended | Must be paired with latitude |
-| `Event URL` | Optional | Must use HTTPS |
+| `Miles (approx)` | Optional | Number, or a label like `120 over 3 days` |
+| `Legislative District` | Optional | Public legislative-district label |
+| `Event Stop?` | Yes | `Yes` and `TBD` both publish an event stop; `No` does not |
 
-The legacy columns in the supplied CSV are still supported. New structured values take priority over the legacy event notes.
+Curated public event copy and approximate map locations live in `data/event-overrides.json`. The pipeline also supports structured event-detail columns when the team is ready to maintain them directly in the public sheet.
 
 ## Update from a local CSV
 
@@ -102,7 +88,7 @@ GitHub disables scheduled workflows in public repositories after 60 days without
 
 ## Map service
 
-MapLibre is the open-source browser renderer. OpenFreeMap’s public instance currently requires no registration or API key. Its style URL lives in one setting and can be replaced without changing the map code:
+MapLibre is the open-source browser renderer. The default background uses OpenStreetMap’s standard raster tiles with visible attribution. A different MapLibre-compatible style URL can be supplied without changing the map code:
 
 ```bash
 VITE_MAP_STYLE_URL=https://example.org/your-map-style npm run build

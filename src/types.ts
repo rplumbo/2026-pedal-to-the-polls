@@ -10,7 +10,7 @@ export interface RideRoute {
   id: string
   order: number
   title: string
-  chapter: string
+  leg: string
   dateRange: {
     startDate: string
     endDate: string

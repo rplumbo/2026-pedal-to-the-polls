@@ -11,7 +11,6 @@ import {
 import { formatMiles } from './lib/format'
 import type { AppData } from './types'
 
-type ScheduleMode = 'all' | 'events'
 type MobileView = 'schedule' | 'map'
 
 const MapPanel = lazy(() =>
@@ -60,7 +59,6 @@ function App() {
   const initialHash = useMemo(readHashSelection, [])
   const [data, setData] = useState<AppData | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [scheduleMode, setScheduleMode] = useState<ScheduleMode>('all')
   const [mobileView, setMobileView] = useState<MobileView>('schedule')
   const [selectedRouteId, setSelectedRouteId] = useState<string | null>(initialHash.routeId)
   const [selectedEventId, setSelectedEventId] = useState<string | null>(initialHash.eventId)
@@ -146,11 +144,6 @@ function App() {
 
   const activeEntry = data.timeline.find((entry) => entry.event?.id === selectedEventId)
   const mapRouteId = selectedRouteId ?? activeEntry?.routeId ?? null
-  const filteredEntries = data.timeline.filter((entry) => {
-    if (selectedRouteId && entry.routeId !== selectedRouteId) return false
-    if (scheduleMode === 'events' && !entry.event) return false
-    return true
-  })
 
   const updatedDate = new Intl.DateTimeFormat('en-US', {
     month: 'short',
@@ -161,7 +154,6 @@ function App() {
 
   const showEventInSchedule = (eventId: string) => {
     const entry = data.timeline.find((candidate) => candidate.event?.id === eventId)
-    setScheduleMode('all')
     if (entry && selectedRouteId && selectedRouteId !== entry.routeId) {
       setSelectedRouteId(null)
     }
@@ -219,7 +211,7 @@ function App() {
             <span className="eyebrow">Ride across Minnesota</span>
             <h1>Miles for the water.</h1>
             <p>
-              Follow a six-chapter ride from Ely to Stillwater—and find the community
+              Follow a six-leg ride from Ely to Stillwater—and find the community
               gatherings happening along the way.
             </p>
             <p className="ride-intro__dates">
@@ -243,33 +235,15 @@ function App() {
             </dl>
           </section>
 
-          <section className="schedule-controls" aria-label="Schedule filters">
+          <section className="schedule-controls" aria-label="Route leg selection">
             <div className="schedule-controls__heading">
               <div>
                 <span className="eyebrow">The journey</span>
-                <h2>Choose a route chapter</h2>
-              </div>
-              <div className="view-toggle" aria-label="Filter ride days">
-                <button
-                  type="button"
-                  className={scheduleMode === 'all' ? 'is-active' : ''}
-                  onClick={() => setScheduleMode('all')}
-                  aria-pressed={scheduleMode === 'all'}
-                >
-                  All days
-                </button>
-                <button
-                  type="button"
-                  className={scheduleMode === 'events' ? 'is-active' : ''}
-                  onClick={() => setScheduleMode('events')}
-                  aria-pressed={scheduleMode === 'events'}
-                >
-                  Events
-                </button>
+                <h2>Choose a route leg</h2>
               </div>
             </div>
 
-            <div className="route-chips" aria-label="Route chapters">
+            <div className="route-chips" aria-label="Route legs">
               <button
                 type="button"
                 className={!selectedRouteId ? 'is-active' : ''}
@@ -291,11 +265,11 @@ function App() {
                   className={selectedRouteId === route.id ? 'is-active' : ''}
                   onClick={() => handleSelectRoute(route.id)}
                   aria-pressed={selectedRouteId === route.id}
-                  aria-label={`${route.chapter}: ${route.title}`}
+                  aria-label={`${route.leg}: ${route.title}`}
                   title={route.title}
                 >
                   <i style={{ backgroundColor: route.color }} aria-hidden="true" />
-                  {route.chapter.replace('Chapter ', 'Ch. ')}
+                  {route.leg}
                 </button>
               ))}
             </div>
@@ -304,7 +278,8 @@ function App() {
           <section className="timeline-section" aria-label="Chronological ride timeline">
             <Timeline
               routes={data.routes}
-              entries={filteredEntries}
+              entries={data.timeline}
+              selectedRouteId={selectedRouteId}
               selectedEventId={selectedEventId}
               onSelectEvent={handleSelectEvent}
               onSelectRoute={handleSelectRoute}
