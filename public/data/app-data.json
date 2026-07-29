@@ -7,7 +7,7 @@
     "startDate": "2026-09-23",
     "endDate": "2026-11-01",
     "dateRange": "September 23 – November 1, 2026",
-    "generatedAt": "2026-07-29T21:46:34.750Z",
+    "generatedAt": "2026-07-29T21:56:33.176Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -37,7 +37,7 @@
     {
       "id": "ely-grand-rapids",
       "order": 1,
-      "title": "Ely to Grand Rapids (Week 1)",
+      "title": "Ely to Grand Rapids",
       "leg": "Leg 1",
       "dateRange": {
         "startDate": "2026-09-23",
@@ -488,7 +488,7 @@
     {
       "id": "grand-rapids-detroit-lakes",
       "order": 2,
-      "title": "Grand Rapids to Detroit Lakes (Week 2)",
+      "title": "Grand Rapids to Detroit Lakes",
       "leg": "Leg 2",
       "dateRange": {
         "startDate": "2026-10-01",
@@ -779,7 +779,7 @@
     {
       "id": "detroit-lakes-saint-cloud",
       "order": 3,
-      "title": "Moorhead to Saint Cloud (Week 3)",
+      "title": "Moorhead to Saint Cloud",
       "leg": "Leg 3",
       "dateRange": {
         "startDate": "2026-10-06",
@@ -3214,7 +3214,7 @@
     {
       "id": "saint-cloud-mankato",
       "order": 4,
-      "title": "Saint Cloud to Mankato (Week 4)",
+      "title": "Saint Cloud to Mankato",
       "leg": "Leg 4",
       "dateRange": {
         "startDate": "2026-10-12",
@@ -7580,7 +7580,7 @@
     {
       "id": "winona-stillwater",
       "order": 6,
-      "title": "Winona to Stillwater (Week 6)",
+      "title": "Winona to Stillwater",
       "leg": "Leg 6",
       "dateRange": {
         "startDate": "2026-10-21",

@@ -171,6 +171,21 @@ export function Timeline({
     }
   }, [revealEventId])
 
+  useEffect(() => {
+    if (!selectedRouteId) return
+
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById(`route-${selectedRouteId}`)?.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'auto'
+          : 'smooth',
+        block: 'start',
+      })
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [selectedRouteId])
+
   if (groups.length === 0) {
     return (
       <div className="timeline-empty">
@@ -191,6 +206,7 @@ export function Timeline({
               : ''
           }`}
           key={route.id}
+          id={`route-${route.id}`}
         >
           <h2 className="timeline-group__title">
             <button

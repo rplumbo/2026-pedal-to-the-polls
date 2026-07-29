@@ -390,6 +390,17 @@ test("generated app data is normalized, chronological, and public-safe", async (
     data.routes.map((route) => route.leg),
     ["Leg 1", "Leg 2", "Leg 3", "Leg 4", "Leg 5", "Leg 6"]
   );
+  assert.deepEqual(
+    data.routes.map((route) => route.title),
+    [
+      "Ely to Grand Rapids",
+      "Grand Rapids to Detroit Lakes",
+      "Moorhead to Saint Cloud",
+      "Saint Cloud to Mankato",
+      "Mankato to Winona",
+      "Winona to Stillwater"
+    ]
+  );
   assert.ok(data.routes.every((route) => !("chapter" in route)));
   assert.ok(
     data.routes.every(

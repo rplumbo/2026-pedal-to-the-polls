@@ -347,6 +347,7 @@ summary:focus-visible {
   color: #536762;
   font-size: 0.72rem;
   font-weight: 800;
+  white-space: nowrap;
   background: transparent;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
@@ -370,6 +371,7 @@ summary:focus-visible {
 }
 
 .route-chips i {
+  flex: none;
   width: 9px;
   height: 9px;
   border: 2px solid rgba(255, 255, 255, 0.6);
@@ -393,6 +395,7 @@ summary:focus-visible {
 }
 
 .timeline-group {
+  scroll-margin-top: 142px;
   transition: opacity 160ms ease;
 }
 
@@ -1327,6 +1330,10 @@ summary:focus-visible {
   .schedule-controls {
     top: 68px;
     padding: 18px 18px 15px;
+  }
+
+  .timeline-group {
+    scroll-margin-top: 204px;
   }
 
   .timeline-card__route strong,

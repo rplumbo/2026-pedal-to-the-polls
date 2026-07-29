@@ -269,7 +269,7 @@ function App() {
                   title={route.title}
                 >
                   <i style={{ backgroundColor: route.color }} aria-hidden="true" />
-                  {route.leg}
+                  <span>{route.title}</span>
                 </button>
               ))}
             </div>

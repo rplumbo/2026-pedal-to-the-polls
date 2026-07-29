@@ -4,7 +4,7 @@
     {
       "id": "ely-grand-rapids",
       "order": 1,
-      "title": "Ely to Grand Rapids (Week 1)",
+      "title": "Ely to Grand Rapids",
       "leg": "Leg 1",
       "file": "Ely_to_Grand_Rapids_(Week_1).gpx",
       "startDate": "2026-09-23",
@@ -15,7 +15,7 @@
     {
       "id": "grand-rapids-detroit-lakes",
       "order": 2,
-      "title": "Grand Rapids to Detroit Lakes (Week 2)",
+      "title": "Grand Rapids to Detroit Lakes",
       "leg": "Leg 2",
       "file": "Grand_Rapids_to_Detroit_Lakes_(Week_2).gpx",
       "startDate": "2026-10-01",
@@ -26,7 +26,7 @@
     {
       "id": "detroit-lakes-saint-cloud",
       "order": 3,
-      "title": "Moorhead to Saint Cloud (Week 3)",
+      "title": "Moorhead to Saint Cloud",
       "leg": "Leg 3",
       "file": "Moorhead_to_Saint_Cloud_(Week_3).gpx",
       "startDate": "2026-10-06",
@@ -37,7 +37,7 @@
     {
       "id": "saint-cloud-mankato",
       "order": 4,
-      "title": "Saint Cloud to Mankato (Week 4)",
+      "title": "Saint Cloud to Mankato",
       "leg": "Leg 4",
       "file": "Saint_Cloud_to_Mankato(Week_4).gpx",
       "startDate": "2026-10-12",
@@ -59,7 +59,7 @@
     {
       "id": "winona-stillwater",
       "order": 6,
-      "title": "Winona to Stillwater (Week 6)",
+      "title": "Winona to Stillwater",
       "leg": "Leg 6",
       "file": "Winona_to_Stillwater_(Week_6).gpx",
       "startDate": "2026-10-21",
