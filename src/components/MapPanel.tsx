@@ -110,6 +110,9 @@ export function MapPanel({
   )
   const selectedEntry = eventEntries.find((entry) => entry.event.id === selectedEventId)
   const selectedRoute = routes.find((route) => route.id === selectedRouteId)
+  const selectedEntryRoute = selectedEntry
+    ? routes.find((route) => route.id === selectedEntry.routeId)
+    : undefined
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current || routes.length === 0) {
@@ -280,9 +283,11 @@ export function MapPanel({
 
       for (const entry of eventEntries) {
         const button = document.createElement('button')
+        const entryRoute = routes.find((route) => route.id === entry.routeId)
         button.type = 'button'
         button.className = 'map-marker'
         button.dataset.eventId = entry.event.id
+        button.style.setProperty('--route-color', entryRoute?.color ?? 'var(--pine)')
         button.setAttribute(
           'aria-label',
           `${entry.event.number}. ${entry.event.title}, ${formatDateRange(entry.startDate, entry.endDate)}`,
@@ -412,7 +417,12 @@ export function MapPanel({
       )}
 
       {selectedEntry?.event && (
-        <article id="map-event-details" className="map-event-card" aria-live="polite">
+        <article
+          id="map-event-details"
+          className="map-event-card"
+          style={{ '--route-color': selectedEntryRoute?.color } as React.CSSProperties}
+          aria-live="polite"
+        >
           <button
             className="map-event-card__close icon-button"
             type="button"
@@ -421,13 +431,20 @@ export function MapPanel({
             <CloseIcon />
             <span className="sr-only">Close event details</span>
           </button>
-          <div className="event-card__topline">
-            <span className="status-badge">Event stop</span>
-            <time dateTime={selectedEntry.startDate}>
-              {formatDateRange(selectedEntry.startDate, selectedEntry.endDate)}
-            </time>
+          <div className="map-event-card__heading">
+            <span className="map-event-card__marker" aria-hidden="true">
+              {selectedEntry.event.number}
+            </span>
+            <div>
+              <div className="event-card__topline">
+                <span className="status-badge">Selected stop</span>
+                <time dateTime={selectedEntry.startDate}>
+                  {formatDateRange(selectedEntry.startDate, selectedEntry.endDate)}
+                </time>
+              </div>
+              <h2>{selectedEntry.event.title}</h2>
+            </div>
           </div>
-          <h2>{selectedEntry.event.title}</h2>
           <p>{selectedEntry.event.description}</p>
           <div className="map-event-card__facts">
             <span>

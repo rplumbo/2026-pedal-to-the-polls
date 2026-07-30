@@ -147,15 +147,20 @@ function App() {
   }, [])
 
   const handleSelectEvent = useCallback((eventId: string) => {
+    const isSelectingEvent = selectedEventId !== eventId
     const entry = data?.timeline.find((candidate) => candidate.event?.id === eventId)
     if (entry) {
       setSelectedRouteId((current) =>
         current && current !== entry.routeId ? null : current,
       )
     }
-    setSelectedEventId((current) => (current === eventId ? null : eventId))
+    setSelectedEventId(isSelectingEvent ? eventId : null)
     setRevealEventId(null)
-  }, [data])
+    if (isSelectingEvent && isMobile) {
+      setHasOpenedMap(true)
+      setMobileView('map')
+    }
+  }, [data, isMobile, selectedEventId])
 
   if (error) return <ErrorState message={error} />
   if (!data) return <LoadingState />

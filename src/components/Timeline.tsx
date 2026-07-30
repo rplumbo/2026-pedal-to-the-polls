@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef } from 'react'
-import { ArrowRightIcon, LocationIcon, RouteIcon, TimeIcon } from '../icons'
+import { ArrowRightIcon, RouteIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, TimelineEntry } from '../types'
 
@@ -56,43 +56,18 @@ function TimelineCard({
               {entry.event.number}
             </span>
             <div>
-              <span className="status-label">Event stop</span>
+              <span className="status-label">
+                {isSelected ? 'Selected stop' : 'Event stop'}
+              </span>
               <h3>{entry.event.title}</h3>
             </div>
           </div>
-
-          <div
-            id={`event-details-${entry.event.id}`}
-            className="timeline-card__event-details"
-          >
-            <p>{entry.event.description}</p>
-            <div className="event-facts">
-              <span>
-                <LocationIcon />
-                {[entry.event.venue, entry.event.city].filter(Boolean).join(' · ')}
-              </span>
-              {entry.event.address && <span className="event-address">{entry.event.address}</span>}
-              {entry.event.timeLabel && (
-                <span>
-                  <TimeIcon />
-                  {entry.event.timeLabel} CT
-                </span>
-              )}
-            </div>
-            {entry.event.url && (
-              <a
-                className="event-link"
-                href={entry.event.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Event details
-              </a>
-            )}
-            {entry.event.coordinateSource === 'route-approximate' && (
-              <span className="approximate-note">Map pin is approximate</span>
-            )}
-          </div>
+          {isSelected && (
+            <span className="timeline-card__map-cue" aria-hidden="true">
+              <span>Showing on map</span>
+              <ArrowRightIcon />
+            </span>
+          )}
         </div>
       )}
     </>
@@ -109,9 +84,9 @@ function TimelineCard({
           type="button"
           className="timeline-card__hit"
           onClick={() => onSelectEvent(entry.event!.id)}
-          aria-label={`${isSelected ? 'Hide' : 'Show'} details for ${entry.event.title}`}
-          aria-expanded={isSelected}
-          aria-controls={`event-details-${entry.event.id}`}
+          aria-label={`${isSelected ? 'Clear' : 'Select'} ${entry.event.title} on map`}
+          aria-pressed={isSelected}
+          aria-controls={isSelected ? 'map-event-details' : undefined}
         />
         {content}
       </article>

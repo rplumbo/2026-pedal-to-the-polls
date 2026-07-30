@@ -549,9 +549,14 @@ summary:focus-visible {
 }
 
 .timeline-card--event.is-selected {
+  z-index: 2;
+  width: calc(100% + 17px);
   border-color: var(--route-color, var(--lake));
-  border-left-color: var(--route-color, var(--lake));
-  box-shadow: 0 8px 22px rgba(24, 56, 48, 0.13);
+  border-left-width: 5px;
+  border-right-width: 4px;
+  background: color-mix(in srgb, var(--route-color, var(--lake)) 7%, #fffdfa);
+  box-shadow: 0 9px 24px rgba(24, 56, 48, 0.16);
+  transform: translateX(4px);
 }
 
 .timeline-card__date,
@@ -641,6 +646,11 @@ summary:focus-visible {
   border-radius: 50% 50% 50% 4px;
 }
 
+.timeline-card--event.is-selected .event-number {
+  background: var(--route-color, var(--lake));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--route-color, var(--lake)) 18%, transparent);
+}
+
 .status-label {
   display: block;
   margin-bottom: 2px;
@@ -659,49 +669,42 @@ summary:focus-visible {
   line-height: 1.16;
 }
 
-.timeline-card__event-details {
-  display: none;
-  padding-left: 38px;
-}
-
-.timeline-card--event.is-selected .timeline-card__event-details {
-  display: block;
-}
-
-.timeline-card__event-details p {
-  margin: 10px 0;
-  color: #566a65;
-  font-size: 0.77rem;
-  line-height: 1.48;
-}
-
-.event-facts {
+.timeline-card__map-cue {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: #38534d;
-  font-size: 0.7rem;
-  font-weight: 700;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: var(--route-color, var(--lake));
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.event-facts span,
+.timeline-card__map-cue::before {
+  height: 1px;
+  flex: 1;
+  content: "";
+  background: color-mix(in srgb, var(--route-color, var(--lake)) 45%, transparent);
+}
+
+.timeline-card__map-cue svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.2;
+}
+
 .map-event-card__facts span {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.event-facts svg,
 .map-event-card__facts svg {
   flex: none;
   width: 15px;
   height: 15px;
   color: var(--lake);
-}
-
-.event-facts .event-address {
-  padding-left: 21px;
-  font-weight: 600;
 }
 
 .event-link {
@@ -713,14 +716,6 @@ summary:focus-visible {
   font-size: 0.7rem;
   font-weight: 850;
   text-underline-offset: 3px;
-}
-
-.approximate-note {
-  display: inline-block;
-  margin-top: 9px;
-  color: #596a65;
-  font-size: 0.62rem;
-  font-style: italic;
 }
 
 .timeline-empty {
@@ -971,7 +966,7 @@ summary:focus-visible {
   font-size: 0.68rem;
   font-weight: 900;
   line-height: 1;
-  background: var(--pine);
+  background: var(--route-color, var(--pine));
   border: 2px solid var(--white);
   border-radius: 50% 50% 50% 4px;
 }
@@ -984,21 +979,23 @@ summary:focus-visible {
 }
 
 .map-marker.is-active span {
-  box-shadow: 0 0 0 4px rgba(255, 253, 247, 0.9);
+  box-shadow:
+    0 0 0 4px rgba(255, 253, 247, 0.94),
+    0 0 0 7px var(--route-color, var(--pine));
 }
 
 .map-event-card {
   position: absolute;
   bottom: 34px;
-  left: 20px;
+  left: 0;
   z-index: 4;
-  width: min(420px, calc(100% - 40px));
+  width: min(440px, calc(100% - 20px));
   padding: 18px 48px 17px 19px;
   color: var(--pine);
-  background: rgba(255, 253, 247, 0.98);
+  background: color-mix(in srgb, var(--route-color, var(--sun)) 6%, rgba(255, 253, 247, 0.98));
   border: 1px solid #aeb6b0;
-  border-left: 4px solid var(--sun);
-  border-radius: 6px;
+  border-left: 5px solid var(--route-color, var(--sun));
+  border-radius: 0 6px 6px 0;
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
 }
@@ -1016,6 +1013,27 @@ summary:focus-visible {
 .event-card__topline {
   justify-content: flex-start;
   margin-bottom: 7px;
+}
+
+.map-event-card__heading {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+}
+
+.map-event-card__marker {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 900;
+  background: var(--route-color, var(--pine));
+  border: 2px solid var(--white);
+  border-radius: 50% 50% 50% 5px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--route-color, var(--pine)) 20%, transparent);
 }
 
 .event-card__topline time {
@@ -1036,7 +1054,7 @@ summary:focus-visible {
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
-  background: var(--lake);
+  background: var(--route-color, var(--lake));
   border-radius: 2px;
 }
 
@@ -1066,17 +1084,6 @@ summary:focus-visible {
 .map-event-card__address {
   flex-basis: 100%;
   padding-left: 21px;
-}
-
-.text-button {
-  padding: 7px 0 1px;
-  color: var(--lake);
-  font-size: 0.7rem;
-  font-weight: 850;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid currentColor;
-  cursor: pointer;
 }
 
 .map-disclaimer {
@@ -1343,6 +1350,11 @@ summary:focus-visible {
     white-space: normal;
   }
 
+  .timeline-card--event.is-selected {
+    width: 100%;
+    transform: none;
+  }
+
   .timeline-section {
     padding: 23px 17px 36px;
   }
@@ -1365,8 +1377,8 @@ summary:focus-visible {
 
   .map-event-card {
     bottom: 80px;
-    left: 10px;
-    width: calc(100% - 20px);
+    left: 0;
+    width: calc(100% - 10px);
     max-height: 46vh;
     overflow-y: auto;
   }
