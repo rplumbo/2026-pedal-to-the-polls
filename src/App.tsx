@@ -170,16 +170,6 @@ function App() {
     timeZone: data.meta.timezone,
   }).format(new Date(data.meta.generatedAt))
 
-  const showEventInSchedule = (eventId: string) => {
-    const entry = data.timeline.find((candidate) => candidate.event?.id === eventId)
-    if (entry && selectedRouteId && selectedRouteId !== entry.routeId) {
-      setSelectedRouteId(null)
-    }
-    setSelectedEventId(eventId)
-    setRevealEventId(eventId)
-    setMobileView('schedule')
-  }
-
   return (
     <div className={`app-shell app-shell--${mobileView}`}>
       <header className="masthead">
@@ -348,7 +338,6 @@ function App() {
                   setRevealEventId(null)
                 }}
                 onClearEvent={() => setSelectedEventId(null)}
-                onShowSchedule={showEventInSchedule}
               />
             </Suspense>
           )}

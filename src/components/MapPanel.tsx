@@ -25,7 +25,6 @@ interface MapPanelProps {
   onSelectEvent: (eventId: string) => void
   onShowFullRoute: () => void
   onClearEvent: () => void
-  onShowSchedule: (eventId: string) => void
 }
 
 const ROUTE_SOURCE_ID = 'ride-routes'
@@ -92,7 +91,6 @@ export function MapPanel({
   onSelectEvent,
   onShowFullRoute,
   onClearEvent,
-  onShowSchedule,
 }: MapPanelProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const routeOverlayRef = useRef<SVGSVGElement>(null)
@@ -456,16 +454,6 @@ export function MapPanel({
               Event details
             </a>
           )}
-          {selectedEntry.event.coordinateSource === 'route-approximate' && (
-            <span className="approximate-note">Map pin is approximate</span>
-          )}
-          <button
-            type="button"
-            className="text-button"
-            onClick={() => onShowSchedule(selectedEntry.event!.id)}
-          >
-            View in schedule
-          </button>
         </article>
       )}
 
