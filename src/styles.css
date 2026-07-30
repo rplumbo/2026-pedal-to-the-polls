@@ -849,7 +849,7 @@ summary:focus-visible {
 }
 
 .route-overlay:has(path.is-selected) path:not(.is-selected) {
-  opacity: 0.2;
+  opacity: 0.45;
 }
 
 .maplibregl-marker {
