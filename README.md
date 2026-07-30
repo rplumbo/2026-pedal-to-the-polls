@@ -12,3 +12,7 @@ Requirements: Node.js 22 and npm.
 npm ci
 npm run dev
 ```
+
+## Deployment
+
+This site is deployed automatically via merges to main.
