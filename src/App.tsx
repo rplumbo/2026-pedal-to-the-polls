@@ -222,10 +222,12 @@ function App() {
         <aside className="schedule-panel" aria-label="Ride overview and schedule">
           <section className="ride-intro">
             <span className="eyebrow">Ride across Minnesota</span>
-            <h1>Miles for the water.</h1>
+            <h1>Miles for Our Water.</h1>
             <p>
-              Follow a six-leg ride from Ely to Stillwater—and find the community
-              gatherings happening along the way.
+              Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her
+              husband Dave as they ride across Minnesota in support of the Boundary Waters
+              Canoe Area. Amy and Dave are towing a canoe through each Minnesota congressional
+              district to raise awareness of how voting can protect this special place.
             </p>
             <p className="ride-intro__dates">
               <CalendarIcon />
