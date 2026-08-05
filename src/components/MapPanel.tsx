@@ -9,7 +9,7 @@ import {
 } from 'maplibre-gl'
 import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { CloseIcon, LocationIcon, TimeIcon } from '../icons'
+import { CloseIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
 import { SponsorLogo } from './SponsorLogo'
@@ -438,31 +438,36 @@ export function MapPanel({
               {selectedEntry.event.number}
             </span>
             <div>
-              <div className="event-card__topline">
-                <span className="status-badge">Selected stop</span>
-                <time dateTime={selectedEntry.startDate}>
-                  {formatDateRange(selectedEntry.startDate, selectedEntry.endDate)}
-                </time>
-              </div>
+              <span className="status-badge">Event stop</span>
               <h2>{selectedEntry.event.title}</h2>
             </div>
           </div>
-          <p>{selectedEntry.event.description}</p>
-          <div className="map-event-card__facts">
-            <span>
-              <LocationIcon />
-              {[selectedEntry.event.venue, selectedEntry.event.city].filter(Boolean).join(' · ')}
-            </span>
-            {selectedEntry.event.address && (
-              <span className="map-event-card__address">{selectedEntry.event.address}</span>
-            )}
-            {selectedEntry.event.timeLabel && (
-              <span>
-                <TimeIcon />
-                {selectedEntry.event.timeLabel} CT
-              </span>
-            )}
-          </div>
+          <dl className="map-event-card__details">
+            <div>
+              <dt>Date</dt>
+              <dd>
+                <time dateTime={selectedEntry.startDate}>
+                  {formatDateRange(selectedEntry.startDate, selectedEntry.endDate)}
+                </time>
+              </dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>{selectedEntry.event.timeLabel ? `${selectedEntry.event.timeLabel} CT` : 'To be announced'}</dd>
+            </div>
+            <div className="map-event-card__place">
+              <dt>Place</dt>
+              <dd>{selectedEntry.event.venue ?? selectedEntry.event.city}</dd>
+              {selectedEntry.event.venue && selectedEntry.event.city && (
+                <span>{selectedEntry.event.city}</span>
+              )}
+              {selectedEntry.event.address && <span>{selectedEntry.event.address}</span>}
+            </div>
+          </dl>
+          <section className="map-event-card__description" aria-label="About this stop">
+            <h3>About this stop</h3>
+            <p>{selectedEntry.event.description}</p>
+          </section>
           {selectedStopSponsor && (
             <div className="map-event-card__sponsor">
               <span>{stopSponsors[selectedEntry.event.id]?.label ?? 'Stop partner'}</span>
