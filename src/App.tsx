@@ -203,11 +203,11 @@ function App() {
     <div className={`app-shell app-shell--${mobileView}${showDonationPage ? ' app-shell--donate' : ''}`}>
       <header className="masthead">
         <a className="brand" href={import.meta.env.BASE_URL} aria-label="Pedal to the Polls home">
-          <TrailMark className="brand__mark" />
-          <span>
-            <small>2026</small>
-            <strong>Pedal to the Polls</strong>
-          </span>
+          <img
+            className="brand__logo"
+            src={`${import.meta.env.BASE_URL}images/STBWAF%20Logo_white.png.avif`}
+            alt=""
+          />
         </a>
 
         <div className="masthead__date">
@@ -270,7 +270,7 @@ function App() {
         <aside className="schedule-panel" aria-label="Ride overview and schedule">
           <section className="ride-intro">
             <span className="eyebrow">Ride across Minnesota</span>
-            <h1>Miles for Our Water.</h1>
+            <h1>Pedal to the Polls</h1>
             <p>
               Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her husband Dave as they ride across the State to encourage Minnesotans to get out and vote for Boundary Waters champions this midterm! Amy and Dave are towing a canoe through dozens of Minnesota State Legislative districts to raise awareness for Boundary Waters permanent protection, and how Minnesota can act to safeguard this special place, forever.
             </p>

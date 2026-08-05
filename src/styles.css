@@ -116,36 +116,14 @@ summary:focus-visible {
   text-decoration: none;
 }
 
-.brand__mark {
-  width: 42px;
-  height: 42px;
-  margin-right: 11px;
-  color: #efd197;
-}
-
-.brand span {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.brand small {
-  margin-bottom: -1px;
-  color: #efd197;
-  font-size: 0.63rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  line-height: 1;
-}
-
-.brand strong {
-  overflow: hidden;
-  font-family: var(--serif);
-  font-size: 1.23rem;
-  font-weight: 700;
-  line-height: 1.15;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.brand__logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 56px;
+  max-height: 56px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .masthead__date,
@@ -1702,15 +1680,9 @@ summary:focus-visible {
     padding: 0 12px 0 14px;
   }
 
-  .brand__mark {
-    width: 34px;
-    height: 34px;
-    margin-right: 8px;
-  }
-
-  .brand strong {
-    max-width: 170px;
-    font-size: 1.02rem;
+  .brand__logo {
+    height: 52px;
+    max-height: 52px;
   }
 
   .masthead__date {
@@ -1942,9 +1914,9 @@ summary:focus-visible {
 }
 
 @media (max-width: 540px) {
-  .brand strong {
-    max-width: 142px;
-    font-size: 0.96rem;
+  .brand__logo {
+    height: 52px;
+    max-height: 52px;
   }
 
   .mobile-view-switcher button {
