@@ -1,17 +1,20 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react'
+import { DonatePage } from './components/DonatePage'
 import { Timeline } from './components/Timeline'
-import { loadAppData } from './data'
+import { loadAppData, loadExperienceContent } from './data'
 import {
   CalendarIcon,
+  HeartIcon,
   MapIcon,
   RouteIcon,
   ScheduleIcon,
   TrailMark,
 } from './icons'
 import { formatMiles } from './lib/format'
-import type { AppData } from './types'
+import type { AppData, ExperienceContent } from './types'
 
 type MobileView = 'schedule' | 'map'
+type PageView = 'map' | 'donate-personal' | 'donate-business'
 
 const MapPanel = lazy(() =>
   import('./components/MapPanel').then((module) => ({ default: module.MapPanel })),
@@ -19,16 +22,19 @@ const MapPanel = lazy(() =>
 
 function readHashSelection() {
   const params = new URLSearchParams(window.location.hash.replace(/^#/, ''))
+  const view = params.get('view')
   return {
     eventId: params.get('event'),
     routeId: params.get('route'),
+    page: view === 'donate-personal' || view === 'donate-business' ? view : 'map' as PageView,
   }
 }
 
-function writeHash(eventId: string | null, routeId: string | null) {
+function writeHash(eventId: string | null, routeId: string | null, page: PageView) {
   const params = new URLSearchParams()
   if (eventId) params.set('event', eventId)
   if (routeId) params.set('route', routeId)
+  if (page !== 'map') params.set('view', page)
   const hash = params.toString()
   window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${hash ? `#${hash}` : ''}`)
 }
@@ -76,7 +82,9 @@ function ErrorState({ message }: { message: string }) {
 function App() {
   const initialHash = useMemo(readHashSelection, [])
   const [data, setData] = useState<AppData | null>(null)
+  const [experience, setExperience] = useState<ExperienceContent | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [page, setPage] = useState<PageView>(initialHash.page)
   const [mobileView, setMobileView] = useState<MobileView>('schedule')
   const [selectedRouteId, setSelectedRouteId] = useState<string | null>(initialHash.routeId)
   const [selectedEventId, setSelectedEventId] = useState<string | null>(initialHash.eventId)
@@ -88,10 +96,15 @@ function App() {
 
   useEffect(() => {
     const controller = new AbortController()
-    loadAppData(controller.signal).then(setData).catch((reason: unknown) => {
-      if (reason instanceof DOMException && reason.name === 'AbortError') return
-      setError(reason instanceof Error ? reason.message : 'An unexpected data error occurred.')
-    })
+    Promise.all([loadAppData(controller.signal), loadExperienceContent(controller.signal)])
+      .then(([appData, content]) => {
+        setData(appData)
+        setExperience(content)
+      })
+      .catch((reason: unknown) => {
+        if (reason instanceof DOMException && reason.name === 'AbortError') return
+        setError(reason instanceof Error ? reason.message : 'An unexpected data error occurred.')
+      })
     return () => controller.abort()
   }, [])
 
@@ -111,6 +124,7 @@ function App() {
       setSelectedRouteId(selection.routeId)
       setSelectedEventId(selection.eventId)
       setRevealEventId(selection.eventId)
+      setPage(selection.page)
     }
     window.addEventListener('hashchange', syncSelectionFromHash)
     return () => window.removeEventListener('hashchange', syncSelectionFromHash)
@@ -137,8 +151,8 @@ function App() {
   }, [data, selectedEventId, selectedRouteId])
 
   useEffect(() => {
-    writeHash(selectedEventId, selectedRouteId)
-  }, [selectedEventId, selectedRouteId])
+    writeHash(selectedEventId, selectedRouteId, page)
+  }, [page, selectedEventId, selectedRouteId])
 
   const handleSelectRoute = useCallback((routeId: string) => {
     setSelectedRouteId((current) => (current === routeId ? null : routeId))
@@ -163,7 +177,7 @@ function App() {
   }, [data, isMobile, selectedEventId])
 
   if (error) return <ErrorState message={error} />
-  if (!data) return <LoadingState />
+  if (!data || !experience) return <LoadingState />
 
   const activeEntry = data.timeline.find((entry) => entry.event?.id === selectedEventId)
   const mapRouteId = selectedRouteId ?? activeEntry?.routeId ?? null
@@ -174,9 +188,19 @@ function App() {
     year: 'numeric',
     timeZone: data.meta.timezone,
   }).format(new Date(data.meta.generatedAt))
+  const presentingSponsor = experience.sponsors.find(
+    (sponsor) => sponsor.id === experience.presentingSponsorId,
+  )
+
+  if (!presentingSponsor) {
+    return <ErrorState message="The presenting sponsor is missing from the sponsor content." />
+  }
+
+  const donationKind = page === 'donate-business' ? 'business' : 'personal'
+  const showDonationPage = page !== 'map'
 
   return (
-    <div className={`app-shell app-shell--${mobileView}`}>
+    <div className={`app-shell app-shell--${mobileView}${showDonationPage ? ' app-shell--donate' : ''}`}>
       <header className="masthead">
         <a className="brand" href={import.meta.env.BASE_URL} aria-label="Pedal to the Polls home">
           <TrailMark className="brand__mark" />
@@ -191,15 +215,17 @@ function App() {
           <span>{data.meta.dateRange}</span>
         </div>
 
-        <nav className="mobile-view-switcher" aria-label="Choose schedule or map view">
+        {!showDonationPage && <nav className="mobile-view-switcher" aria-label="Choose schedule or map view">
           <button
             type="button"
             className={mobileView === 'schedule' ? 'is-active' : ''}
             onClick={() => setMobileView('schedule')}
             aria-pressed={mobileView === 'schedule'}
+            aria-label="Show schedule"
+            title="Schedule"
           >
             <ScheduleIcon />
-            Schedule
+            <span>Schedule</span>
           </button>
           <button
             type="button"
@@ -209,15 +235,37 @@ function App() {
               setMobileView('map')
             }}
             aria-pressed={mobileView === 'map'}
+            aria-label="Show map"
+            title="Map"
           >
             <MapIcon />
-            Map
+            <span>Map</span>
           </button>
-        </nav>
+        </nav>}
 
-        <span className="masthead__mission">Minnesota miles for the Boundary Waters</span>
+        <div className="masthead__actions">
+          <span className="masthead__mission">Minnesota miles for the Boundary Waters</span>
+          <button
+            type="button"
+            className="masthead__donate"
+            onClick={() => setPage('donate-personal')}
+            aria-current={page === 'donate-personal' ? 'page' : undefined}
+          >
+            <HeartIcon />
+            <span>Donate</span>
+          </button>
+        </div>
       </header>
 
+      {showDonationPage ? (
+        <DonatePage
+          kind={donationKind}
+          content={experience.donationPages[donationKind]}
+          presentingSponsor={presentingSponsor}
+          onShowMap={() => setPage('map')}
+          onChangeKind={(kind) => setPage(`donate-${kind}`)}
+        />
+      ) : (
       <main id="main-content" className="workspace">
         <aside className="schedule-panel" aria-label="Ride overview and schedule">
           <section className="ride-intro">
@@ -301,6 +349,8 @@ function App() {
               onSelectEvent={handleSelectEvent}
               onSelectRoute={handleSelectRoute}
               revealEventId={revealEventId}
+              sponsors={experience.sponsors}
+              stopSponsors={experience.stopSponsors}
             />
           </section>
 
@@ -339,17 +389,23 @@ function App() {
                 selectedEventId={selectedEventId}
                 onSelectRoute={handleSelectRoute}
                 onSelectEvent={handleSelectEvent}
-                onShowFullRoute={() => {
-                  setSelectedRouteId(null)
-                  setSelectedEventId(null)
-                  setRevealEventId(null)
-                }}
                 onClearEvent={() => setSelectedEventId(null)}
+                sponsors={experience.sponsors}
+                presentingSponsorId={experience.presentingSponsorId}
+                stopSponsors={experience.stopSponsors}
               />
             </Suspense>
           )}
         </div>
       </main>
+      )}
+
+      {!showDonationPage && (
+        <button className="support-ride-button" type="button" onClick={() => setPage('donate-personal')}>
+          <HeartIcon />
+          Support the ride
+        </button>
+      )}
 
       <div className="sr-only" aria-live="polite">
         {activeEntry?.event

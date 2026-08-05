@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { ArrowRightIcon, RouteIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
-import type { RideRoute, TimelineEntry } from '../types'
+import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
+import { SponsorLogo } from './SponsorLogo'
 
 interface TimelineProps {
   routes: RideRoute[]
@@ -11,6 +12,8 @@ interface TimelineProps {
   onSelectEvent: (eventId: string) => void
   onSelectRoute: (routeId: string) => void
   revealEventId: string | null
+  sponsors: Sponsor[]
+  stopSponsors: Record<string, StopSponsor>
 }
 
 interface TimelineGroup {
@@ -23,11 +26,15 @@ function TimelineCard({
   route,
   isSelected,
   onSelectEvent,
+  sponsor,
+  sponsorLabel,
 }: {
   entry: TimelineEntry
   route: RideRoute
   isSelected: boolean
   onSelectEvent: (eventId: string) => void
+  sponsor?: Sponsor
+  sponsorLabel?: string
 }) {
   const content = (
     <>
@@ -67,6 +74,12 @@ function TimelineCard({
               <span>Showing on map</span>
               <ArrowRightIcon />
             </span>
+          )}
+          {sponsor && (
+            <div className="timeline-card__sponsor">
+              <span>{sponsorLabel ?? 'Stop partner'}</span>
+              <SponsorLogo sponsor={sponsor} />
+            </div>
           )}
         </div>
       )}
@@ -111,6 +124,8 @@ export function Timeline({
   onSelectEvent,
   onSelectRoute,
   revealEventId,
+  sponsors,
+  stopSponsors,
 }: TimelineProps) {
   const hasScrolledToReveal = useRef<string | null>(null)
 
@@ -211,6 +226,8 @@ export function Timeline({
                   route={route}
                   isSelected={entry.event?.id === selectedEventId}
                   onSelectEvent={onSelectEvent}
+                  sponsor={entry.event ? sponsors.find((sponsor) => sponsor.id === stopSponsors[entry.event!.id]?.sponsorId) : undefined}
+                  sponsorLabel={entry.event ? stopSponsors[entry.event.id]?.label : undefined}
                 />
               </li>
             ))}

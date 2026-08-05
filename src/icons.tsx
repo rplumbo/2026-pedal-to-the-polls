@@ -29,6 +29,15 @@ export function CalendarIcon(props: IconProps) {
   )
 }
 
+export function BuildingIcon(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M4 21h16M6 21V5h8v16M14 9h4v12" />
+      <path d="M9 9h2M9 13h2M9 17h2M16.5 13h1M16.5 17h1" />
+    </svg>
+  )
+}
+
 export function ChevronDownIcon(props: IconProps) {
   return (
     <svg {...defaults} {...props}>
@@ -41,6 +50,14 @@ export function CloseIcon(props: IconProps) {
   return (
     <svg {...defaults} {...props}>
       <path d="m6 6 12 12M18 6 6 18" />
+    </svg>
+  )
+}
+
+export function HeartIcon(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M20.8 4.9a5.5 5.5 0 0 0-7.8 0L12 6l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.3a5.5 5.5 0 0 0 0-7.8Z" />
     </svg>
   )
 }

@@ -1,0 +1,77 @@
+{
+  "sponsors": [
+    {
+      "id": "northstar-outdoors",
+      "name": "Northstar Outdoors",
+      "shortName": "Northstar Outdoors",
+      "level": "Presenting partner",
+      "monogram": "NO"
+    },
+    {
+      "id": "clearwater-co-op",
+      "name": "Clearwater Co-op",
+      "shortName": "Clearwater Co-op",
+      "level": "Trail partner",
+      "monogram": "CC"
+    },
+    {
+      "id": "north-country-cycles",
+      "name": "North Country Cycles",
+      "shortName": "North Country Cycles",
+      "level": "Trail partner",
+      "monogram": "NC"
+    },
+    {
+      "id": "wild-rice-roasters",
+      "name": "Wild Rice Roasters",
+      "shortName": "Wild Rice Roasters",
+      "level": "Community partner",
+      "monogram": "WR"
+    }
+  ],
+  "presentingSponsorId": "northstar-outdoors",
+  "stopSponsors": {
+    "ely-ride-launch": {
+      "sponsorId": "north-country-cycles",
+      "label": "Launch stop partner"
+    },
+    "grand-rapids-gathering": {
+      "sponsorId": "clearwater-co-op",
+      "label": "Community stop partner"
+    },
+    "saint-paul-community-gathering": {
+      "sponsorId": "wild-rice-roasters",
+      "label": "Community stop partner"
+    }
+  },
+  "donationPages": {
+    "personal": {
+      "eyebrow": "Support the ride",
+      "title": "Keep the Boundary Waters on the map.",
+      "description": "Your gift supports a ride built to connect Minnesotans with the Boundary Waters and the power of their vote.",
+      "impactTitle": "Your gift helps make the ride possible",
+      "impactItems": [
+        "Carry riders and the canoe through every congressional district.",
+        "Bring community conversations to stops across Minnesota.",
+        "Build public support for protecting the Boundary Waters."
+      ],
+      "amountOptions": [25, 50, 100, 250],
+      "customAmountLabel": "Other amount",
+      "submitLabel": "Continue to secure payment"
+    },
+    "business": {
+      "eyebrow": "Become a ride sponsor",
+      "title": "Put your support behind the journey.",
+      "description": "Partner with Pedal to the Polls to help bring the Boundary Waters conversation to communities across Minnesota.",
+      "impactTitle": "Business partners can support the ride at every scale",
+      "impactItems": [
+        "Sponsor the statewide ride and receive prominent recognition.",
+        "Support an individual community stop along the route.",
+        "Connect your team with a visible Minnesota conservation effort."
+      ],
+      "amountOptions": [1000, 2500, 5000, 10000],
+      "customAmountLabel": "Talk with our team",
+      "submitLabel": "Start a sponsorship conversation"
+    }
+  }
+}

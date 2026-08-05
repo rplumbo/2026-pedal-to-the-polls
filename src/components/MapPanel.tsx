@@ -9,9 +9,10 @@ import {
 } from 'maplibre-gl'
 import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { CloseIcon, LocationIcon, ResetIcon, TimeIcon } from '../icons'
+import { CloseIcon, LocationIcon, TimeIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
-import type { RideRoute, TimelineEntry } from '../types'
+import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
+import { SponsorLogo } from './SponsorLogo'
 
 setWorkerUrl(mapLibreWorkerUrl)
 
@@ -23,8 +24,10 @@ interface MapPanelProps {
   selectedEventId: string | null
   onSelectRoute: (routeId: string) => void
   onSelectEvent: (eventId: string) => void
-  onShowFullRoute: () => void
   onClearEvent: () => void
+  sponsors: Sponsor[]
+  presentingSponsorId: string
+  stopSponsors: Record<string, StopSponsor>
 }
 
 const ROUTE_SOURCE_ID = 'ride-routes'
@@ -89,8 +92,10 @@ export function MapPanel({
   selectedEventId,
   onSelectRoute,
   onSelectEvent,
-  onShowFullRoute,
   onClearEvent,
+  sponsors,
+  presentingSponsorId,
+  stopSponsors,
 }: MapPanelProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const routeOverlayRef = useRef<SVGSVGElement>(null)
@@ -109,9 +114,12 @@ export function MapPanel({
     [timeline],
   )
   const selectedEntry = eventEntries.find((entry) => entry.event.id === selectedEventId)
-  const selectedRoute = routes.find((route) => route.id === selectedRouteId)
   const selectedEntryRoute = selectedEntry
     ? routes.find((route) => route.id === selectedEntry.routeId)
+    : undefined
+  const presentingSponsor = sponsors.find((sponsor) => sponsor.id === presentingSponsorId)
+  const selectedStopSponsor = selectedEntry?.event
+    ? sponsors.find((sponsor) => sponsor.id === stopSponsors[selectedEntry.event.id]?.sponsorId)
     : undefined
 
   useEffect(() => {
@@ -371,13 +379,6 @@ export function MapPanel({
     })
   }, [mapReady, selectedEntry])
 
-  const resetView = () => {
-    onShowFullRoute()
-    if (mapRef.current) {
-      fitMap(mapRef.current, getCombinedBounds(routes), window.innerWidth < 760)
-    }
-  }
-
   return (
     <section className="map-panel" aria-label="Route map">
       <div ref={containerRef} className="map-canvas" />
@@ -392,22 +393,23 @@ export function MapPanel({
         ))}
       </svg>
 
-      <div className="map-toolbar">
-        <div>
-          <span className="map-toolbar__eyebrow">
-            {selectedRoute ? selectedRoute.leg : 'Full route'}
-          </span>
-          <strong>{selectedRoute ? selectedRoute.title : 'Across Minnesota'}</strong>
-        </div>
-        <button className="icon-button" type="button" onClick={resetView} title="Show the full route">
-          <ResetIcon />
-          <span className="sr-only">Show the full route</span>
-        </button>
-      </div>
-
-      <div className="map-key" aria-label="Map marker key">
-        <span><i className="key-dot" /> Event stop</span>
-      </div>
+      {presentingSponsor && (
+        <details className="map-sponsor-dock">
+          <summary>
+            <span className="map-sponsor-dock__label">Presented by</span>
+            <SponsorLogo sponsor={presentingSponsor} />
+            <span className="map-sponsor-dock__partners">Partners</span>
+          </summary>
+          <div className="map-sponsor-dock__tray">
+            <p>Supporting the full ride</p>
+            <div>
+              {sponsors.map((sponsor) => (
+                <SponsorLogo sponsor={sponsor} key={sponsor.id} showLevel />
+              ))}
+            </div>
+          </div>
+        </details>
+      )}
 
       {mapFailed && (
         <div className="map-error" role="status">
@@ -461,6 +463,12 @@ export function MapPanel({
               </span>
             )}
           </div>
+          {selectedStopSponsor && (
+            <div className="map-event-card__sponsor">
+              <span>{stopSponsors[selectedEntry.event.id]?.label ?? 'Stop partner'}</span>
+              <SponsorLogo sponsor={selectedStopSponsor} />
+            </div>
+          )}
           {selectedEntry.event.url && (
             <a
               className="event-link"

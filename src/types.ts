@@ -44,6 +44,42 @@ export interface RideEvent {
   url?: string | null
 }
 
+export interface Sponsor {
+  id: string
+  name: string
+  shortName: string
+  level: string
+  monogram: string
+  url?: string
+  logoUrl?: string
+}
+
+export interface StopSponsor {
+  sponsorId: string
+  label?: string
+}
+
+export interface DonationPageContent {
+  eyebrow: string
+  title: string
+  description: string
+  impactTitle: string
+  impactItems: string[]
+  amountOptions: number[]
+  customAmountLabel: string
+  submitLabel: string
+}
+
+export interface ExperienceContent {
+  sponsors: Sponsor[]
+  presentingSponsorId: string
+  stopSponsors: Record<string, StopSponsor>
+  donationPages: {
+    personal: DonationPageContent
+    business: DonationPageContent
+  }
+}
+
 export interface TimelineEntry {
   id: string
   order: number
