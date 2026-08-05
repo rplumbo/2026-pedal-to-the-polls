@@ -5,28 +5,32 @@
       "name": "Northstar Outdoors",
       "shortName": "Northstar Outdoors",
       "level": "Presenting partner",
-      "monogram": "NO"
+      "monogram": "NO",
+      "url": "http://www.savetheboundarywaters.org"
     },
     {
       "id": "clearwater-co-op",
       "name": "Clearwater Co-op",
       "shortName": "Clearwater Co-op",
       "level": "Trail partner",
-      "monogram": "CC"
+      "monogram": "CC",
+      "url": "http://www.savetheboundarywaters.org"
     },
     {
       "id": "north-country-cycles",
-      "name": "North Country Cycles",
-      "shortName": "North Country Cycles",
+      "name": "Dunder Mifflin Paper Co.",
+      "shortName": "Dunder Mifflin Paper Co.",
       "level": "Trail partner",
-      "monogram": "NC"
+      "monogram": "DM",
+      "url": "http://www.savetheboundarywaters.org"
     },
     {
       "id": "wild-rice-roasters",
-      "name": "Wild Rice Roasters",
-      "shortName": "Wild Rice Roasters",
+      "name": "Mississippi Spelling Association",
+      "shortName": "Mississippi Spelling Association",
       "level": "Community partner",
-      "monogram": "WR"
+      "monogram": "MS",
+      "url": "http://www.savetheboundarywaters.org"
     }
   ],
   "presentingSponsorId": "northstar-outdoors",
