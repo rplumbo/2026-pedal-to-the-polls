@@ -272,10 +272,7 @@ function App() {
             <span className="eyebrow">Ride across Minnesota</span>
             <h1>Miles for Our Water.</h1>
             <p>
-              Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her
-              husband Dave as they ride across Minnesota in support of the Boundary Waters
-              Canoe Area. Amy and Dave are towing a canoe through each Minnesota congressional
-              district to raise awareness of how voting can protect this special place.
+              Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her husband Dave as they ride across the State to encourage Minnesotans to get out and vote for Boundary Waters champions this midterm! Amy and Dave are towing a canoe through dozens of Minnesota State Legislative districts to raise awareness for Boundary Waters permanent protection, and how Minnesota can act to safeguard this special place, forever.
             </p>
             <p className="ride-intro__dates">
               <CalendarIcon />
