@@ -14,7 +14,7 @@ import { formatMiles } from './lib/format'
 import type { AppData, ExperienceContent } from './types'
 
 type MobileView = 'schedule' | 'map'
-type PageView = 'map' | 'donate'
+type PageView = 'map' | 'donate' | 'donate-business'
 
 const MapPanel = lazy(() =>
   import('./components/MapPanel').then((module) => ({ default: module.MapPanel })),
@@ -24,7 +24,9 @@ function readHashSelection() {
   const params = new URLSearchParams(window.location.hash.replace(/^#/, ''))
   const view = params.get('view')
   const page: PageView =
-    view === 'donate' || view === 'donate-personal' || view === 'donate-business'
+    view === 'donate-business'
+      ? 'donate-business'
+      : view === 'donate' || view === 'donate-personal'
       ? 'donate'
       : 'map'
 
@@ -253,7 +255,7 @@ function App() {
             type="button"
             className="masthead__donate"
             onClick={() => setPage('donate')}
-            aria-current={page === 'donate' ? 'page' : undefined}
+            aria-current={page === 'donate' || page === 'donate-business' ? 'page' : undefined}
           >
             <HeartIcon />
             <span>Donate</span>
@@ -263,9 +265,12 @@ function App() {
 
       {showDonationPage ? (
         <DonatePage
+          kind={page === 'donate-business' ? 'business' : 'personal'}
           donationPages={experience.donationPages}
           presentingSponsor={presentingSponsor}
           onShowMap={() => setPage('map')}
+          onShowBusiness={() => setPage('donate-business')}
+          onShowPersonal={() => setPage('donate')}
         />
       ) : (
       <main id="main-content" className="workspace">

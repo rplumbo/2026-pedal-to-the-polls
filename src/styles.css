@@ -1289,6 +1289,10 @@ summary:focus-visible {
   height: 16px;
 }
 
+.text-link--secondary {
+  margin-left: 18px;
+}
+
 .donate-page h1 {
   max-width: 490px;
   margin: 10px 0 16px;
@@ -1475,6 +1479,10 @@ summary:focus-visible {
   margin: 22px 0 31px 39px;
 }
 
+.amount-grid--simple {
+  margin-left: 0;
+}
+
 .amount-grid button {
   min-height: 48px;
   color: var(--pine);
@@ -1508,6 +1516,12 @@ summary:focus-visible {
 
 .everyaction-option {
   margin-top: 10px;
+}
+
+.everyaction-option--business {
+  padding-top: 24px;
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
 }
 
 .everyaction-option:first-child {
@@ -1553,9 +1567,37 @@ summary:focus-visible {
   cursor: pointer !important;
 }
 
+.business-sponsorship-button {
+  display: inline-flex;
+  width: 100%;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 18px;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: none;
+  background: var(--pine);
+  border: 1px solid var(--pine);
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
 .everyaction-donate-button.embedded-pay-button:hover {
   background: #00555d !important;
   border-color: #00555d !important;
+}
+
+.business-sponsorship-button:hover {
+  background: #0b3029;
+  border-color: #0b3029;
 }
 
 .everyaction-donate-button--business.embedded-pay-button {
@@ -1576,6 +1618,12 @@ summary:focus-visible {
   stroke-width: 2.2;
 }
 
+.business-sponsorship-button svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.2;
+}
+
 .donation-form-shell__heading--details {
   padding-top: 24px;
   border-top: 1px solid var(--line);
@@ -1587,6 +1635,10 @@ summary:focus-visible {
   background: #f2eee4;
   border: 1px dashed #b9b2a4;
   border-radius: 4px;
+}
+
+.form-placeholder--simple {
+  margin-left: 0;
 }
 
 .form-placeholder__fields {
