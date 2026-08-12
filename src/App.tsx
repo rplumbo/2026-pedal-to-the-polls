@@ -14,7 +14,7 @@ import { formatMiles } from './lib/format'
 import type { AppData, ExperienceContent } from './types'
 
 type MobileView = 'schedule' | 'map'
-type PageView = 'map' | 'donate-personal' | 'donate-business'
+type PageView = 'map' | 'donate'
 
 const MapPanel = lazy(() =>
   import('./components/MapPanel').then((module) => ({ default: module.MapPanel })),
@@ -23,10 +23,15 @@ const MapPanel = lazy(() =>
 function readHashSelection() {
   const params = new URLSearchParams(window.location.hash.replace(/^#/, ''))
   const view = params.get('view')
+  const page: PageView =
+    view === 'donate' || view === 'donate-personal' || view === 'donate-business'
+      ? 'donate'
+      : 'map'
+
   return {
     eventId: params.get('event'),
     routeId: params.get('route'),
-    page: view === 'donate-personal' || view === 'donate-business' ? view : 'map' as PageView,
+    page,
   }
 }
 
@@ -196,7 +201,6 @@ function App() {
     return <ErrorState message="The presenting sponsor is missing from the sponsor content." />
   }
 
-  const donationKind = page === 'donate-business' ? 'business' : 'personal'
   const showDonationPage = page !== 'map'
 
   return (
@@ -248,8 +252,8 @@ function App() {
           <button
             type="button"
             className="masthead__donate"
-            onClick={() => setPage('donate-personal')}
-            aria-current={page === 'donate-personal' ? 'page' : undefined}
+            onClick={() => setPage('donate')}
+            aria-current={page === 'donate' ? 'page' : undefined}
           >
             <HeartIcon />
             <span>Donate</span>
@@ -259,11 +263,9 @@ function App() {
 
       {showDonationPage ? (
         <DonatePage
-          kind={donationKind}
-          content={experience.donationPages[donationKind]}
+          donationPages={experience.donationPages}
           presentingSponsor={presentingSponsor}
           onShowMap={() => setPage('map')}
-          onChangeKind={(kind) => setPage(`donate-${kind}`)}
         />
       ) : (
       <main id="main-content" className="workspace">
@@ -398,7 +400,7 @@ function App() {
       )}
 
       {!showDonationPage && (
-        <button className="support-ride-button" type="button" onClick={() => setPage('donate-personal')}>
+        <button className="support-ride-button" type="button" onClick={() => setPage('donate')}>
           <HeartIcon />
           Support the ride
         </button>

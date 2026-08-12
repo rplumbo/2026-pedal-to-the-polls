@@ -1496,6 +1496,82 @@ summary:focus-visible {
   font-weight: 850;
 }
 
+.everyaction-button-stack {
+  display: grid;
+  gap: 11px;
+  margin: 24px 0 0 39px;
+}
+
+.everyaction-option {
+  margin-top: 10px;
+}
+
+.everyaction-option:first-child {
+  margin-top: 0;
+}
+
+.everyaction-option h3 {
+  margin: 0 0 4px;
+  color: var(--pine);
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.1;
+}
+
+.everyaction-option p {
+  max-width: 460px;
+  margin: 0;
+  color: #62736e;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.everyaction-donate-button.embedded-pay-button {
+  display: inline-flex !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  padding: 13px 18px !important;
+  color: var(--white) !important;
+  font-family: inherit !important;
+  font-size: 0.84rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+  text-transform: none !important;
+  background: var(--lake) !important;
+  border: 1px solid var(--lake) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+.everyaction-donate-button.embedded-pay-button:hover {
+  background: #00555d !important;
+  border-color: #00555d !important;
+}
+
+.everyaction-donate-button--business.embedded-pay-button {
+  color: var(--pine) !important;
+  background: #efd197 !important;
+  border-color: #e0bc78 !important;
+}
+
+.everyaction-donate-button--business.embedded-pay-button:hover {
+  background: #ffe8b7 !important;
+  border-color: #e9c57f !important;
+}
+
+.everyaction-donate-button svg {
+  flex: none;
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.2;
+}
+
 .donation-form-shell__heading--details {
   padding-top: 24px;
   border-top: 1px solid var(--line);
