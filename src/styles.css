@@ -1423,6 +1423,10 @@ summary:focus-visible {
   align-items: start;
 }
 
+.donation-form-shell__heading--simple {
+  display: block;
+}
+
 .form-step {
   display: grid;
   width: 27px;
@@ -1499,7 +1503,7 @@ summary:focus-visible {
 .everyaction-button-stack {
   display: grid;
   gap: 11px;
-  margin: 24px 0 0 39px;
+  margin: 24px 0 0;
 }
 
 .everyaction-option {

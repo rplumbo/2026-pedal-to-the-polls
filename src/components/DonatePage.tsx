@@ -73,12 +73,8 @@ export function DonatePage({
 
       <section className="donation-form-shell" aria-label="Donation options">
         <div className="donation-form-shell__body">
-          <div className="donation-form-shell__heading">
-            <span className="form-step">1</span>
-            <div>
-              <h2>Choose how to give</h2>
-              <p>Both options open the secure EveryAction form in a popup.</p>
-            </div>
+          <div className="donation-form-shell__heading donation-form-shell__heading--simple">
+            <h2>Support the Ride</h2>
           </div>
 
           <div className="everyaction-button-stack" aria-label="Donation options">
