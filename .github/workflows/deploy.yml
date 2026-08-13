@@ -25,7 +25,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      BASE_PATH: /${{ github.event.repository.name }}/
+      BASE_PATH: /
       PUBLIC_TIMELINE_CSV_URL: ${{ vars.PUBLIC_TIMELINE_CSV_URL }}
       REQUIRE_REMOTE_TIMELINE: ${{ vars.PUBLIC_TIMELINE_CSV_URL != '' }}
 
