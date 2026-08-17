@@ -148,7 +148,7 @@ export function DonatePage({
   }, [kind])
 
   return (
-    <main className="donate-page" id="main-content">
+    <main className={`donate-page donate-page--${kind}`} id="main-content">
       <section className="donate-page__intro">
         <div className="donate-page__nav">
           <button className="text-link" type="button" onClick={onShowMap}>
@@ -163,30 +163,41 @@ export function DonatePage({
           )}
         </div>
 
-        <span className="eyebrow">{content.eyebrow}</span>
-        <h1>{content.title}</h1>
-        <div className="donate-page__copy">
-          <p className={kind === 'personal' ? 'donate-page__lead' : undefined}>{content.description}</p>
-          {content.additionalParagraphs?.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+        <div className="donate-page__content">
+          <div className="donate-page__pitch">
+            <span className="eyebrow">{content.eyebrow}</span>
+            <h1>{content.title}</h1>
+            <div className="donate-page__copy">
+              <p className={kind === 'personal' ? 'donate-page__lead' : undefined}>{content.description}</p>
+            </div>
+          </div>
 
-        {kind === 'business' && (
-          <div className="donate-page__business-resources">
-            <SponsorshipPacketLink />
-            {content.contact && (
-              <address className="donate-page__contact">
-                <strong>Questions?</strong>
-                <span>
-                  Contact {content.contact.name}, {content.contact.title}, at{' '}
-                  <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a> or{' '}
-                  <a href={`tel:${content.contact.phone.replace(/[^+\d]/g, '')}`}>{content.contact.phone}</a>.
-                </span>
-              </address>
+          <div className="donate-page__details">
+            {!!content.additionalParagraphs?.length && (
+              <div className="donate-page__copy donate-page__copy--additional">
+                {content.additionalParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            )}
+
+            {kind === 'business' && (
+              <div className="donate-page__business-resources">
+                <SponsorshipPacketLink />
+                {content.contact && (
+                  <address className="donate-page__contact">
+                    <strong>Questions?</strong>
+                    <span>
+                      Contact {content.contact.name}, {content.contact.title}, at{' '}
+                      <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a> or{' '}
+                      <a href={`tel:${content.contact.phone.replace(/[^+\d]/g, '')}`}>{content.contact.phone}</a>.
+                    </span>
+                  </address>
+                )}
+              </div>
             )}
           </div>
-        )}
+        </div>
 
         <div className="donate-page__sponsor">
           <span>Ride support provided by</span>
@@ -196,9 +207,11 @@ export function DonatePage({
 
       <section className="donation-form-shell" aria-label={kind === 'business' ? 'Business contribution form' : 'Donation options'}>
         <div className="donation-form-shell__body">
-          <div className="donation-form-shell__heading donation-form-shell__heading--simple">
-            <h2>{kind === 'business' ? 'Business sponsorship' : 'Support the ride'}</h2>
-          </div>
+          {kind === 'personal' && (
+            <div className="donation-form-shell__heading donation-form-shell__heading--simple">
+              <h2>Support the ride</h2>
+            </div>
+          )}
 
           {kind === 'personal' ? (
             <div className="everyaction-button-stack" aria-label="Donation options">

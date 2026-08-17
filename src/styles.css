@@ -1492,7 +1492,11 @@ summary:focus-visible {
   margin-top: 14px;
 }
 
-.donate-page__copy p:last-child {
+.donate-page__details {
+  margin-top: 14px;
+}
+
+.donate-page__copy--additional p:last-child {
   color: var(--pine);
   font-weight: 750;
 }
@@ -1892,7 +1896,7 @@ summary:focus-visible {
 .business-form-stack {
   display: grid;
   gap: 14px;
-  margin-top: 24px;
+  margin-top: 0;
 }
 
 .business-form-host {
@@ -2114,6 +2118,34 @@ summary:focus-visible {
 @keyframes pedal {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1480px) {
+  .donate-page--business {
+    display: block;
+    padding-right: clamp(36px, 5vw, 70px);
+    padding-left: clamp(36px, 5vw, 70px);
+  }
+
+  .donate-page--business .donate-page__intro {
+    max-width: 960px;
+  }
+
+  .donate-page--business .donate-page__content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(34px, 5vw, 64px);
+    align-items: start;
+  }
+
+  .donate-page--business .donate-page__details {
+    margin-top: 32px;
+  }
+
+  .donate-page--business .donation-form-shell {
+    max-width: 960px;
+    margin-top: 48px;
   }
 }
 
