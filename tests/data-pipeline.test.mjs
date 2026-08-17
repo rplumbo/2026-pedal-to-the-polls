@@ -371,9 +371,9 @@ test("generated app data is normalized, chronological, and public-safe", async (
   assert.equal(data.meta.schemaVersion, 1);
   assert.equal(data.meta.title, "2026 Pedal to the Polls");
   assert.equal(data.meta.timezone, "America/Chicago");
-  assert.equal(data.meta.startDate, "2026-09-23");
+  assert.equal(data.meta.startDate, "2026-09-22");
   assert.equal(data.meta.endDate, "2026-11-01");
-  assert.equal(data.meta.dateRange, "September 23 – November 1, 2026");
+  assert.equal(data.meta.dateRange, "September 22 – November 1, 2026");
   assert.deepEqual(Object.keys(data).sort(), [
     "meta",
     "routes",
@@ -440,6 +440,7 @@ test("generated app data is normalized, chronological, and public-safe", async (
   assert.equal(data.stats.routeCount, data.routes.length);
   assert.equal(data.stats.timelineEntryCount, data.timeline.length);
   assert.equal(data.stats.eventCount, events.length);
+  assert.equal(events.length, 19);
   assert.equal(
     data.stats.confirmedEventCount + data.stats.tentativeEventCount,
     events.length
@@ -449,6 +450,30 @@ test("generated app data is normalized, chronological, and public-safe", async (
   assert.deepEqual(
     events.map((event) => event.number),
     Array.from({ length: events.length }, (_, index) => index + 1)
+  );
+  assert.deepEqual(
+    events.map((event) => event.date),
+    [
+      "2026-09-22",
+      "2026-09-26",
+      "2026-09-27",
+      "2026-09-28",
+      "2026-09-30",
+      "2026-10-03",
+      "2026-10-07",
+      "2026-10-10",
+      "2026-10-15",
+      "2026-10-17",
+      "2026-10-19",
+      "2026-10-20",
+      "2026-10-22",
+      "2026-10-24",
+      "2026-10-25",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-29",
+      "2026-11-01"
+    ]
   );
   assert.ok(
     events.every(
@@ -465,6 +490,7 @@ test("generated app data is normalized, chronological, and public-safe", async (
     "city",
     "coordinateSource",
     "coordinates",
+    "date",
     "description",
     "id",
     "number",

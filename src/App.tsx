@@ -4,6 +4,7 @@ import { Timeline } from './components/Timeline'
 import { loadAppData, loadExperienceContent } from './data'
 import {
   CalendarIcon,
+  ChevronDownIcon,
   HeartIcon,
   MapIcon,
   RouteIcon,
@@ -279,8 +280,43 @@ function App() {
             <span className="eyebrow">Ride across Minnesota</span>
             <h1>Pedal to the Polls</h1>
             <p>
-              Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her husband Dave as they ride across the State to encourage Minnesotans to get out and vote for Boundary Waters champions this midterm! Amy and Dave are towing a canoe through dozens of Minnesota State Legislative districts to raise awareness for Boundary Waters permanent protection, and how Minnesota can act to safeguard this special place, forever.
+              <span className="ride-intro__riders">
+                <img
+                  src="https://www.dropbox.com/scl/fi/t62586ikmzsds6ythxvsw/20160621_6D_NJP_IMG_4132.jpg?rlkey=dzc0vb2k85v2eoyejcehlr5ur&raw=1"
+                  alt="Amy and Dave Freeman in the Boundary Waters"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                />
+                <span>Amy &amp; Dave Freeman</span>
+              </span>
+              Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her husband Dave as they ride across the State to encourage Minnesotans to get out and vote for Boundary Waters champions this midterm! Amy and Dave are biking (with a canoe in tow) across the state of Minnesota to raise awareness for Boundary Waters permanent protection, and how Minnesota can act to safeguard this special place, forever.
             </p>
+            <div className="ride-intro__actions">
+              <details className="ride-intro__more">
+                <summary>
+                  <span className="ride-intro__more-logo" aria-hidden="true">
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/STBWAF%20Logo_white.png.avif`}
+                      alt=""
+                    />
+                  </span>
+                  <span className="ride-intro__more-copy">
+                    <strong>About the Action Fund</strong>
+                    <small>Turning Boundary Waters protection into action at the ballot box.</small>
+                    <span className="ride-intro__more-cue">
+                      <span className="ride-intro__more-closed">Learn about our work</span>
+                      <span className="ride-intro__more-open">Show less</span>
+                      <ChevronDownIcon />
+                    </span>
+                  </span>
+                </summary>
+                <div>
+                  <p>
+                    The Save the Boundary Waters Action Fund is a 501c(4) organization dedicated to permanently protecting the Boundary Waters Canoe Area Wilderness from toxic copper-nickel mining proposed in its watershed. Save the Boundary Waters Action Fund endorses candidates committed to supporting permanent protection legislation, meets with lawmakers, works to make Boundary Waters protection a winning electoral issue, and provides grassroots support to endorsed Boundary Waters champions through a robust door knocking and volunteer program. The mission of Save the Boundary Waters Action Fund is to ensure Minnesota elects Boundary Waters champions who will protect this special and unique place, forever.
+                  </p>
+                </div>
+              </details>
+            </div>
             <p className="ride-intro__dates">
               <CalendarIcon />
               {data.meta.dateRange}
@@ -302,7 +338,7 @@ function App() {
             </dl>
           </section>
 
-          <section className="schedule-controls" aria-label="Route leg selection">
+          <section id="route-navigator" className="schedule-controls" aria-label="Route leg selection">
             <div className="schedule-controls__heading">
               <div>
                 <span className="eyebrow">The journey</span>

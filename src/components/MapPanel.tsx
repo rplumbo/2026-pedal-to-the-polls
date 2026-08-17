@@ -298,7 +298,7 @@ export function MapPanel({
         button.style.setProperty('--route-color', entryRoute?.color ?? 'var(--pine)')
         button.setAttribute(
           'aria-label',
-          `${entry.event.number}. ${entry.event.title}, ${formatDateRange(entry.startDate, entry.endDate)}`,
+          `${entry.event.number}. ${entry.event.title}, ${formatDateRange(entry.event.date)}`,
         )
         button.title = entry.event.title
         button.innerHTML = `<span aria-hidden="true">${entry.event.number}</span>`
@@ -446,8 +446,8 @@ export function MapPanel({
             <div>
               <dt>Date</dt>
               <dd>
-                <time dateTime={selectedEntry.startDate}>
-                  {formatDateRange(selectedEntry.startDate, selectedEntry.endDate)}
+                <time dateTime={selectedEntry.event.date}>
+                  {formatDateRange(selectedEntry.event.date)}
                 </time>
               </dd>
             </div>
@@ -457,10 +457,8 @@ export function MapPanel({
             </div>
             <div className="map-event-card__place">
               <dt>Place</dt>
-              <dd>{selectedEntry.event.venue ?? selectedEntry.event.city}</dd>
-              {selectedEntry.event.venue && selectedEntry.event.city && (
-                <span>{selectedEntry.event.city}</span>
-              )}
+              <dd>{selectedEntry.event.venue ?? 'To be announced'}</dd>
+              {selectedEntry.event.city && <span>{selectedEntry.event.city}</span>}
               {selectedEntry.event.address && <span>{selectedEntry.event.address}</span>}
             </div>
           </dl>

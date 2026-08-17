@@ -54,6 +54,14 @@ export function CloseIcon(props: IconProps) {
   )
 }
 
+export function DownloadIcon(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M5 20h14" />
+    </svg>
+  )
+}
+
 export function HeartIcon(props: IconProps) {
   return (
     <svg {...defaults} {...props}>

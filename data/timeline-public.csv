@@ -9,9 +9,9 @@ Date,From,To,Miles (approx),Legislative District,Event Stop?
 "Friday, October 2nd",Deer River,Cass Lake,28,,No
 "Saturday, October 3rd",Cass Lake,Bemidji,15,2A,Yes
 "Sunday, October 4th",Bemidji,Park Rapids,37,,No
-"Monday, October 5th",Park Rapids,Detroit Lakes,40,,TBD
-"Tuesday, October 6th",Detroit Lakes,Moorhead,50,SD 4,Yes
-"Wednesday, October 7th-Thursday, 8th",Moorhead,Fergus Falls,56,,TBD
+"Monday, October 5th",Park Rapids,Detroit Lakes,40,,No
+"Tuesday, October 6th",Detroit Lakes,Moorhead,50,SD 4,No
+"Wednesday, October 7th-Thursday, 8th",Moorhead,Fergus Falls,56,,Yes
 "Friday, October 9th",Fergus Falls,Alexandria,48,,No
 "Saturday, October 10-Sunday, 11th",Alexandria,Saint Cloud,70,SD 14,Yes
 "Monday, October 12th and Tuesday, 13th",Saint Cloud,Saint Cloud,,,No

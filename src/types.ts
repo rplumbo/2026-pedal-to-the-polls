@@ -32,6 +32,7 @@ export interface RideRoute {
 export interface RideEvent {
   id: string
   number: number
+  date: string
   title: string
   description: string
   timeLabel?: string | null
@@ -63,11 +64,13 @@ export interface DonationPageContent {
   eyebrow: string
   title: string
   description: string
-  impactTitle: string
-  impactItems: string[]
-  amountOptions: number[]
-  customAmountLabel: string
-  submitLabel: string
+  additionalParagraphs?: string[]
+  contact?: {
+    name: string
+    title: string
+    email: string
+    phone: string
+  }
 }
 
 export interface ExperienceContent {

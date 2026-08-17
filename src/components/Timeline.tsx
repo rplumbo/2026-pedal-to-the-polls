@@ -66,6 +66,9 @@ function TimelineCard({
               <span className="status-label">
                 {isSelected ? 'Selected stop' : 'Event stop'}
               </span>
+              <time className="timeline-card__event-date" dateTime={entry.event.date}>
+                {formatDateRange(entry.event.date)}
+              </time>
               <h3>{entry.event.title}</h3>
             </div>
           </div>

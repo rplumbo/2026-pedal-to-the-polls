@@ -916,6 +916,9 @@ function validateOverrides(overrides) {
     if (event.url) {
       normalizeHttpsUrl(event.url, `Event override ${date} URL`);
     }
+    if (event.date) {
+      assertIsoDate(event.date, `Event override ${date} public date`);
+    }
     if (event.locationHint) {
       validateCoordinatePair(
         event.locationHint,
@@ -1287,6 +1290,12 @@ export function buildTimeline({
       event = {
         id: eventId,
         number: eventNumber,
+        date: override.date
+          ? assertIsoDate(
+              override.date,
+              `Event override ${date.startDate} public date`
+            )
+          : date.startDate,
         title,
         description,
         timeLabel,
@@ -1341,6 +1350,7 @@ function validateOutput(data) {
 
   const routeIds = new Set(data.routes.map((route) => route.id));
   const eventNumbers = [];
+  let previousEventDate = null;
   for (const entry of data.timeline) {
     if (!routeIds.has(entry.routeId)) {
       throw new Error(`Generated timeline references unknown route ${entry.routeId}.`);
@@ -1356,6 +1366,18 @@ function validateOutput(data) {
         entry.event.coordinates,
         `Generated event ${entry.event.id}`
       );
+      const eventDate = assertIsoDate(
+        entry.event.date,
+        `Generated event ${entry.event.id} date`
+      );
+      if (
+        eventDate < data.meta.startDate ||
+        eventDate > data.meta.endDate ||
+        (previousEventDate && eventDate < previousEventDate)
+      ) {
+        throw new Error(`Generated event ${entry.event.id} is outside chronological campaign order.`);
+      }
+      previousEventDate = eventDate;
       eventNumbers.push(entry.event.number);
     } else if (entry.eventStatus !== "none") {
       throw new Error("Generated non-event row has a public event status.");
@@ -1467,7 +1489,6 @@ export async function buildAppData() {
   validateOverrides(overrides);
 
   const warnings = [
-    "The first two routes use sparse cue-point geometry; lines between cues are approximate.",
     "Events without published latitude and longitude are snapped to the route near a curated city center.",
     "Source cumulative-mile totals are excluded because they do not reconcile with the itinerary rows."
   ];
@@ -1500,9 +1521,9 @@ export async function buildAppData() {
       title: "2026 Pedal to the Polls",
       year: RIDE_YEAR,
       timezone: "America/Chicago",
-      startDate: "2026-09-23",
+      startDate: "2026-09-22",
       endDate: "2026-11-01",
-      dateRange: "September 23 – November 1, 2026",
+      dateRange: "September 22 – November 1, 2026",
       generatedAt: generatedAt(),
       source: {
         timeline: timelineSource.source,
