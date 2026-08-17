@@ -200,10 +200,6 @@ function App() {
     (sponsor) => sponsor.id === experience.presentingSponsorId,
   )
 
-  if (!presentingSponsor) {
-    return <ErrorState message="The presenting sponsor is missing from the sponsor content." />
-  }
-
   const showDonationPage = page !== 'map'
 
   return (
@@ -251,7 +247,6 @@ function App() {
         </nav>}
 
         <div className="masthead__actions">
-          <span className="masthead__mission">Minnesota miles for the Boundary Waters</span>
           <button
             type="button"
             className="masthead__donate"

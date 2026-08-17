@@ -75,7 +75,7 @@ export interface DonationPageContent {
 
 export interface ExperienceContent {
   sponsors: Sponsor[]
-  presentingSponsorId: string
+  presentingSponsorId: string | null
   stopSponsors: Record<string, StopSponsor>
   donationPages: {
     personal: DonationPageContent

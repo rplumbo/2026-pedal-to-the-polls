@@ -34,7 +34,8 @@ function assertExperienceContent(value: unknown): asserts value is ExperienceCon
   const content = value as Partial<ExperienceContent>
   if (
     !Array.isArray(content.sponsors) ||
-    !content.presentingSponsorId ||
+    !('presentingSponsorId' in content) ||
+    (content.presentingSponsorId !== null && typeof content.presentingSponsorId !== 'string') ||
     !content.stopSponsors ||
     !content.donationPages?.personal ||
     !content.donationPages.business

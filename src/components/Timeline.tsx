@@ -70,6 +70,10 @@ function TimelineCard({
                 {formatDateRange(entry.event.date)}
               </time>
               <h3>{entry.event.title}</h3>
+              <div className="timeline-card__event-facts">
+                <span>{entry.event.timeLabel ? `${entry.event.timeLabel} CT` : 'Time TBD'}</span>
+                <span>{entry.event.venue ?? 'Place TBD'}</span>
+              </div>
             </div>
           </div>
           {isSelected && (

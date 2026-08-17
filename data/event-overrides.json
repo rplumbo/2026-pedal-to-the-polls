@@ -11,7 +11,8 @@
       "timeLabel": "4:00 PM – 7:00 PM",
       "venue": "Puddle Jumper Park",
       "city": "Ely",
-      "locationHint": [-91.86687, 47.90325]
+      "address": "115 E Chapman St, Ely, MN",
+      "coordinates": [-91.86507, 47.902386]
     },
     "2026-09-24": {
       "id": "heck-fest",
@@ -22,7 +23,8 @@
       "description": "Join us at Heck Fest in Two Harbors! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Castle Danger",
       "city": "Two Harbors",
-      "locationHint": [-91.67073, 47.02271]
+      "address": "17 7th St, Two Harbors, MN",
+      "coordinates": [-91.673282, 47.019521]
     },
     "2026-09-27": {
       "id": "duluth-public-lands-day-celebration",
@@ -33,7 +35,8 @@
       "description": "Join us to celebrate National Public Lands Day in Duluth! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Duluth Cider",
       "city": "Duluth",
-      "locationHint": [-92.10049, 46.78667]
+      "address": "2307 W Superior St, Duluth, MN",
+      "coordinates": [-92.127521, 46.76493]
     },
     "2026-09-28": {
       "id": "cloquet-door-knock",
@@ -54,7 +57,8 @@
       "description": "Hear from Amy and Dave Freeman in Grand Rapids about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Klockow Brewing",
       "city": "Grand Rapids",
-      "locationHint": [-93.53021, 47.23717]
+      "address": "36 SE 10th St, Grand Rapids, MN",
+      "coordinates": [-93.527669, 47.221078]
     },
     "2026-10-03": {
       "id": "bemidji-door-knock",
@@ -95,7 +99,8 @@
       "description": "Hear from Amy and Dave Freeman in Mankato about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "LocAle Brewery",
       "city": "Mankato",
-      "locationHint": [-93.9994, 44.16358]
+      "address": "228 Poplar St, Mankato, MN",
+      "coordinates": [-94.009748, 44.163755]
     },
     "2026-10-17": {
       "id": "northfield-community-gathering",
@@ -126,7 +131,8 @@
       "description": "Hear from Amy and Dave Freeman in Winona about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Two Fathoms Brewing",
       "city": "Winona",
-      "locationHint": [-91.66635, 44.05539]
+      "address": "65 E Front St, Winona, MN",
+      "coordinates": [-91.635228, 44.05358]
     },
     "2026-10-22": {
       "id": "lake-city-community-gathering",
@@ -137,7 +143,8 @@
       "description": "Hear from Amy and Dave Freeman in Lake City about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Lake City Public Library",
       "city": "Lake City",
-      "locationHint": [-92.26684, 44.44974]
+      "address": "201 S High St, Lake City, MN",
+      "coordinates": [-92.266258, 44.448039]
     },
     "2026-10-24": {
       "id": "lakeville-door-knock",
@@ -168,7 +175,8 @@
       "description": "Hear from Amy and Dave Freeman in Minnetonka about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Back Channel Brewing",
       "city": "Minnetonka",
-      "locationHint": [-93.56635, 44.9033]
+      "address": "4787 Shoreline Dr, Spring Park, MN",
+      "coordinates": [-93.644013, 44.936406]
     },
     "2026-10-27": {
       "id": "coon-rapids-door-knock",
@@ -189,7 +197,8 @@
       "description": "Hear from Amy and Dave Freeman in Saint Paul about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
       "venue": "Patagonia",
       "city": "Saint Paul",
-      "locationHint": [-93.08996, 44.9537]
+      "address": "1648 Grand Ave, Saint Paul, MN",
+      "coordinates": [-93.170154, 44.939819]
     },
     "2026-11-01": {
       "id": "stillwater-grand-finale",
@@ -200,7 +209,8 @@
       "description": "At the Grand Finale of the 2026 Pedal to the Polls campaign, hear from Amy and Dave Freeman about their journey across Minnesota and celebrate the end of the campaign with us.",
       "venue": "River Siren Brewery",
       "city": "Stillwater",
-      "locationHint": [-92.80604, 45.056]
+      "address": "225 Main St N, Stillwater, MN",
+      "coordinates": [-92.806476, 45.058143]
     }
   }
 }

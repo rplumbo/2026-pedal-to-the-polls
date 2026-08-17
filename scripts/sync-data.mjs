@@ -925,6 +925,12 @@ function validateOverrides(overrides) {
         `Event override ${date} location hint`
       );
     }
+    if (event.coordinates) {
+      validateCoordinatePair(
+        event.coordinates,
+        `Event override ${date} coordinates`
+      );
+    }
   }
 }
 
@@ -1264,11 +1270,20 @@ export function buildTimeline({
           `Timeline record ${sourceRecord} must provide both event latitude and longitude.`
         );
       }
+      const overrideCoordinates = override.coordinates
+        ? validateCoordinatePair(
+            override.coordinates,
+            `Event override ${date.startDate} coordinates`
+          )
+        : null;
 
       let coordinates;
       let coordinateSource;
       if (latitude !== null && longitude !== null) {
         coordinates = [round(longitude), round(latitude)];
+        coordinateSource = "provided";
+      } else if (overrideCoordinates) {
+        coordinates = overrideCoordinates.map((coordinate) => round(coordinate));
         coordinateSource = "provided";
       } else {
         const overrideCity = normalizeWhitespace(override.city).toLowerCase();

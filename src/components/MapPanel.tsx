@@ -26,7 +26,7 @@ interface MapPanelProps {
   onSelectEvent: (eventId: string) => void
   onClearEvent: () => void
   sponsors: Sponsor[]
-  presentingSponsorId: string
+  presentingSponsorId: string | null
   stopSponsors: Record<string, StopSponsor>
 }
 
@@ -453,13 +453,15 @@ export function MapPanel({
             </div>
             <div>
               <dt>Time</dt>
-              <dd>{selectedEntry.event.timeLabel ? `${selectedEntry.event.timeLabel} CT` : 'To be announced'}</dd>
+              <dd>{selectedEntry.event.timeLabel ? `${selectedEntry.event.timeLabel} CT` : 'TBD'}</dd>
             </div>
             <div className="map-event-card__place">
               <dt>Place</dt>
-              <dd>{selectedEntry.event.venue ?? 'To be announced'}</dd>
-              {selectedEntry.event.city && <span>{selectedEntry.event.city}</span>}
+              <dd>{selectedEntry.event.venue ?? 'TBD'}</dd>
               {selectedEntry.event.address && <span>{selectedEntry.event.address}</span>}
+              {!selectedEntry.event.address && selectedEntry.event.city && (
+                <span>{selectedEntry.event.city}</span>
+              )}
             </div>
           </dl>
           <section className="map-event-card__description" aria-label="About this stop">

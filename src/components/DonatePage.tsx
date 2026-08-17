@@ -16,7 +16,7 @@ interface DonatePageProps {
     personal: DonationPageContent
     business: DonationPageContent
   }
-  presentingSponsor: Sponsor
+  presentingSponsor?: Sponsor
   onShowMap: () => void
   onShowBusiness: () => void
   onShowPersonal: () => void
@@ -183,6 +183,9 @@ export function DonatePage({
 
             {kind === 'business' && (
               <div className="donate-page__business-resources">
+                <p className="donate-page__packet-prompt">
+                  Want to see the sponsorship opportunities and benefits?
+                </p>
                 <SponsorshipPacketLink />
                 {content.contact && (
                   <address className="donate-page__contact">
@@ -190,7 +193,7 @@ export function DonatePage({
                     <span>
                       Contact {content.contact.name}, {content.contact.title}, at{' '}
                       <a href={`mailto:${content.contact.email}`}>{content.contact.email}</a> or{' '}
-                      <a href={`tel:${content.contact.phone.replace(/[^+\d]/g, '')}`}>{content.contact.phone}</a>.
+                      <a href={`tel:${content.contact.phone.replace(/[^+\d]/g, '')}`}>{content.contact.phone}</a>
                     </span>
                   </address>
                 )}
@@ -199,10 +202,12 @@ export function DonatePage({
           </div>
         </div>
 
-        <div className="donate-page__sponsor">
-          <span>Ride support provided by</span>
-          <SponsorLogo sponsor={presentingSponsor} />
-        </div>
+        {presentingSponsor && (
+          <div className="donate-page__sponsor">
+            <span>Ride support provided by</span>
+            <SponsorLogo sponsor={presentingSponsor} />
+          </div>
+        )}
       </section>
 
       <section className="donation-form-shell" aria-label={kind === 'business' ? 'Business contribution form' : 'Donation options'}>
