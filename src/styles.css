@@ -1064,13 +1064,14 @@ summary:focus-visible {
   width: min(430px, calc(100% - 104px));
 }
 
-.map-sponsor-dock summary {
+.map-sponsor-dock__single {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 11px;
   padding: 10px 13px;
   color: var(--pine);
+  text-decoration: none;
   list-style: none;
   background: rgba(255, 253, 247, 0.95);
   border: 1px solid rgba(151, 159, 153, 0.65);
@@ -1083,10 +1084,6 @@ summary:focus-visible {
     transform 150ms ease;
 }
 
-.map-sponsor-dock summary::-webkit-details-marker {
-  display: none;
-}
-
 .map-sponsor-dock__label,
 .map-event-card__sponsor > span,
 .timeline-card__sponsor > span {
@@ -1097,7 +1094,7 @@ summary:focus-visible {
   text-transform: uppercase;
 }
 
-.map-sponsor-dock summary:hover {
+.map-sponsor-dock__single:hover {
   border-color: #82978f;
   box-shadow: 0 8px 20px rgba(29, 52, 46, 0.15);
   transform: translateY(-1px);
@@ -1124,43 +1121,6 @@ summary:focus-visible {
   transition: transform 150ms ease;
 }
 
-.map-sponsor-dock__open {
-  display: none;
-}
-
-.map-sponsor-dock[open] .map-sponsor-dock__closed {
-  display: none;
-}
-
-.map-sponsor-dock[open] .map-sponsor-dock__open {
-  display: inline;
-}
-
-.map-sponsor-dock[open] .map-sponsor-dock__cue svg {
-  transform: rotate(180deg);
-}
-
-.map-sponsor-dock__tray {
-  margin-top: 5px;
-  padding: 13px;
-  background: rgba(255, 253, 247, 0.98);
-  border: 1px solid rgba(151, 159, 153, 0.65);
-  border-radius: 4px;
-  box-shadow: 0 10px 24px rgba(29, 52, 46, 0.15);
-}
-
-.map-sponsor-dock__tray > p {
-  margin: 0 0 9px;
-  color: #60716c;
-  font-size: 0.62rem;
-  font-weight: 800;
-}
-
-.map-sponsor-dock__tray > div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7px;
-}
 
 .sponsor-logo {
   display: inline-flex;
@@ -1209,13 +1169,13 @@ summary:focus-visible {
   white-space: nowrap;
 }
 
-.map-sponsor-dock > summary .sponsor-logo__monogram {
+.map-sponsor-dock .sponsor-logo__monogram {
   width: 29px;
   height: 29px;
   font-size: 0.69rem;
 }
 
-.map-sponsor-dock > summary .sponsor-logo__copy strong {
+.map-sponsor-dock .sponsor-logo__copy strong {
   font-size: 0.86rem;
 }
 
@@ -1224,14 +1184,6 @@ summary:focus-visible {
   color: #64746f;
   font-size: 0.53rem;
   font-weight: 800;
-}
-
-.map-sponsor-dock__tray .sponsor-logo {
-  min-height: 48px;
-  padding: 8px;
-  background: #f3efe5;
-  border: 1px solid var(--line);
-  border-radius: 3px;
 }
 
 .support-ride-button {
@@ -2390,7 +2342,7 @@ summary:focus-visible {
     width: calc(100% - 76px);
   }
 
-  .map-sponsor-dock summary {
+  .map-sponsor-dock__single {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
     padding: 8px 10px;
@@ -2404,13 +2356,13 @@ summary:focus-visible {
     padding-left: 8px;
   }
 
-  .map-sponsor-dock > summary .sponsor-logo__monogram {
+  .map-sponsor-dock .sponsor-logo__monogram {
     width: 25px;
     height: 25px;
     font-size: 0.62rem;
   }
 
-  .map-sponsor-dock > summary .sponsor-logo__copy strong {
+  .map-sponsor-dock .sponsor-logo__copy strong {
     font-size: 0.75rem;
   }
 

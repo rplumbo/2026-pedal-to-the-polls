@@ -9,7 +9,7 @@ import {
 } from 'maplibre-gl'
 import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ChevronDownIcon, CloseIcon } from '../icons'
+import { ArrowRightIcon, CloseIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
 import { SponsorLogo } from './SponsorLogo'
@@ -394,25 +394,22 @@ export function MapPanel({
       </svg>
 
       {presentingSponsor && (
-        <details className="map-sponsor-dock">
-          <summary>
+        <aside className="map-sponsor-dock">
+          <a
+            className="map-sponsor-dock__single"
+            href={presentingSponsor.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Visit presenting sponsor ${presentingSponsor.name}`}
+          >
             <span className="map-sponsor-dock__label">Presented by</span>
             <SponsorLogo sponsor={presentingSponsor} linked={false} />
             <span className="map-sponsor-dock__cue">
-              <span className="map-sponsor-dock__closed">View ride partners</span>
-              <span className="map-sponsor-dock__open">Hide ride partners</span>
-              <ChevronDownIcon />
+              Visit sponsor
+              <ArrowRightIcon />
             </span>
-          </summary>
-          <div className="map-sponsor-dock__tray">
-            <p>Supporting the full ride</p>
-            <div>
-              {sponsors.map((sponsor) => (
-                <SponsorLogo sponsor={sponsor} key={sponsor.id} showLevel />
-              ))}
-            </div>
-          </div>
-        </details>
+          </a>
+        </aside>
       )}
 
       {mapFailed && (

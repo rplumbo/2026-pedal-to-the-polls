@@ -8,47 +8,10 @@
       "monogram": "NC",
       "url": "https://www.northstarcanoes.com/",
       "logoUrl": "images/Northstar_logo.png"
-    },
-    {
-      "id": "clearwater-co-op",
-      "name": "Clearwater Co-op",
-      "shortName": "Clearwater Co-op",
-      "level": "Trail partner",
-      "monogram": "CC",
-      "url": "http://www.savetheboundarywaters.org"
-    },
-    {
-      "id": "north-country-cycles",
-      "name": "Dunder Mifflin Paper Co.",
-      "shortName": "Dunder Mifflin Paper Co.",
-      "level": "Trail partner",
-      "monogram": "DM",
-      "url": "http://www.savetheboundarywaters.org"
-    },
-    {
-      "id": "wild-rice-roasters",
-      "name": "Mississippi Spelling Association",
-      "shortName": "Mississippi Spelling Association",
-      "level": "Community partner",
-      "monogram": "MS",
-      "url": "http://www.savetheboundarywaters.org"
     }
   ],
   "presentingSponsorId": "northstar-canoes",
-  "stopSponsors": {
-    "ely-launch-event": {
-      "sponsorId": "north-country-cycles",
-      "label": "Launch stop partner"
-    },
-    "grand-rapids-community-gathering": {
-      "sponsorId": "clearwater-co-op",
-      "label": "Community stop partner"
-    },
-    "saint-paul-community-gathering": {
-      "sponsorId": "wild-rice-roasters",
-      "label": "Community stop partner"
-    }
-  },
+  "stopSponsors": {},
   "donationPages": {
     "personal": {
       "eyebrow": "Support the ride",
