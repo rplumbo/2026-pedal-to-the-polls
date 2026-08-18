@@ -7,8 +7,13 @@ interface SponsorLogoProps {
 }
 
 export function SponsorLogo({ sponsor, className = '', showLevel = false }: SponsorLogoProps) {
+  const logoSrc = sponsor.logoUrl?.startsWith('http')
+    ? sponsor.logoUrl
+    : sponsor.logoUrl
+      ? `${import.meta.env.BASE_URL}${sponsor.logoUrl.replace(/^\/+/, '')}`
+      : undefined
   const mark = sponsor.logoUrl ? (
-    <img className="sponsor-logo__image" src={sponsor.logoUrl} alt={sponsor.name} />
+    <img className="sponsor-logo__image" src={logoSrc} alt={sponsor.name} />
   ) : (
     <span className="sponsor-logo__monogram" aria-hidden="true">
       {sponsor.monogram}
@@ -18,10 +23,12 @@ export function SponsorLogo({ sponsor, className = '', showLevel = false }: Spon
   const content = (
     <>
       {mark}
-      <span className="sponsor-logo__copy">
-        <strong>{sponsor.shortName}</strong>
-        {showLevel && <small>{sponsor.level}</small>}
-      </span>
+      {(!sponsor.logoUrl || showLevel) && (
+        <span className="sponsor-logo__copy">
+          {!sponsor.logoUrl && <strong>{sponsor.shortName}</strong>}
+          {showLevel && <small>{sponsor.level}</small>}
+        </span>
+      )}
     </>
   )
 

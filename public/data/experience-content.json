@@ -1,12 +1,13 @@
 {
   "sponsors": [
     {
-      "id": "northstar-outdoors",
-      "name": "Northstar Outdoors",
-      "shortName": "Northstar Outdoors",
+      "id": "northstar-canoes",
+      "name": "Northstar Canoes",
+      "shortName": "Northstar Canoes",
       "level": "Presenting partner",
-      "monogram": "NO",
-      "url": "http://www.savetheboundarywaters.org"
+      "monogram": "NC",
+      "url": "https://www.northstarcanoes.com/",
+      "logoUrl": "images/Northstar_logo.png"
     },
     {
       "id": "clearwater-co-op",
@@ -33,7 +34,7 @@
       "url": "http://www.savetheboundarywaters.org"
     }
   ],
-  "presentingSponsorId": "northstar-outdoors",
+  "presentingSponsorId": "northstar-canoes",
   "stopSponsors": {
     "ely-launch-event": {
       "sponsorId": "north-country-cycles",
