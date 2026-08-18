@@ -9,7 +9,7 @@ import {
 } from 'maplibre-gl'
 import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { CloseIcon } from '../icons'
+import { ChevronDownIcon, CloseIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
 import { SponsorLogo } from './SponsorLogo'
@@ -397,8 +397,12 @@ export function MapPanel({
         <details className="map-sponsor-dock">
           <summary>
             <span className="map-sponsor-dock__label">Presented by</span>
-            <SponsorLogo sponsor={presentingSponsor} />
-            <span className="map-sponsor-dock__partners">Partners</span>
+            <SponsorLogo sponsor={presentingSponsor} linked={false} />
+            <span className="map-sponsor-dock__cue">
+              <span className="map-sponsor-dock__closed">View ride partners</span>
+              <span className="map-sponsor-dock__open">Hide ride partners</span>
+              <ChevronDownIcon />
+            </span>
           </summary>
           <div className="map-sponsor-dock__tray">
             <p>Supporting the full ride</p>

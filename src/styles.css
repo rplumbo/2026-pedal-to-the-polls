@@ -1077,6 +1077,10 @@ summary:focus-visible {
   border-radius: 4px;
   box-shadow: 0 5px 16px rgba(29, 52, 46, 0.1);
   cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
 }
 
 .map-sponsor-dock summary::-webkit-details-marker {
@@ -1084,7 +1088,6 @@ summary:focus-visible {
 }
 
 .map-sponsor-dock__label,
-.map-sponsor-dock__partners,
 .map-event-card__sponsor > span,
 .timeline-card__sponsor > span {
   color: #60716c;
@@ -1094,9 +1097,47 @@ summary:focus-visible {
   text-transform: uppercase;
 }
 
-.map-sponsor-dock__partners {
+.map-sponsor-dock summary:hover {
+  border-color: #82978f;
+  box-shadow: 0 8px 20px rgba(29, 52, 46, 0.15);
+  transform: translateY(-1px);
+}
+
+.map-sponsor-dock__cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding-left: 11px;
+  color: var(--lake);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
   border-left: 1px solid var(--line);
+}
+
+.map-sponsor-dock__cue svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  transition: transform 150ms ease;
+}
+
+.map-sponsor-dock__open {
+  display: none;
+}
+
+.map-sponsor-dock[open] .map-sponsor-dock__closed {
+  display: none;
+}
+
+.map-sponsor-dock[open] .map-sponsor-dock__open {
+  display: inline;
+}
+
+.map-sponsor-dock[open] .map-sponsor-dock__cue svg {
+  transform: rotate(180deg);
 }
 
 .map-sponsor-dock__tray {
@@ -2359,7 +2400,7 @@ summary:focus-visible {
     display: none;
   }
 
-  .map-sponsor-dock__partners {
+  .map-sponsor-dock__cue {
     padding-left: 8px;
   }
 

@@ -4,9 +4,15 @@ interface SponsorLogoProps {
   sponsor: Sponsor
   className?: string
   showLevel?: boolean
+  linked?: boolean
 }
 
-export function SponsorLogo({ sponsor, className = '', showLevel = false }: SponsorLogoProps) {
+export function SponsorLogo({
+  sponsor,
+  className = '',
+  showLevel = false,
+  linked = true,
+}: SponsorLogoProps) {
   const logoSrc = sponsor.logoUrl?.startsWith('http')
     ? sponsor.logoUrl
     : sponsor.logoUrl
@@ -32,7 +38,7 @@ export function SponsorLogo({ sponsor, className = '', showLevel = false }: Spon
     </>
   )
 
-  if (sponsor.url) {
+  if (sponsor.url && linked) {
     return (
       <a
         className={`sponsor-logo ${className}`.trim()}
