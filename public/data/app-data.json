@@ -7,13 +7,13 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-08-19T22:06:02.981Z",
+    "generatedAt": "2026-08-19T22:15:21.816Z",
     "source": {
       "timeline": {
         "kind": "local",
         "label": "data/timeline-public.csv"
       },
-      "timelineSha256": "ab2ab3a82c81f09f44dd2d29bb7c4ace76eb1c2b96e3fd0f46aeb784f05093a0",
+      "timelineSha256": "c4b98f2ba80938594aca9a3a01ef8a99f56a6dcd3d95319ab2196b474413dbde",
       "routeManifest": "data/route-manifest.json"
     },
     "warnings": [
@@ -19606,14 +19606,14 @@
   ],
   "timeline": [
     {
-      "id": "day-2026-09-23-ely-finland-halfway",
+      "id": "day-2026-09-23-ely-finland",
       "order": 1,
       "dateLabel": "Wednesday, Sept 23rd",
       "startDate": "2026-09-23",
       "endDate": "2026-09-23",
       "routeId": "ely-grand-rapids",
       "from": "Ely",
-      "to": "Finland (halfway)",
+      "to": "Finland",
       "miles": 38,
       "milesLabel": "38 miles",
       "district": "SD 3",
@@ -19638,13 +19638,13 @@
       }
     },
     {
-      "id": "day-2026-09-24-finland-halfway-two-harbors",
+      "id": "day-2026-09-24-finland-two-harbors",
       "order": 2,
       "dateLabel": "Thursday, Sept 24th-Saturday, 26th",
       "startDate": "2026-09-24",
       "endDate": "2026-09-26",
       "routeId": "ely-grand-rapids",
-      "from": "Finland (halfway)",
+      "from": "Finland",
       "to": "Two Harbors",
       "miles": 34,
       "milesLabel": "34 miles",
