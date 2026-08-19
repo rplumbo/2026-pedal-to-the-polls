@@ -8,7 +8,7 @@ const EVERYACTION_PERSONAL_HOST = 'https://secure.everyaction.com/wrSbblYkO0W-oc
 const EVERYACTION_ACTIONTAG_BASE = 'https://static.everyaction.com/ea-actiontag'
 const EVERYACTION_BUSINESS_FORM = 'https://secure.everyaction.com/v1/Forms/f9dWXtiRV0-LmWX9i3RUGQ2'
 const EVERYACTION_BUSINESS_LINK = 'https://secure.everyaction.com/f9dWXtiRV0-LmWX9i3RUGQ2'
-const SPONSORSHIP_PACKET_URL = `${import.meta.env.BASE_URL}Pedal%20to%20the%20Polls%20Sponsorship%20Packet.pdf`
+const SPONSORSHIP_PACKET_URL = `${import.meta.env.BASE_URL}Pedal%20to%20the%20Polls%20Sponsorship%20Packet%202026.pdf`
 
 interface DonatePageProps {
   kind: 'personal' | 'business'
