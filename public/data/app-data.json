@@ -7,7 +7,7 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-08-17T21:07:02.951Z",
+    "generatedAt": "2026-08-19T22:06:02.981Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -19653,16 +19653,16 @@
       "event": {
         "id": "heck-fest",
         "number": 2,
-        "date": "2026-09-26",
+        "date": "2026-09-25",
         "title": "Heck Fest",
         "description": "Join us at Heck Fest in Two Harbors! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
         "timeLabel": null,
-        "venue": "Castle Danger",
-        "address": "17 7th St, Two Harbors, MN",
+        "venue": "Spokengear",
+        "address": "1130 11th St, Two Harbors, MN 55616",
         "city": "Two Harbors",
         "coordinates": [
-          -91.673282,
-          47.019521
+          -91.68072,
+          47.030384
         ],
         "coordinateSource": "provided",
         "status": "confirmed",

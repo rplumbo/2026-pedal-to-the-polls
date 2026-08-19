@@ -19,6 +19,7 @@ const GENERATED_DATA_PATH = path.join(
   PROJECT_ROOT,
   "public/data/app-data.json"
 );
+const EVENTS_DATA_PATH = path.join(PROJECT_ROOT, "data/events.json");
 
 test("CSV parser handles commas, escaped quotes, CRLF, and multiline fields", () => {
   const csv =
@@ -94,7 +95,7 @@ test("legacy Event Stop values publish every Yes and TBD row", () => {
     ]
   };
   const overrides = {
-    eventsByStartDate: {
+    eventsByTimelineStartDate: {
       "2026-09-23": {
         id: "finland-event",
         published: false,
@@ -233,7 +234,7 @@ test("future structured sheet columns override legacy parsing safely", () => {
       }
     ]
   };
-  const overrides = { eventsByStartDate: {} };
+  const overrides = { eventsByTimelineStartDate: {} };
   const geometryByRouteId = new Map([
     [
       "fixture-route",
@@ -268,7 +269,7 @@ test("future structured sheet columns override legacy parsing safely", () => {
     .replace('"1 Main Street"', '""')
     .replace('"https://example.org/event"', '""');
   const matchingOverride = {
-    eventsByStartDate: {
+    eventsByTimelineStartDate: {
       "2026-09-23": {
         id: "structured-event",
         title: "Retired event title",
@@ -305,7 +306,7 @@ test("future structured sheet columns override legacy parsing safely", () => {
     csv: minimalStructuredCsv,
     manifest,
     overrides: {
-      eventsByStartDate: {
+      eventsByTimelineStartDate: {
         "2026-09-23": {
           id: "retired-event",
           title: "Retired event title",
@@ -325,7 +326,7 @@ test("future structured sheet columns override legacy parsing safely", () => {
     csv: minimalStructuredCsv.replace(",new-event,", ",,"),
     manifest,
     overrides: {
-      eventsByStartDate: {
+      eventsByTimelineStartDate: {
         "2026-09-23": {
           id: "retired-event",
           title: "Retired event title",
@@ -366,7 +367,14 @@ test("future structured sheet columns override legacy parsing safely", () => {
 });
 
 test("generated app data is normalized, chronological, and public-safe", async () => {
-  const data = JSON.parse(await readFile(GENERATED_DATA_PATH, "utf8"));
+  const [data, eventSource] = await Promise.all([
+    readFile(GENERATED_DATA_PATH, "utf8").then(JSON.parse),
+    readFile(EVENTS_DATA_PATH, "utf8").then(JSON.parse)
+  ]);
+  const sourceEvents = Object.entries(eventSource.eventsByTimelineStartDate)
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([, event]) => event)
+    .filter((event) => event.published);
 
   assert.equal(data.meta.schemaVersion, 1);
   assert.equal(data.meta.title, "2026 Pedal to the Polls");
@@ -440,7 +448,7 @@ test("generated app data is normalized, chronological, and public-safe", async (
   assert.equal(data.stats.routeCount, data.routes.length);
   assert.equal(data.stats.timelineEntryCount, data.timeline.length);
   assert.equal(data.stats.eventCount, events.length);
-  assert.equal(events.length, 19);
+  assert.equal(events.length, sourceEvents.length);
   assert.equal(
     data.stats.confirmedEventCount + data.stats.tentativeEventCount,
     events.length
@@ -451,83 +459,25 @@ test("generated app data is normalized, chronological, and public-safe", async (
     events.map((event) => event.number),
     Array.from({ length: events.length }, (_, index) => index + 1)
   );
+  const publicFields = [
+    "id",
+    "date",
+    "title",
+    "description",
+    "timeLabel",
+    "venue",
+    "address",
+    "city",
+    "status",
+    "url"
+  ];
+  const selectPublicFields = (event) =>
+    Object.fromEntries(
+      publicFields.map((field) => [field, event[field] ?? null])
+    );
   assert.deepEqual(
-    events.map((event) => event.date),
-    [
-      "2026-09-22",
-      "2026-09-26",
-      "2026-09-27",
-      "2026-09-28",
-      "2026-09-30",
-      "2026-10-03",
-      "2026-10-07",
-      "2026-10-10",
-      "2026-10-15",
-      "2026-10-17",
-      "2026-10-19",
-      "2026-10-20",
-      "2026-10-22",
-      "2026-10-24",
-      "2026-10-25",
-      "2026-10-26",
-      "2026-10-27",
-      "2026-10-29",
-      "2026-11-01"
-    ]
-  );
-  assert.deepEqual(
-    events.map(({ title, date, timeLabel, venue, city }) => ({
-      title,
-      date,
-      timeLabel,
-      venue,
-      city
-    })),
-    [
-      { title: "Ely Launch Event", date: "2026-09-22", timeLabel: "4:00 PM – 7:00 PM", venue: "Puddle Jumper Park", city: "Ely" },
-      { title: "Heck Fest", date: "2026-09-26", timeLabel: null, venue: "Castle Danger", city: "Two Harbors" },
-      { title: "Duluth Public Lands Day Celebration", date: "2026-09-27", timeLabel: null, venue: "Duluth Cider", city: "Duluth" },
-      { title: "Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson", date: "2026-09-28", timeLabel: null, venue: null, city: "Cloquet" },
-      { title: "Grand Rapids Community Gathering", date: "2026-09-30", timeLabel: null, venue: "Klockow Brewing", city: "Grand Rapids" },
-      { title: "Bemidji Door Knock BWCA Champion Reed Olson", date: "2026-10-03", timeLabel: null, venue: null, city: "Bemidji" },
-      { title: "Moorhead Community Gathering", date: "2026-10-07", timeLabel: null, venue: null, city: "Moorhead" },
-      { title: "Saint Cloud Door Knock for BWCA Champs", date: "2026-10-10", timeLabel: null, venue: null, city: "Saint Cloud" },
-      { title: "Mankato Community Gathering", date: "2026-10-15", timeLabel: null, venue: "LocAle Brewery", city: "Mankato" },
-      { title: "Northfield Community Gathering", date: "2026-10-17", timeLabel: null, venue: null, city: "Northfield" },
-      { title: "Rochester Community Gathering", date: "2026-10-19", timeLabel: null, venue: null, city: "Rochester" },
-      { title: "Winona Community Gathering", date: "2026-10-20", timeLabel: null, venue: "Two Fathoms Brewing", city: "Winona" },
-      { title: "Lake City Community Gathering", date: "2026-10-22", timeLabel: null, venue: "Lake City Public Library", city: "Lake City" },
-      { title: "Lakeville Door Knock for BWCA Champs", date: "2026-10-24", timeLabel: null, venue: null, city: "Lakeville" },
-      { title: "Chanhassen Door Knock for BWCA Champs", date: "2026-10-25", timeLabel: null, venue: null, city: "Chanhassen" },
-      { title: "Minnetonka Community Gathering", date: "2026-10-26", timeLabel: null, venue: "Back Channel Brewing", city: "Minnetonka" },
-      { title: "Coon Rapids Door Knock for BWCA Champs", date: "2026-10-27", timeLabel: null, venue: null, city: "Coon Rapids" },
-      { title: "Saint Paul Community Gathering", date: "2026-10-29", timeLabel: null, venue: "Patagonia", city: "Saint Paul" },
-      { title: "Stillwater Grand Finale", date: "2026-11-01", timeLabel: null, venue: "River Siren Brewery", city: "Stillwater" }
-    ]
-  );
-  assert.deepEqual(
-    events.map((event) => event.description),
-    [
-      "Join Boundary Waters supporters and cyclists at Puddle Jumper Park in Ely as the Pedal to the Polls journey gets underway. Help us pack the park as we send Dave and Amy off on their journey! There will be food, great company, and the first opportunity to sign the canoe in support of permanent protection.",
-      "Join us at Heck Fest in Two Harbors! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Join us to celebrate National Public Lands Day in Duluth! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Join Dave and Amy Freeman in Cloquet for a door knock to support Boundary Waters champions Mary Carlson and Chris Swanson!",
-      "Hear from Amy and Dave Freeman in Grand Rapids about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Join Dave and Amy Freeman in Bemidji for a door knock to support Boundary Waters champion Reed Olson!",
-      "Hear from Amy and Dave Freeman in Moorhead about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
-      "Hear from Amy and Dave Freeman in Mankato about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Hear from Amy and Dave Freeman in Northfield about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Hear from Amy and Dave Freeman in Rochester about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Hear from Amy and Dave Freeman in Winona about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Hear from Amy and Dave Freeman in Lake City about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Join Dave and Amy Freeman in Lakeville for a door knock to support Boundary Waters champion Brian Cohn!",
-      "Join Dave and Amy Freeman in Chanhassen for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
-      "Hear from Amy and Dave Freeman in Minnetonka about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "Join Dave and Amy Freeman in Coon Rapids for a door knock to support Boundary Waters champions Zack Stephenson, Angela Nelson, and Kari Rehrauer!",
-      "Hear from Amy and Dave Freeman in Saint Paul about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-      "At the Grand Finale of the 2026 Pedal to the Polls campaign, hear from Amy and Dave Freeman about their journey across Minnesota and celebrate the end of the campaign with us."
-    ]
+    events.map(selectPublicFields),
+    sourceEvents.map(selectPublicFields)
   );
   assert.ok(
     events.every(
@@ -538,39 +488,14 @@ test("generated app data is normalized, chronological, and public-safe", async (
         event.coordinates.every(Number.isFinite)
       )
   );
-  assert.deepEqual(
-    events
-      .filter((event) => event.coordinateSource === "provided")
-      .map(({ id, address, coordinates }) => ({ id, address, coordinates })),
-    [
-      { id: "ely-launch-event", address: "115 E Chapman St, Ely, MN", coordinates: [-91.86507, 47.902386] },
-      { id: "heck-fest", address: "17 7th St, Two Harbors, MN", coordinates: [-91.673282, 47.019521] },
-      { id: "duluth-public-lands-day-celebration", address: "2307 W Superior St, Duluth, MN", coordinates: [-92.127521, 46.76493] },
-      { id: "grand-rapids-community-gathering", address: "36 SE 10th St, Grand Rapids, MN", coordinates: [-93.527669, 47.221078] },
-      { id: "mankato-community-gathering", address: "228 Poplar St, Mankato, MN", coordinates: [-94.009748, 44.163755] },
-      { id: "winona-community-gathering", address: "65 E Front St, Winona, MN", coordinates: [-91.635228, 44.05358] },
-      { id: "lake-city-community-gathering", address: "201 S High St, Lake City, MN", coordinates: [-92.266258, 44.448039] },
-      { id: "minnetonka-community-gathering", address: "4787 Shoreline Dr, Spring Park, MN", coordinates: [-93.644013, 44.936406] },
-      { id: "saint-paul-community-gathering", address: "1648 Grand Ave, Saint Paul, MN", coordinates: [-93.170154, 44.939819] },
-      { id: "stillwater-grand-finale", address: "225 Main St N, Stillwater, MN", coordinates: [-92.806476, 45.058143] }
-    ]
-  );
-  assert.deepEqual(
-    events
-      .filter((event) => event.coordinateSource === "route-approximate")
-      .map((event) => event.id),
-    [
-      "cloquet-door-knock",
-      "bemidji-door-knock",
-      "moorhead-community-gathering",
-      "saint-cloud-door-knock",
-      "northfield-community-gathering",
-      "rochester-community-gathering",
-      "lakeville-door-knock",
-      "chanhassen-door-knock",
-      "coon-rapids-door-knock"
-    ]
-  );
+  for (const [index, sourceEvent] of sourceEvents.entries()) {
+    if (sourceEvent.coordinates) {
+      assert.equal(events[index].coordinateSource, "provided");
+      assert.deepEqual(events[index].coordinates, sourceEvent.coordinates);
+    } else {
+      assert.equal(events[index].coordinateSource, "route-approximate");
+    }
+  }
 
   const eventKeys = [
     "address",

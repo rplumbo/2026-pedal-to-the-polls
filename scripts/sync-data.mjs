@@ -8,7 +8,7 @@ const PROJECT_ROOT = path.resolve(path.dirname(SCRIPT_PATH), "..");
 const DEFAULT_TIMELINE_FILE = "data/timeline-public.csv";
 const DEFAULT_OUTPUT_FILE = "public/data/app-data.json";
 const ROUTE_MANIFEST_FILE = "data/route-manifest.json";
-const EVENT_OVERRIDES_FILE = "data/event-overrides.json";
+const EVENTS_FILE = "data/events.json";
 const RIDE_YEAR = 2026;
 const MAX_REMOTE_CSV_BYTES = 2_000_000;
 const DENSE_TRACK_SIMPLIFICATION_METERS = 8;
@@ -868,16 +868,16 @@ async function loadRoutes(manifest) {
 function validateOverrides(overrides) {
   if (
     overrides?.schemaVersion !== 1 ||
-    typeof overrides.eventsByStartDate !== "object" ||
-    Array.isArray(overrides.eventsByStartDate)
+    typeof overrides.eventsByTimelineStartDate !== "object" ||
+    Array.isArray(overrides.eventsByTimelineStartDate)
   ) {
     throw new Error(
-      "Event overrides must use schemaVersion 1 and eventsByStartDate."
+      "Events must use schemaVersion 1 and eventsByTimelineStartDate."
     );
   }
 
   const ids = new Set();
-  for (const [date, event] of Object.entries(overrides.eventsByStartDate)) {
+  for (const [date, event] of Object.entries(overrides.eventsByTimelineStartDate)) {
     assertIsoDate(date, `Event override date ${date}`);
     if (!event || typeof event !== "object" || Array.isArray(event)) {
       throw new Error(`Event override ${date} must be an object.`);
@@ -936,7 +936,7 @@ function validateOverrides(overrides) {
 
 function createCityHintLookup(overrides) {
   const lookup = new Map();
-  for (const event of Object.values(overrides.eventsByStartDate)) {
+  for (const event of Object.values(overrides.eventsByTimelineStartDate)) {
     if (event.city && event.locationHint) {
       lookup.set(normalizeWhitespace(event.city).toLowerCase(), event.locationHint);
     }
@@ -1111,7 +1111,7 @@ export function buildTimeline({
       "published",
       "eventpublished"
     );
-    const datedOverride = overrides.eventsByStartDate[date.startDate] ?? {};
+    const datedOverride = overrides.eventsByTimelineStartDate[date.startDate] ?? {};
     const override =
       hasStructuredEventSchema
         ? structuredEventId && datedOverride.id === structuredEventId
@@ -1497,7 +1497,7 @@ function generatedAt() {
 export async function buildAppData() {
   const [manifest, overrides, timelineSource] = await Promise.all([
     readJson(ROUTE_MANIFEST_FILE),
-    readJson(EVENT_OVERRIDES_FILE),
+    readJson(EVENTS_FILE),
     loadTimelineCsv()
   ]);
   validateManifest(manifest);
