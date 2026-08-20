@@ -7,7 +7,7 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-08-19T22:15:21.816Z",
+    "generatedAt": "2026-08-20T13:12:04.846Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -20160,9 +20160,9 @@
         "id": "lake-city-community-gathering",
         "number": 13,
         "date": "2026-10-22",
-        "title": "Lake City Community Gathering",
-        "description": "Hear from Amy and Dave Freeman in Lake City about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "title": "Author talk by Dave and Amy",
+        "description": "Take a break from the electoral hustle of Pedal to the Polls and enjoy an intimate author talk with Dave and Amy! They will be discussing their book North American Odyssey: 12,000 Miles Across the Continent by Kayak, Canoe, and Dogsled.",
+        "timeLabel": "6:30 PM",
         "venue": "Lake City Public Library",
         "address": "201 S High St, Lake City, MN",
         "city": "Lake City",
