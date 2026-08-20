@@ -234,7 +234,7 @@ export function DonatePage({
               </button>
 
               <div className="everyaction-option everyaction-option--business">
-                <h3>Business or sponsor giving</h3>
+                <h3>Business Sponsorship</h3>
                 <p>{businessContent.description}</p>
               </div>
               <button
