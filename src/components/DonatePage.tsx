@@ -221,7 +221,7 @@ export function DonatePage({
           {kind === 'personal' ? (
             <div className="everyaction-button-stack" aria-label="Donation options">
               <div className="everyaction-option">
-                <h3>Individual gifts</h3>
+                <h3>Individual Gifts</h3>
                 <p>Make a secure individual contribution to power the ride.</p>
               </div>
               <button
