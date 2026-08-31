@@ -7,7 +7,7 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-08-20T13:12:04.846Z",
+    "generatedAt": "2026-08-31T13:30:25.150Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -19685,10 +19685,10 @@
       "event": {
         "id": "duluth-public-lands-day-celebration",
         "number": 3,
-        "date": "2026-09-27",
+        "date": "2026-09-26",
         "title": "Duluth Public Lands Day Celebration",
         "description": "Join us to celebrate National Public Lands Day in Duluth! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "3:00 PM – 5:30 PM",
         "venue": "Duluth Cider",
         "address": "2307 W Superior St, Duluth, MN",
         "city": "Duluth",
@@ -19720,7 +19720,7 @@
         "date": "2026-09-28",
         "title": "Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson",
         "description": "Join Dave and Amy Freeman in Cloquet for a door knock to support Boundary Waters champions Mary Carlson and Chris Swanson!",
-        "timeLabel": null,
+        "timeLabel": "4:00 PM",
         "venue": null,
         "address": null,
         "city": "Cloquet",
@@ -19766,7 +19766,7 @@
         "date": "2026-09-30",
         "title": "Grand Rapids Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Grand Rapids about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "5:00 PM – 7:00 PM",
         "venue": "Klockow Brewing",
         "address": "36 SE 10th St, Grand Rapids, MN",
         "city": "Grand Rapids",
@@ -19826,7 +19826,7 @@
         "date": "2026-10-03",
         "title": "Bemidji Door Knock BWCA Champion Reed Olson",
         "description": "Join Dave and Amy Freeman in Bemidji for a door knock to support Boundary Waters champion Reed Olson!",
-        "timeLabel": null,
+        "timeLabel": "1:00 PM",
         "venue": null,
         "address": null,
         "city": "Bemidji",
@@ -19900,15 +19900,15 @@
         "date": "2026-10-07",
         "title": "Moorhead Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Moorhead about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
-        "venue": null,
-        "address": null,
+        "timeLabel": "5:00 PM – 8:00 PM",
+        "venue": "Swing Barrel Brewing",
+        "address": "814 Center Ave, Suite 1, Moorhead, MN 56560",
         "city": "Moorhead",
         "coordinates": [
-          -96.75949,
-          46.87505
+          -96.766954,
+          46.875209
         ],
-        "coordinateSource": "route-approximate",
+        "coordinateSource": "provided",
         "status": "confirmed",
         "url": null
       }
@@ -19943,7 +19943,7 @@
       "event": {
         "id": "saint-cloud-door-knock",
         "number": 8,
-        "date": "2026-10-10",
+        "date": "2026-10-11",
         "title": "Saint Cloud Door Knock for BWCA Champs",
         "description": "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
         "timeLabel": null,
@@ -20038,15 +20038,15 @@
         "date": "2026-10-17",
         "title": "Northfield Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Northfield about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
-        "venue": null,
-        "address": null,
+        "timeLabel": "1:00 PM – 3:00 PM",
+        "venue": "Seeds Farm",
+        "address": "6903 115th St E, Northfield, MN 55057",
         "city": "Northfield",
         "coordinates": [
-          -93.161603,
-          44.458301
+          -93.165249,
+          44.420606
         ],
-        "coordinateSource": "route-approximate",
+        "coordinateSource": "provided",
         "status": "confirmed",
         "url": null
       }
@@ -20084,15 +20084,15 @@
         "date": "2026-10-19",
         "title": "Rochester Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Rochester about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
-        "venue": null,
-        "address": null,
+        "timeLabel": "6:00 PM – 8:00 PM",
+        "venue": "Cascade Meadows Wetlands and Environmental Science Center",
+        "address": "2900 19th St NW, Rochester, MN 55901",
         "city": "Rochester",
         "coordinates": [
-          -92.47893,
-          44.0254
+          -92.505588,
+          44.039438
         ],
-        "coordinateSource": "route-approximate",
+        "coordinateSource": "provided",
         "status": "confirmed",
         "url": null
       }
@@ -20208,15 +20208,15 @@
         "date": "2026-10-24",
         "title": "Lakeville Door Knock for BWCA Champs",
         "description": "Join Dave and Amy Freeman in Lakeville for a door knock to support Boundary Waters champion Brian Cohn!",
-        "timeLabel": null,
-        "venue": null,
-        "address": null,
+        "timeLabel": "1:00 PM",
+        "venue": "DFL Field Office - Burnsville",
+        "address": "401 W Travelers Trl, Suite 425, Burnsville, MN",
         "city": "Lakeville",
         "coordinates": [
-          -93.24272,
-          44.64518
+          -93.283933,
+          44.775203
         ],
-        "coordinateSource": "route-approximate",
+        "coordinateSource": "provided",
         "status": "confirmed",
         "url": null
       }
@@ -20304,7 +20304,7 @@
         "date": "2026-10-27",
         "title": "Coon Rapids Door Knock for BWCA Champs",
         "description": "Join Dave and Amy Freeman in Coon Rapids for a door knock to support Boundary Waters champions Zack Stephenson, Angela Nelson, and Kari Rehrauer!",
-        "timeLabel": null,
+        "timeLabel": "4:00 PM",
         "venue": null,
         "address": null,
         "city": "Coon Rapids",
