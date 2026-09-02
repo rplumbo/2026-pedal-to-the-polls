@@ -7,13 +7,13 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-09-01T19:17:07.123Z",
+    "generatedAt": "2026-09-02T13:32:06.570Z",
     "source": {
       "timeline": {
         "kind": "local",
         "label": "data/timeline-public.csv"
       },
-      "timelineSha256": "c4b98f2ba80938594aca9a3a01ef8a99f56a6dcd3d95319ab2196b474413dbde",
+      "timelineSha256": "b7555903539716f6a04305e060d5b62e540fd0c3275b22ab92055f8d13943415",
       "routeManifest": "data/route-manifest.json"
     },
     "warnings": [
@@ -20222,45 +20222,45 @@
       }
     },
     {
-      "id": "day-2026-10-25-lakeville-chanhassen",
+      "id": "day-2026-10-25-lakeville-chaska",
       "order": 27,
       "dateLabel": "Sunday, October 25th",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
       "routeId": "winona-stillwater",
       "from": "Lakeville",
-      "to": "Chanhassen",
+      "to": "Chaska",
       "miles": 30,
       "milesLabel": "30 miles",
       "district": "SD 48",
       "eventStatus": "confirmed",
       "event": {
-        "id": "chanhassen-door-knock",
+        "id": "chaska-door-knock",
         "number": 15,
         "date": "2026-10-25",
-        "title": "Chanhassen Door Knock for BWCA Champs",
-        "description": "Join Dave and Amy Freeman in Chanhassen for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
+        "title": "Chaska Door Knock for BWCA Champs",
+        "description": "Join Dave and Amy Freeman in Chaska for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
         "timeLabel": null,
-        "venue": null,
-        "address": null,
-        "city": "Chanhassen",
+        "venue": "Firemen’s Park",
+        "address": "3260 Chaska Blvd, Chaska, MN 55318",
+        "city": "Chaska",
         "coordinates": [
-          -93.54646,
-          44.86329
+          -93.6042,
+          44.7907
         ],
-        "coordinateSource": "route-approximate",
+        "coordinateSource": "provided",
         "status": "confirmed",
         "url": null
       }
     },
     {
-      "id": "day-2026-10-26-chanhassen-minnetonka-excelsior",
+      "id": "day-2026-10-26-chaska-minnetonka-excelsior",
       "order": 28,
       "dateLabel": "Monday, October 26th",
       "startDate": "2026-10-26",
       "endDate": "2026-10-26",
       "routeId": "winona-stillwater",
-      "from": "Chanhassen",
+      "from": "Chaska",
       "to": "Minnetonka / Excelsior",
       "miles": 15,
       "milesLabel": "15 miles",

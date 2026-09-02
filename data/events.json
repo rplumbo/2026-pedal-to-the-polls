@@ -176,14 +176,16 @@
       "coordinates": [-93.283933, 44.775203]
     },
     "2026-10-25": {
-      "id": "chanhassen-door-knock",
+      "id": "chaska-door-knock",
       "published": true,
       "status": "confirmed",
       "date": "2026-10-25",
-      "title": "Chanhassen Door Knock for BWCA Champs",
-      "description": "Join Dave and Amy Freeman in Chanhassen for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
-      "city": "Chanhassen",
-      "locationHint": [-93.53079, 44.86191]
+      "title": "Chaska Door Knock for BWCA Champs",
+      "description": "Join Dave and Amy Freeman in Chaska for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
+      "venue": "Firemen’s Park",
+      "city": "Chaska",
+      "address": "3260 Chaska Blvd, Chaska, MN 55318",
+      "coordinates": [-93.6042, 44.7907]
     },
     "2026-10-26": {
       "id": "minnetonka-community-gathering",
