@@ -50,6 +50,7 @@ export interface Sponsor {
   name: string
   shortName: string
   level: string
+  tier: 'lead' | 'supporting'
   monogram: string
   url?: string
   logoUrl?: string
@@ -75,7 +76,6 @@ export interface DonationPageContent {
 
 export interface ExperienceContent {
   sponsors: Sponsor[]
-  presentingSponsorId: string | null
   stopSponsors: Record<string, StopSponsor>
   donationPages: {
     personal: DonationPageContent

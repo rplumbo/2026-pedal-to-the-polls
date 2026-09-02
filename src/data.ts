@@ -1,4 +1,4 @@
-import type { AppData, ExperienceContent } from './types'
+import type { AppData, ExperienceContent, Sponsor } from './types'
 
 function assertAppData(value: unknown): asserts value is AppData {
   if (!value || typeof value !== 'object') {
@@ -32,10 +32,15 @@ function assertExperienceContent(value: unknown): asserts value is ExperienceCon
   }
 
   const content = value as Partial<ExperienceContent>
+  const sponsorsAreValid =
+    Array.isArray(content.sponsors) &&
+    content.sponsors.every((sponsor) => {
+      if (!sponsor || typeof sponsor !== 'object') return false
+      const candidate = sponsor as Partial<Sponsor>
+      return candidate.tier === 'lead' || candidate.tier === 'supporting'
+    })
   if (
-    !Array.isArray(content.sponsors) ||
-    !('presentingSponsorId' in content) ||
-    (content.presentingSponsorId !== null && typeof content.presentingSponsorId !== 'string') ||
+    !sponsorsAreValid ||
     !content.stopSponsors ||
     !content.donationPages?.personal ||
     !content.donationPages.business

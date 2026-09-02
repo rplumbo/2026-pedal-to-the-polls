@@ -4,13 +4,33 @@
       "id": "northstar-canoes",
       "name": "Northstar Canoes",
       "shortName": "Northstar Canoes",
-      "level": "Presenting partner",
+      "level": "Lead sponsor",
+      "tier": "lead",
       "monogram": "NC",
       "url": "https://www.northstarcanoes.com/",
       "logoUrl": "images/Northstar_logo.png"
+    },
+    {
+      "id": "angry-catfish",
+      "name": "Angry Catfish Bicycle Shop and Coffee Bar",
+      "shortName": "Angry Catfish",
+      "level": "Lead sponsor",
+      "tier": "lead",
+      "monogram": "AC",
+      "url": "https://www.angrycatfishbicycle.com/",
+      "logoUrl": "images/Angry%20Cat%20Fish_Logo_Web.png"
+    },
+    {
+      "id": "ely-outfitting-company",
+      "name": "Ely Outfitting Company",
+      "shortName": "Ely Outfitting Co.",
+      "level": "Supporting sponsor",
+      "tier": "supporting",
+      "monogram": "EOC",
+      "url": "https://elyoutfittingcompany.com/",
+      "logoUrl": "images/EOC.png"
     }
   ],
-  "presentingSponsorId": "northstar-canoes",
   "stopSponsors": {},
   "donationPages": {
     "personal": {

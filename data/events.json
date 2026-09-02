@@ -71,8 +71,10 @@
       "title": "Bemidji Door Knock BWCA Champion Reed Olson",
       "description": "Join Dave and Amy Freeman in Bemidji for a door knock to support Boundary Waters champion Reed Olson!",
       "timeLabel": "1:00 PM",
+      "venue": "DFL Field Office",
       "city": "Bemidji",
-      "locationHint": [-94.88028, 47.47356]
+      "address": "1510 Bemidji Ave N, Bemidji, MN 56601",
+      "coordinates": [-94.879491, 47.483149]
     },
     "2026-10-07": {
       "id": "moorhead-community-gathering",

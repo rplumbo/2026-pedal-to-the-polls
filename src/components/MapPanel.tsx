@@ -9,10 +9,11 @@ import {
 } from 'maplibre-gl'
 import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { ArrowRightIcon, CloseIcon } from '../icons'
+import { CloseIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
 import { SponsorLogo } from './SponsorLogo'
+import { SponsorShowcase } from './SponsorShowcase'
 
 setWorkerUrl(mapLibreWorkerUrl)
 
@@ -26,7 +27,6 @@ interface MapPanelProps {
   onSelectEvent: (eventId: string) => void
   onClearEvent: () => void
   sponsors: Sponsor[]
-  presentingSponsorId: string | null
   stopSponsors: Record<string, StopSponsor>
 }
 
@@ -94,7 +94,6 @@ export function MapPanel({
   onSelectEvent,
   onClearEvent,
   sponsors,
-  presentingSponsorId,
   stopSponsors,
 }: MapPanelProps) {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -117,7 +116,6 @@ export function MapPanel({
   const selectedEntryRoute = selectedEntry
     ? routes.find((route) => route.id === selectedEntry.routeId)
     : undefined
-  const presentingSponsor = sponsors.find((sponsor) => sponsor.id === presentingSponsorId)
   const selectedStopSponsor = selectedEntry?.event
     ? sponsors.find((sponsor) => sponsor.id === stopSponsors[selectedEntry.event.id]?.sponsorId)
     : undefined
@@ -393,24 +391,9 @@ export function MapPanel({
         ))}
       </svg>
 
-      {presentingSponsor && (
-        <aside className="map-sponsor-dock">
-          <a
-            className="map-sponsor-dock__single"
-            href={presentingSponsor.url}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Visit presenting sponsor ${presentingSponsor.name}`}
-          >
-            <span className="map-sponsor-dock__label">Presented by</span>
-            <SponsorLogo sponsor={presentingSponsor} linked={false} />
-            <span className="map-sponsor-dock__cue">
-              Visit sponsor
-              <ArrowRightIcon />
-            </span>
-          </a>
-        </aside>
-      )}
+      <aside className="map-sponsor-stack" aria-label="Ride sponsors">
+        <SponsorShowcase sponsors={sponsors} includeSupporting />
+      </aside>
 
       {mapFailed && (
         <div className="map-error" role="status">

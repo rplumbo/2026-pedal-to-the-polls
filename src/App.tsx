@@ -196,10 +196,6 @@ function App() {
     year: 'numeric',
     timeZone: data.meta.timezone,
   }).format(new Date(data.meta.generatedAt))
-  const presentingSponsor = experience.sponsors.find(
-    (sponsor) => sponsor.id === experience.presentingSponsorId,
-  )
-
   const showDonationPage = page !== 'map'
 
   return (
@@ -263,7 +259,7 @@ function App() {
         <DonatePage
           kind={page === 'donate-business' ? 'business' : 'personal'}
           donationPages={experience.donationPages}
-          presentingSponsor={presentingSponsor}
+          sponsors={experience.sponsors}
           onShowMap={() => setPage('map')}
           onShowBusiness={() => setPage('donate-business')}
           onShowPersonal={() => setPage('donate')}
@@ -426,7 +422,6 @@ function App() {
                 onSelectEvent={handleSelectEvent}
                 onClearEvent={() => setSelectedEventId(null)}
                 sponsors={experience.sponsors}
-                presentingSponsorId={experience.presentingSponsorId}
                 stopSponsors={experience.stopSponsors}
               />
             </Suspense>
