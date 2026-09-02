@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { BuildingIcon, DownloadIcon, HeartIcon, MapIcon } from '../icons'
 import type { DonationPageContent, Sponsor } from '../types'
-import { SponsorShowcase, SupportingSponsorCredit } from './SponsorShowcase'
+import { SponsorShowcase } from './SponsorShowcase'
 
 const EVERYACTION_PAY_ASSET_BASE = 'https://static.everyaction.com/plutus'
 const EVERYACTION_PERSONAL_HOST = 'https://secure.everyaction.com/wrSbblYkO0W-ocwl-jCGLw2'
@@ -203,13 +203,12 @@ export function DonatePage({
         </div>
 
         <div className="donate-page__sponsor">
-          <SponsorShowcase sponsors={sponsors} />
+          <SponsorShowcase sponsors={sponsors} includeSupporting />
         </div>
       </section>
 
-      <div className="donate-page__action-column">
-        <section className="donation-form-shell" aria-label={kind === 'business' ? 'Business contribution form' : 'Donation options'}>
-          <div className="donation-form-shell__body">
+      <section className="donation-form-shell" aria-label={kind === 'business' ? 'Business contribution form' : 'Donation options'}>
+        <div className="donation-form-shell__body">
           {kind === 'personal' && (
             <div className="donation-form-shell__heading donation-form-shell__heading--simple">
               <h2>Support the ride</h2>
@@ -273,16 +272,11 @@ export function DonatePage({
               </div>
             </div>
           )}
-          </div>
-          <p className="donation-form-shell__note">
-            Secure {kind === 'business' ? 'business contribution' : 'donation'} form powered by EveryAction
-          </p>
-        </section>
-
-        <aside className="donate-page__supporting-sponsor" aria-label="Additional ride support">
-          <SupportingSponsorCredit sponsors={sponsors} />
-        </aside>
-      </div>
+        </div>
+        <p className="donation-form-shell__note">
+          Secure {kind === 'business' ? 'business contribution' : 'donation'} form powered by EveryAction
+        </p>
+      </section>
     </main>
   )
 }

@@ -1062,12 +1062,13 @@ summary:focus-visible {
   left: 18px;
   z-index: 3;
   width: min(292px, calc(100% - 104px));
-  color: var(--pine);
-  filter: drop-shadow(0 5px 8px rgba(29, 52, 46, 0.1));
 }
 
 .sponsor-showcase {
   display: grid;
+  width: 100%;
+  color: var(--pine);
+  filter: drop-shadow(0 5px 8px rgba(29, 52, 46, 0.1));
 }
 
 .sponsor-showcase__row {
@@ -1075,7 +1076,7 @@ summary:focus-visible {
   gap: 7px;
 }
 
-.map-sponsor-stack .sponsor-showcase__row--lead {
+.sponsor-showcase__row--lead {
   box-sizing: border-box;
   width: 100%;
   padding: 10px 13px 11px 11px;
@@ -1085,7 +1086,7 @@ summary:focus-visible {
   border-radius: 4px 4px 0 0;
 }
 
-.map-sponsor-stack .sponsor-showcase__row--supporting {
+.sponsor-showcase__row--supporting {
   box-sizing: border-box;
   width: max-content;
   padding: 5px 10px 6px;
@@ -1116,32 +1117,6 @@ summary:focus-visible {
 .sponsor-showcase__logos .sponsor-logo {
   flex: none;
   justify-content: flex-start;
-}
-
-.supporting-sponsor-credit {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #687873;
-}
-
-.supporting-sponsor-credit > span {
-  font-size: 0.48rem;
-  font-weight: 850;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.supporting-sponsor-credit__logos {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.supporting-sponsor-credit .sponsor-logo__image {
-  width: 76px;
-  height: 27px;
 }
 
 .sponsor-showcase__row--supporting .sponsor-logo__image {
@@ -1573,31 +1548,11 @@ summary:focus-visible {
 
 .donate-page__sponsor {
   margin-top: 36px;
-  padding: 11px 13px 12px;
-  background: rgba(239, 209, 151, 0.13);
-  border-left: 3px solid #d6ae5f;
 }
 
 .donate-page__sponsor .sponsor-showcase {
-  width: max-content;
+  width: 292px;
   max-width: 100%;
-}
-
-.donate-page__action-column {
-  display: grid;
-  min-width: 0;
-  gap: 16px;
-}
-
-.donate-page__supporting-sponsor {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 4px;
-}
-
-.donate-page__supporting-sponsor .supporting-sponsor-credit {
-  padding-top: 9px;
-  border-top: 1px solid var(--line);
 }
 
 .impact-list {
@@ -2395,10 +2350,6 @@ summary:focus-visible {
 
   .map-sponsor-stack .sponsor-showcase__eyebrow {
     font-size: 0.5rem;
-  }
-
-  .donate-page__supporting-sponsor {
-    padding-right: 0;
   }
 
   .support-ride-button {
