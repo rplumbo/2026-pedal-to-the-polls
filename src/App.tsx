@@ -280,7 +280,7 @@ function App() {
                 />
                 <span>Amy &amp; Dave Freeman</span>
               </span>
-              Follow National Geographic Adventurer of the Year 2014 Amy Freeman and her husband Dave as they ride across the State to encourage Minnesotans to get out and vote for Boundary Waters champions this midterm! Amy and Dave are biking (with a canoe in tow) across the state of Minnesota to raise awareness for Boundary Waters permanent protection, and how Minnesota can act to safeguard this special place, forever.
+              Follow National Geographic Adventurers of the Year (2014) Amy and Dave Freeman as they ride across the State to encourage Minnesotans to get out and vote for Boundary Waters champions this midterm! Amy and Dave are biking (with a canoe in tow) across the state of Minnesota to raise awareness for Boundary Waters permanent protection, and how Minnesota can act to safeguard this special place, forever.
             </p>
             <div className="ride-intro__actions">
               <details className="ride-intro__more">
