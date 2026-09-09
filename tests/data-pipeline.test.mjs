@@ -586,7 +586,7 @@ test("every published event matches the September 9 master document audit", asyn
     assert.ok(event.date >= route.dateRange.startDate && event.date <= route.dateRange.endDate, event.id);
   }
   assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 2, 1, 3, 7]);
-  assert.equal(entries.filter(({ event }) => event.url).length, 18);
+  assert.equal(entries.filter(({ event }) => event.url).length, 19);
   assert.deepEqual(entries.filter(({ event }) => !event.timeLabel).map(({ event }) => event.id), ["saint-cloud-door-knock"]);
   for (const entry of data.timeline) {
     assert.equal(entry.dayNumber, campaignDay(entry.startDate));

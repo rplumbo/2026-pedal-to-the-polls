@@ -2,7 +2,7 @@
 
 Source: [master document, Events List tab](https://docs.google.com/document/d/1gRzKqc7Layg1XinjCOBbR8VhDfNr6JAf5Jpv-fSETR0/edit?tab=t.n9whrzjq5eor). Re-fetched in the final recovery session and independently parsed from the live text export; all 19 records exactly match the audit fixture. The supplied URL opens the Donate Form tab; the Events List tab in the same document is the event source.
 
-All 19 published events match the master for title (ignoring capitalization), date, campaign day number, time, venue, description, and supplied RSVP URL. The app includes all 18 supplied RSVP URLs and the additional Lakeville signup link embedded in the description. Event dates are shown prominently in the schedule and map details. Campaign days count calendar dates from September 22 (day 1) to November 1 (day 41).
+All 19 published events match the master for title (ignoring capitalization), date, campaign day number, time, venue, description, and supplied RSVP URL. The app includes all 19 supplied RSVP URLs and the additional Lakeville signup link embedded in the description. Event dates are shown prominently in the schedule and map details. Campaign days count calendar dates from September 22 (day 1) to November 1 (day 41).
 
 ## Event comparison
 
@@ -10,7 +10,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 
 | Stop | Day | Event | Date | Time | Venue | RSVP |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1 | Ely Launch Event | 2026-09-22 | 4:00 PM – 7:00 PM | Puddle Jumper Park | Pending |
+| 1 | 1 | Ely Launch Event | 2026-09-22 | 4:00 PM – 7:00 PM | Puddle Jumper Park | [RSVP](https://secure.everyaction.com/bRWw6xnPwUWh8Xw4QzDwyA2) |
 | 2 | 4 | Heck Fest | 2026-09-25 | 5:00 PM – 7:00 PM | Spokengear | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-heck-fest-two-harbors) |
 | 3 | 5 | Duluth Public Lands Day Celebration | 2026-09-26 | 3:00 PM – 5:30 PM | Duluth Cider | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-duluth-public-lands-day-celebration) |
 | 4 | 7 | Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson | 2026-09-28 | 4:00 PM – 6:00 PM | Cloquet, MN | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-cloquet-door-knock-bwca-champions-mary-carlson-and-chris-swanson) |
@@ -32,7 +32,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 
 ## Source gaps and inconsistencies
 
-- Ely: the master’s RSVP field is blank; the app displays “RSVP link coming soon.”
+- Ely: the master now supplies an RSVP URL, added in the subsequent Ely update below.
 - Saint Cloud: time and venue remain TBD. Coon Rapids: venue remains TBD. Cloquet: only “Cloquet, MN” is supplied, with no street address.
 - Saint Paul: the document supplies 6:30–8:00 PM, despite the original request describing its time as an exception. The app follows the document.
 - Chaska: the master title and venue say Chaska/Firemans Park, while the description says Chanhassen. The app preserves the master copy.
@@ -119,3 +119,7 @@ Changes are local and uncommitted. Preview: http://127.0.0.1:4173/.
 ## Subsequent RSVP presentation update
 
 Per the final UI direction, RSVP controls now appear only in event popouts. The scrolling schedule has no RSVP buttons or pending-link messages. The popout uses “RSVP Here” with the existing warm gold accent, pine text, and an arrow. Earlier schedule-button checks above describe the initial implementation. The updated production build and desktop/mobile browser checks (1440 and 320 pixels) passed: all 19 event cards remain, the list has no RSVP controls, and selecting an event opens its popout with the gold RSVP link intact.
+
+## Subsequent Ely update
+
+Re-read the live Events List tab on September 9, 2026 and added its newly supplied Ely RSVP URL: https://secure.everyaction.com/bRWw6xnPwUWh8Xw4QzDwyA2. Ely’s date, time, venue, and description already matched the document. Updated the source data and master fixture; all 19 events now have RSVP links. Earlier verification counts of 18 links describe the initial audit.
