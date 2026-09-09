@@ -32,6 +32,7 @@ export interface RideRoute {
 export interface RideEvent {
   id: string
   number: number
+  dayNumber: number
   date: string
   title: string
   description: string
@@ -86,6 +87,8 @@ export interface ExperienceContent {
 export interface TimelineEntry {
   id: string
   order: number
+  dayNumber: number
+  endDayNumber: number
   dateLabel: string
   startDate: string
   endDate?: string

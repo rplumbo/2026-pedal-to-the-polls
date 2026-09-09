@@ -8,6 +8,7 @@ import {
   assertSafePlainText,
   buildAppData,
   buildTimeline,
+  campaignDay,
   parseCsv,
   parseGpx,
   parseLegacyDateRange
@@ -454,13 +455,14 @@ test("generated app data is normalized, chronological, and public-safe", async (
     events.length
   );
   assert.equal(data.stats.campaignMiles, 1215);
-  assert.equal(data.stats.campaignDays, 35);
+  assert.equal(data.stats.campaignDays, 41);
   assert.deepEqual(
     events.map((event) => event.number),
     Array.from({ length: events.length }, (_, index) => index + 1)
   );
   const publicFields = [
     "id",
+    "dayNumber",
     "date",
     "title",
     "description",
@@ -503,6 +505,7 @@ test("generated app data is normalized, chronological, and public-safe", async (
     "coordinateSource",
     "coordinates",
     "date",
+    "dayNumber",
     "description",
     "id",
     "number",
@@ -530,4 +533,63 @@ test("generated app data matches a fresh build from the configured source", asyn
   checkedIn.meta.generatedAt = "<ignored>";
   rebuilt.meta.generatedAt = "<ignored>";
   assert.deepEqual(checkedIn, rebuilt);
+});
+
+test("calendar day numbering spans grouped ride days and the full 41-day campaign", () => {
+  assert.equal(campaignDay("2026-09-22"), 1);
+  assert.equal(campaignDay("2026-09-25"), 4);
+  assert.equal(campaignDay("2026-09-26"), 5);
+  assert.equal(campaignDay("2026-10-11"), 20);
+  assert.equal(campaignDay("2026-11-01"), 41);
+  assert.throws(() => campaignDay("2026-09-31"), /invalid calendar date/);
+});
+
+test("every published event matches the September 9 master document audit", async () => {
+  const [data, master] = await Promise.all([
+    readFile(GENERATED_DATA_PATH, "utf8").then(JSON.parse),
+    readFile(path.join(PROJECT_ROOT, "tests/fixtures/master-events-2026-09-09.json"), "utf8").then(JSON.parse)
+  ]);
+  const entries = data.timeline.filter((entry) => entry.event);
+  assert.equal(entries.length, 19);
+  assert.equal(master.length, 19);
+  const normalizedTime = (value) => {
+    if (!value || value === "TBD") return null;
+    const parts = value.toUpperCase().replace(/\s/g, "").split(/[-–]/);
+    const meridiem = parts.at(-1).match(/[AP]M$/)[0];
+    return parts.map((part) => /[AP]M$/.test(part) ? part : part + meridiem).join("-");
+  };
+  for (const [index, { event, routeId }] of entries.entries()) {
+    const expected = master[index];
+    assert.equal(event.number, expected.number);
+    assert.equal(event.dayNumber, expected.dayNumber, event.id);
+    const dateText = expected.dateLabel.replace(/\b(\d+)(st|nd|rd|th)\b/g, "$1");
+    assert.equal(event.date, new Date(`${dateText}, 2026 12:00:00 GMT`).toISOString().slice(0, 10), event.id);
+    assert.equal(event.title.toLowerCase(), expected.title.toLowerCase(), event.id);
+    assert.equal(event.description, expected.description, event.id);
+    assert.equal(normalizedTime(event.timeLabel), normalizedTime(expected.timeLabel), event.id);
+    assert.equal(event.url, expected.url, event.id);
+    if (expected.place === "TBD") {
+      assert.equal(event.venue, null, event.id);
+      assert.equal(event.address, null, event.id);
+    } else {
+      const expectedVenue = expected.place.split(/ - (?=\d)|, (?=\d)|, Two Harbors MN$/)[0];
+      assert.equal(event.venue, expectedVenue, event.id);
+      const suppliedAddress = expected.place.match(/(?: - |, )(\d.+)$/)?.[1];
+      if (suppliedAddress) {
+        const normalizeAddress = (address) => address
+          .replace(/,?\s*(?:Suite|#)\s*/i, " # ")
+          .replace(/\s+\d{5}$/, "");
+        assert.equal(normalizeAddress(event.address), normalizeAddress(suppliedAddress), event.id);
+      }
+    }
+    const route = data.routes.find((candidate) => candidate.id === routeId);
+    assert.ok(event.date >= route.dateRange.startDate && event.date <= route.dateRange.endDate, event.id);
+  }
+  assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 2, 1, 3, 7]);
+  assert.equal(entries.filter(({ event }) => event.url).length, 18);
+  assert.deepEqual(entries.filter(({ event }) => !event.timeLabel).map(({ event }) => event.id), ["saint-cloud-door-knock"]);
+  for (const entry of data.timeline) {
+    assert.equal(entry.dayNumber, campaignDay(entry.startDate));
+    assert.equal(entry.endDayNumber, campaignDay(entry.endDate));
+  }
 });

@@ -10,6 +10,8 @@ const DEFAULT_OUTPUT_FILE = "public/data/app-data.json";
 const ROUTE_MANIFEST_FILE = "data/route-manifest.json";
 const EVENTS_FILE = "data/events.json";
 const RIDE_YEAR = 2026;
+const CAMPAIGN_START_DATE = "2026-09-22";
+const CAMPAIGN_END_DATE = "2026-11-01";
 const MAX_REMOTE_CSV_BYTES = 2_000_000;
 const DENSE_TRACK_SIMPLIFICATION_METERS = 8;
 
@@ -314,6 +316,10 @@ export function assertIsoDate(value, label = "Date") {
     Number(match[3]),
     label
   );
+}
+
+export function campaignDay(date) {
+  return (Date.parse(assertIsoDate(date)) - Date.parse(CAMPAIGN_START_DATE)) / 86_400_000 + 1;
 }
 
 export function parseLegacyDateRange(label, year = RIDE_YEAR) {
@@ -919,6 +925,9 @@ function validateOverrides(overrides) {
     if (event.date) {
       assertIsoDate(event.date, `Event override ${date} public date`);
     }
+    if (event.dayNumber !== undefined && event.dayNumber !== campaignDay(event.date || date)) {
+      throw new Error(`Event override ${date} day number does not match its public date.`);
+    }
     if (event.locationHint) {
       validateCoordinatePair(
         event.locationHint,
@@ -1322,11 +1331,14 @@ export function buildTimeline({
         status: eventStatus,
         url
       };
+      event.dayNumber = campaignDay(event.date);
     }
 
     timeline.push({
       id: timelineId,
       order: index + 1,
+      dayNumber: campaignDay(date.startDate),
+      endDayNumber: campaignDay(date.endDate),
       dateLabel: date.dateLabel,
       startDate: date.startDate,
       endDate: date.endDate,
@@ -1536,8 +1548,8 @@ export async function buildAppData() {
       title: "2026 Pedal to the Polls",
       year: RIDE_YEAR,
       timezone: "America/Chicago",
-      startDate: "2026-09-22",
-      endDate: "2026-11-01",
+      startDate: CAMPAIGN_START_DATE,
+      endDate: CAMPAIGN_END_DATE,
       dateRange: "September 22 – November 1, 2026",
       generatedAt: generatedAt(),
       source: {
@@ -1560,7 +1572,7 @@ export async function buildAppData() {
         (event) => event.status === "tentative"
       ).length,
       campaignMiles: 1215,
-      campaignDays: 35,
+      campaignDays: campaignDay(CAMPAIGN_END_DATE),
       routeDistanceMiles: round(routeDistanceMiles, 1),
       listedMiles: round(listedMiles, 1)
     },

@@ -7,7 +7,7 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-09-02T13:32:06.570Z",
+    "generatedAt": "2026-09-09T16:35:56.217Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -28,7 +28,7 @@
     "confirmedEventCount": 19,
     "tentativeEventCount": 0,
     "campaignMiles": 1215,
-    "campaignDays": 35,
+    "campaignDays": 41,
     "routeDistanceMiles": 1146.3,
     "listedMiles": 1103
   },
@@ -39,7 +39,7 @@
       "title": "Ely to Grand Rapids",
       "leg": "Leg 1",
       "dateRange": {
-        "startDate": "2026-09-23",
+        "startDate": "2026-09-22",
         "endDate": "2026-09-30"
       },
       "color": "#3F6B5B",
@@ -19608,6 +19608,8 @@
     {
       "id": "day-2026-09-23-ely-finland",
       "order": 1,
+      "dayNumber": 2,
+      "endDayNumber": 2,
       "dateLabel": "Wednesday, Sept 23rd",
       "startDate": "2026-09-23",
       "endDate": "2026-09-23",
@@ -19634,12 +19636,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": null,
+        "dayNumber": 1
       }
     },
     {
       "id": "day-2026-09-24-finland-two-harbors",
       "order": 2,
+      "dayNumber": 3,
+      "endDayNumber": 5,
       "dateLabel": "Thursday, Sept 24th-Saturday, 26th",
       "startDate": "2026-09-24",
       "endDate": "2026-09-26",
@@ -19656,7 +19661,7 @@
         "date": "2026-09-25",
         "title": "Heck Fest",
         "description": "Join us at Heck Fest in Two Harbors! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "5:00 PM – 7:00 PM",
         "venue": "Spokengear",
         "address": "1130 11th St, Two Harbors, MN 55616",
         "city": "Two Harbors",
@@ -19666,12 +19671,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-heck-fest-two-harbors",
+        "dayNumber": 4
       }
     },
     {
       "id": "day-2026-09-27-two-harbors-duluth",
       "order": 3,
+      "dayNumber": 6,
+      "endDayNumber": 6,
       "dateLabel": "Sunday, Sept 27th",
       "startDate": "2026-09-27",
       "endDate": "2026-09-27",
@@ -19698,12 +19706,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-duluth-public-lands-day-celebration",
+        "dayNumber": 5
       }
     },
     {
       "id": "day-2026-09-28-duluth-cloquet",
       "order": 4,
+      "dayNumber": 7,
+      "endDayNumber": 7,
       "dateLabel": "Monday, Sept 28th",
       "startDate": "2026-09-28",
       "endDate": "2026-09-28",
@@ -19720,8 +19731,8 @@
         "date": "2026-09-28",
         "title": "Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson",
         "description": "Join Dave and Amy Freeman in Cloquet for a door knock to support Boundary Waters champions Mary Carlson and Chris Swanson!",
-        "timeLabel": "4:00 PM",
-        "venue": null,
+        "timeLabel": "4:00 PM – 6:00 PM",
+        "venue": "Cloquet, MN",
         "address": null,
         "city": "Cloquet",
         "coordinates": [
@@ -19730,12 +19741,15 @@
         ],
         "coordinateSource": "route-approximate",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-cloquet-door-knock-bwca-champions-mary-carlson-and-chris-swanson",
+        "dayNumber": 7
       }
     },
     {
       "id": "day-2026-09-29-cloquet-floodwood",
       "order": 5,
+      "dayNumber": 8,
+      "endDayNumber": 8,
       "dateLabel": "Tuesday, Sept 29th",
       "startDate": "2026-09-29",
       "endDate": "2026-09-29",
@@ -19750,6 +19764,8 @@
     {
       "id": "day-2026-09-30-floodwood-grand-rapids",
       "order": 6,
+      "dayNumber": 9,
+      "endDayNumber": 9,
       "dateLabel": "Wednesday, Sept 30th",
       "startDate": "2026-09-30",
       "endDate": "2026-09-30",
@@ -19776,12 +19792,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-grand-rapids-community-gathering-stop",
+        "dayNumber": 9
       }
     },
     {
       "id": "day-2026-10-01-grand-rapids-deer-river",
       "order": 7,
+      "dayNumber": 10,
+      "endDayNumber": 10,
       "dateLabel": "Thursday, October 1st",
       "startDate": "2026-10-01",
       "endDate": "2026-10-01",
@@ -19796,6 +19815,8 @@
     {
       "id": "day-2026-10-02-deer-river-cass-lake",
       "order": 8,
+      "dayNumber": 11,
+      "endDayNumber": 11,
       "dateLabel": "Friday, October 2nd",
       "startDate": "2026-10-02",
       "endDate": "2026-10-02",
@@ -19810,6 +19831,8 @@
     {
       "id": "day-2026-10-03-cass-lake-bemidji",
       "order": 9,
+      "dayNumber": 12,
+      "endDayNumber": 12,
       "dateLabel": "Saturday, October 3rd",
       "startDate": "2026-10-03",
       "endDate": "2026-10-03",
@@ -19826,7 +19849,7 @@
         "date": "2026-10-03",
         "title": "Bemidji Door Knock BWCA Champion Reed Olson",
         "description": "Join Dave and Amy Freeman in Bemidji for a door knock to support Boundary Waters champion Reed Olson!",
-        "timeLabel": "1:00 PM",
+        "timeLabel": "1:00 PM – 3:00 PM",
         "venue": "DFL Field Office",
         "address": "1510 Bemidji Ave N, Bemidji, MN 56601",
         "city": "Bemidji",
@@ -19836,12 +19859,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-bemidji-door-knock-bwca-champion-reed-olson",
+        "dayNumber": 12
       }
     },
     {
       "id": "day-2026-10-04-bemidji-park-rapids",
       "order": 10,
+      "dayNumber": 13,
+      "endDayNumber": 13,
       "dateLabel": "Sunday, October 4th",
       "startDate": "2026-10-04",
       "endDate": "2026-10-04",
@@ -19856,6 +19882,8 @@
     {
       "id": "day-2026-10-05-park-rapids-detroit-lakes",
       "order": 11,
+      "dayNumber": 14,
+      "endDayNumber": 14,
       "dateLabel": "Monday, October 5th",
       "startDate": "2026-10-05",
       "endDate": "2026-10-05",
@@ -19870,6 +19898,8 @@
     {
       "id": "day-2026-10-06-detroit-lakes-moorhead",
       "order": 12,
+      "dayNumber": 15,
+      "endDayNumber": 15,
       "dateLabel": "Tuesday, October 6th",
       "startDate": "2026-10-06",
       "endDate": "2026-10-06",
@@ -19884,6 +19914,8 @@
     {
       "id": "day-2026-10-07-moorhead-fergus-falls",
       "order": 13,
+      "dayNumber": 16,
+      "endDayNumber": 17,
       "dateLabel": "Wednesday, October 7th-Thursday, 8th",
       "startDate": "2026-10-07",
       "endDate": "2026-10-08",
@@ -19900,7 +19932,7 @@
         "date": "2026-10-07",
         "title": "Moorhead Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Moorhead about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": "5:00 PM – 8:00 PM",
+        "timeLabel": "6:00 PM – 7:30 PM",
         "venue": "Swing Barrel Brewing",
         "address": "814 Center Ave, Suite 1, Moorhead, MN 56560",
         "city": "Moorhead",
@@ -19910,12 +19942,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://secure.everyaction.com/RBBB-EOuyU238YN4wqLq6A2",
+        "dayNumber": 16
       }
     },
     {
       "id": "day-2026-10-09-fergus-falls-alexandria",
       "order": 14,
+      "dayNumber": 18,
+      "endDayNumber": 18,
       "dateLabel": "Friday, October 9th",
       "startDate": "2026-10-09",
       "endDate": "2026-10-09",
@@ -19930,6 +19965,8 @@
     {
       "id": "day-2026-10-10-alexandria-saint-cloud",
       "order": 15,
+      "dayNumber": 19,
+      "endDayNumber": 20,
       "dateLabel": "Saturday, October 10-Sunday, 11th",
       "startDate": "2026-10-10",
       "endDate": "2026-10-11",
@@ -19956,12 +19993,15 @@
         ],
         "coordinateSource": "route-approximate",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs",
+        "dayNumber": 20
       }
     },
     {
       "id": "day-2026-10-12-saint-cloud-saint-cloud",
       "order": 16,
+      "dayNumber": 21,
+      "endDayNumber": 22,
       "dateLabel": "Monday, October 12th and Tuesday, 13th",
       "startDate": "2026-10-12",
       "endDate": "2026-10-13",
@@ -19976,6 +20016,8 @@
     {
       "id": "day-2026-10-15-saint-cloud-mankato",
       "order": 17,
+      "dayNumber": 24,
+      "endDayNumber": 24,
       "dateLabel": "Thursday, October 15th",
       "startDate": "2026-10-15",
       "endDate": "2026-10-15",
@@ -19992,7 +20034,7 @@
         "date": "2026-10-15",
         "title": "Mankato Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Mankato about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "6:00 PM – 8:00 PM",
         "venue": "LocAle Brewery",
         "address": "228 Poplar St, Mankato, MN",
         "city": "Mankato",
@@ -20002,12 +20044,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-mankato-community-gathering",
+        "dayNumber": 24
       }
     },
     {
       "id": "day-2026-10-16-mankato-faribault",
       "order": 18,
+      "dayNumber": 25,
+      "endDayNumber": 25,
       "dateLabel": "Friday, October 16th",
       "startDate": "2026-10-16",
       "endDate": "2026-10-16",
@@ -20022,6 +20067,8 @@
     {
       "id": "day-2026-10-17-faribault-northfield",
       "order": 19,
+      "dayNumber": 26,
+      "endDayNumber": 26,
       "dateLabel": "Saturday, October 17th",
       "startDate": "2026-10-17",
       "endDate": "2026-10-17",
@@ -20048,12 +20095,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-northfield-community-gathering",
+        "dayNumber": 26
       }
     },
     {
       "id": "day-2026-10-18-northfield-pine-island",
       "order": 20,
+      "dayNumber": 27,
+      "endDayNumber": 27,
       "dateLabel": "Sunday, October 18th",
       "startDate": "2026-10-18",
       "endDate": "2026-10-18",
@@ -20068,6 +20118,8 @@
     {
       "id": "day-2026-10-19-pine-island-rochester",
       "order": 21,
+      "dayNumber": 28,
+      "endDayNumber": 28,
       "dateLabel": "Monday, October 19th",
       "startDate": "2026-10-19",
       "endDate": "2026-10-19",
@@ -20094,12 +20146,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-rochester-community-gathering",
+        "dayNumber": 28
       }
     },
     {
       "id": "day-2026-10-20-rochester-winona",
       "order": 22,
+      "dayNumber": 29,
+      "endDayNumber": 29,
       "dateLabel": "Tuesday, October 20th",
       "startDate": "2026-10-20",
       "endDate": "2026-10-20",
@@ -20116,7 +20171,7 @@
         "date": "2026-10-20",
         "title": "Winona Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Winona about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "6:00 PM – 8:00 PM",
         "venue": "Two Fathoms Brewing",
         "address": "65 E Front St, Winona, MN",
         "city": "Winona",
@@ -20126,12 +20181,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-winona-community-gathering",
+        "dayNumber": 29
       }
     },
     {
       "id": "day-2026-10-21-winona-wabasha",
       "order": 23,
+      "dayNumber": 30,
+      "endDayNumber": 30,
       "dateLabel": "Wednesday, October 21st",
       "startDate": "2026-10-21",
       "endDate": "2026-10-21",
@@ -20146,6 +20204,8 @@
     {
       "id": "day-2026-10-22-wabasha-lake-city",
       "order": 24,
+      "dayNumber": 31,
+      "endDayNumber": 31,
       "dateLabel": "Thursday, October 22nd",
       "startDate": "2026-10-22",
       "endDate": "2026-10-22",
@@ -20160,9 +20220,9 @@
         "id": "lake-city-community-gathering",
         "number": 13,
         "date": "2026-10-22",
-        "title": "Author talk by Dave and Amy",
-        "description": "Take a break from the electoral hustle of Pedal to the Polls and enjoy an intimate author talk with Dave and Amy! They will be discussing their book North American Odyssey: 12,000 Miles Across the Continent by Kayak, Canoe, and Dogsled.",
-        "timeLabel": "6:30 PM",
+        "title": "Lake City Community Gathering",
+        "description": "Hear from Amy and Dave Freeman in Lake City about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+        "timeLabel": "6:30 PM – 8:00 PM",
         "venue": "Lake City Public Library",
         "address": "201 S High St, Lake City, MN",
         "city": "Lake City",
@@ -20172,12 +20232,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-lake-city-author-talk-dave-and-amy",
+        "dayNumber": 31
       }
     },
     {
       "id": "day-2026-10-23-lake-city-red-wing",
       "order": 25,
+      "dayNumber": 32,
+      "endDayNumber": 32,
       "dateLabel": "Friday, October 23rd",
       "startDate": "2026-10-23",
       "endDate": "2026-10-23",
@@ -20192,6 +20255,8 @@
     {
       "id": "day-2026-10-24-red-wing-lakeville",
       "order": 26,
+      "dayNumber": 33,
+      "endDayNumber": 33,
       "dateLabel": "Saturday, October 24th",
       "startDate": "2026-10-24",
       "endDate": "2026-10-24",
@@ -20207,8 +20272,8 @@
         "number": 14,
         "date": "2026-10-24",
         "title": "Lakeville Door Knock for BWCA Champs",
-        "description": "Join Dave and Amy Freeman in Lakeville for a door knock to support Boundary Waters champion Brian Cohn!",
-        "timeLabel": "1:00 PM",
+        "description": "Join Dave and Amy Freeman in Lakeville for a door knock to support Boundary Waters champion Brian Cohn! Sign up here: https://secure.ngpvan.com/oTjOwObBjkmYZrtShUcNbw2",
+        "timeLabel": "1:00 PM – 3:00 PM",
         "venue": "DFL Field Office - Burnsville",
         "address": "401 W Travelers Trl, Suite 425, Burnsville, MN",
         "city": "Lakeville",
@@ -20218,12 +20283,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-lakeville-door-knock-bwca-champs",
+        "dayNumber": 33
       }
     },
     {
       "id": "day-2026-10-25-lakeville-chaska",
       "order": 27,
+      "dayNumber": 34,
+      "endDayNumber": 34,
       "dateLabel": "Sunday, October 25th",
       "startDate": "2026-10-25",
       "endDate": "2026-10-25",
@@ -20239,9 +20307,9 @@
         "number": 15,
         "date": "2026-10-25",
         "title": "Chaska Door Knock for BWCA Champs",
-        "description": "Join Dave and Amy Freeman in Chaska for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
-        "timeLabel": null,
-        "venue": "Firemen’s Park",
+        "description": "Join Dave and Amy Freeman in Chanhassen for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
+        "timeLabel": "1:00 PM – 3:00 PM",
+        "venue": "Firemans Park",
         "address": "3260 Chaska Blvd, Chaska, MN 55318",
         "city": "Chaska",
         "coordinates": [
@@ -20250,12 +20318,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-chaska-door-knock-bwca-champs",
+        "dayNumber": 34
       }
     },
     {
       "id": "day-2026-10-26-chaska-minnetonka-excelsior",
       "order": 28,
+      "dayNumber": 35,
+      "endDayNumber": 35,
       "dateLabel": "Monday, October 26th",
       "startDate": "2026-10-26",
       "endDate": "2026-10-26",
@@ -20272,7 +20343,7 @@
         "date": "2026-10-26",
         "title": "Minnetonka Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Minnetonka about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "6:00 PM – 8:00 PM",
         "venue": "Back Channel Brewing",
         "address": "4787 Shoreline Dr, Spring Park, MN",
         "city": "Minnetonka",
@@ -20282,12 +20353,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-minnetonka-community-gathering",
+        "dayNumber": 35
       }
     },
     {
       "id": "day-2026-10-27-minnetonka-excelsior-coon-rapids",
       "order": 29,
+      "dayNumber": 36,
+      "endDayNumber": 36,
       "dateLabel": "Tuesday, October 27th",
       "startDate": "2026-10-27",
       "endDate": "2026-10-27",
@@ -20304,7 +20378,7 @@
         "date": "2026-10-27",
         "title": "Coon Rapids Door Knock for BWCA Champs",
         "description": "Join Dave and Amy Freeman in Coon Rapids for a door knock to support Boundary Waters champions Zack Stephenson, Angela Nelson, and Kari Rehrauer!",
-        "timeLabel": "4:00 PM",
+        "timeLabel": "4:00 PM – 6:00 PM",
         "venue": null,
         "address": null,
         "city": "Coon Rapids",
@@ -20314,12 +20388,15 @@
         ],
         "coordinateSource": "route-approximate",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-coon-rapids-door-knock-bwca-champs",
+        "dayNumber": 36
       }
     },
     {
       "id": "day-2026-10-29-coon-rapids-saint-paul",
       "order": 30,
+      "dayNumber": 38,
+      "endDayNumber": 38,
       "dateLabel": "Thursday, October 29th",
       "startDate": "2026-10-29",
       "endDate": "2026-10-29",
@@ -20336,7 +20413,7 @@
         "date": "2026-10-29",
         "title": "Saint Paul Community Gathering",
         "description": "Hear from Amy and Dave Freeman in Saint Paul about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
-        "timeLabel": null,
+        "timeLabel": "6:30 PM – 8:00 PM",
         "venue": "Patagonia",
         "address": "1648 Grand Ave, Saint Paul, MN",
         "city": "Saint Paul",
@@ -20346,12 +20423,15 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-st-paul-community-gathering",
+        "dayNumber": 38
       }
     },
     {
       "id": "day-2026-10-30-saint-paul-saint-paul",
       "order": 31,
+      "dayNumber": 39,
+      "endDayNumber": 40,
       "dateLabel": "Friday, October 30th-31st",
       "startDate": "2026-10-30",
       "endDate": "2026-10-31",
@@ -20366,6 +20446,8 @@
     {
       "id": "day-2026-11-01-saint-paul-stillwater",
       "order": 32,
+      "dayNumber": 41,
+      "endDayNumber": 41,
       "dateLabel": "Sunday, November 1st",
       "startDate": "2026-11-01",
       "endDate": "2026-11-01",
@@ -20382,7 +20464,7 @@
         "date": "2026-11-01",
         "title": "Stillwater Grand Finale",
         "description": "At the Grand Finale of the 2026 Pedal to the Polls campaign, hear from Amy and Dave Freeman about their journey across Minnesota and celebrate the end of the campaign with us.",
-        "timeLabel": null,
+        "timeLabel": "3:00 PM – 5:00 PM",
         "venue": "River Siren Brewery",
         "address": "225 Main St N, Stillwater, MN",
         "city": "Stillwater",
@@ -20392,7 +20474,8 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": null
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-stillwater-grand-finale",
+        "dayNumber": 41
       }
     }
   ]

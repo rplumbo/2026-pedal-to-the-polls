@@ -1,0 +1,192 @@
+[
+  {
+    "number": 1,
+    "dayNumber": 1,
+    "title": "ELY LAUNCH EVENT",
+    "dateLabel": "Tuesday, September 22",
+    "timeLabel": "4:00 PM - 7:00 PM",
+    "place": "Puddle Jumper Park",
+    "description": "Join Boundary Waters supporters and cyclists at Puddle Jumper Park in Ely as the Pedal to the Polls journey gets underway. Help us pack the park as we send Dave and Amy off on their journey! There will be food, great company, and the first opportunity to sign the canoe in support of permanent protection.",
+    "url": null
+  },
+  {
+    "number": 2,
+    "dayNumber": 4,
+    "title": "HECK FEST",
+    "dateLabel": "Friday, September 25th",
+    "timeLabel": "5:00-7:00PM",
+    "place": "Spokengear, Two Harbors MN",
+    "description": "Join us at Heck Fest in Two Harbors! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-heck-fest-two-harbors"
+  },
+  {
+    "number": 3,
+    "dayNumber": 5,
+    "title": "Duluth Public Lands Day Celebration",
+    "dateLabel": "Saturday, September 26th",
+    "timeLabel": "3:00-5:30PM",
+    "place": "Duluth Cider",
+    "description": "Join us to celebrate National Public Lands Day in Duluth! Hear from Amy and Dave Freeman about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-duluth-public-lands-day-celebration"
+  },
+  {
+    "number": 4,
+    "dayNumber": 7,
+    "title": "Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson",
+    "dateLabel": "Monday, September 28th",
+    "timeLabel": "4:00-6:00PM",
+    "place": "Cloquet, MN",
+    "description": "Join Dave and Amy Freeman in Cloquet for a door knock to support Boundary Waters champions Mary Carlson and Chris Swanson!",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-cloquet-door-knock-bwca-champions-mary-carlson-and-chris-swanson"
+  },
+  {
+    "number": 5,
+    "dayNumber": 9,
+    "title": "Grand Rapids Community Gathering",
+    "dateLabel": "Wednesday, September 30th",
+    "timeLabel": "5:00-7:00pm",
+    "place": "Klockow Brewing",
+    "description": "Hear from Amy and Dave Freeman in Grand Rapids about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-grand-rapids-community-gathering-stop"
+  },
+  {
+    "number": 6,
+    "dayNumber": 12,
+    "title": "Bemidji Door Knock BWCA Champion Reed Olson",
+    "dateLabel": "Saturday, October 3rd",
+    "timeLabel": "1:00-3:00PM",
+    "place": "DFL Field Office - 1510 Bemidji Ave N, Bemidji, MN",
+    "description": "Join Dave and Amy Freeman in Bemidji for a door knock to support Boundary Waters champion Reed Olson!",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-bemidji-door-knock-bwca-champion-reed-olson"
+  },
+  {
+    "number": 7,
+    "dayNumber": 16,
+    "title": "Moorhead Community Gathering",
+    "dateLabel": "Wednesday, October 7th",
+    "timeLabel": "6:00-7:30pm",
+    "place": "Swing Barrel Brewing",
+    "description": "Hear from Amy and Dave Freeman in Moorhead about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://secure.everyaction.com/RBBB-EOuyU238YN4wqLq6A2"
+  },
+  {
+    "number": 8,
+    "dayNumber": 20,
+    "title": "Saint Cloud Door Knock for BWCA Champs",
+    "dateLabel": "Sunday, October 11th",
+    "timeLabel": "TBD",
+    "place": "TBD",
+    "description": "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs"
+  },
+  {
+    "number": 9,
+    "dayNumber": 24,
+    "title": "Mankato Community Gathering",
+    "dateLabel": "Thursday, October 15th",
+    "timeLabel": "6:00-8:00pm",
+    "place": "LocAle Brewery",
+    "description": "Hear from Amy and Dave Freeman in Mankato about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-mankato-community-gathering"
+  },
+  {
+    "number": 10,
+    "dayNumber": 26,
+    "title": "Northfield Community Gathering",
+    "dateLabel": "Saturday, October 17th",
+    "timeLabel": "1:00pm-3:00pm",
+    "place": "Seeds Farm",
+    "description": "Hear from Amy and Dave Freeman in Northfield about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-northfield-community-gathering"
+  },
+  {
+    "number": 11,
+    "dayNumber": 28,
+    "title": "Rochester Community Gathering",
+    "dateLabel": "Monday, October 19th",
+    "timeLabel": "6:00PM - 8:00PM",
+    "place": "Cascade Meadows Wetlands and Environmental Science Center",
+    "description": "Hear from Amy and Dave Freeman in Rochester about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-rochester-community-gathering"
+  },
+  {
+    "number": 12,
+    "dayNumber": 29,
+    "title": "Winona Community Gathering",
+    "dateLabel": "Tuesday, October 20th",
+    "timeLabel": "6:00-8:00PM",
+    "place": "Two Fathoms Brewing",
+    "description": "Hear from Amy and Dave Freeman in Winona about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-winona-community-gathering"
+  },
+  {
+    "number": 13,
+    "dayNumber": 31,
+    "title": "Lake City Community Gathering",
+    "dateLabel": "Thursday, October 22nd",
+    "timeLabel": "6:30-8:00pm",
+    "place": "Lake City Public Library",
+    "description": "Hear from Amy and Dave Freeman in Lake City about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-lake-city-author-talk-dave-and-amy"
+  },
+  {
+    "number": 14,
+    "dayNumber": 33,
+    "title": "Lakeville Door Knock for BWCA Champs",
+    "dateLabel": "Saturday, October 24th",
+    "timeLabel": "1:00-3:00pm",
+    "place": "DFL Field Office - Burnsville, 401 W Travelers Trl # 425, Burnsville, MN",
+    "description": "Join Dave and Amy Freeman in Lakeville for a door knock to support Boundary Waters champion Brian Cohn! Sign up here: https://secure.ngpvan.com/oTjOwObBjkmYZrtShUcNbw2",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-lakeville-door-knock-bwca-champs"
+  },
+  {
+    "number": 15,
+    "dayNumber": 34,
+    "title": "Chaska Door Knock for BWCA Champs",
+    "dateLabel": "Sunday, October 25th",
+    "timeLabel": "1:00-3:00pm",
+    "place": "Firemans Park",
+    "description": "Join Dave and Amy Freeman in Chanhassen for a door knock to support Boundary Waters champions Lucy Rehm and Dan Kessler!",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-chaska-door-knock-bwca-champs"
+  },
+  {
+    "number": 16,
+    "dayNumber": 35,
+    "title": "Minnetonka Community Gathering",
+    "dateLabel": "Monday, October 26th",
+    "timeLabel": "6:00-8:00PM",
+    "place": "Back Channel Brewing",
+    "description": "Hear from Amy and Dave Freeman in Minnetonka about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-minnetonka-community-gathering"
+  },
+  {
+    "number": 17,
+    "dayNumber": 36,
+    "title": "Coon Rapids Door Knock for BWCA Champs",
+    "dateLabel": "Tuesday, October 27th",
+    "timeLabel": "4:00-6:00PM",
+    "place": "TBD",
+    "description": "Join Dave and Amy Freeman in Coon Rapids for a door knock to support Boundary Waters champions Zack Stephenson, Angela Nelson, and Kari Rehrauer!",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-coon-rapids-door-knock-bwca-champs"
+  },
+  {
+    "number": 18,
+    "dayNumber": 38,
+    "title": "Saint Paul Community Gathering",
+    "dateLabel": "Thursday, October 29th",
+    "timeLabel": "6:30pm - 8:00pm",
+    "place": "Patagonia",
+    "description": "Hear from Amy and Dave Freeman in Saint Paul about their journey across Minnesota, and learn how you can get involved in making a difference this election season.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-st-paul-community-gathering"
+  },
+  {
+    "number": 19,
+    "dayNumber": 41,
+    "title": "Stillwater Grand Finale",
+    "dateLabel": "Sunday, November 1st",
+    "timeLabel": "3:00-5:00PM",
+    "place": "River Siren Brewery",
+    "description": "At the Grand Finale of the 2026 Pedal to the Polls campaign, hear from Amy and Dave Freeman about their journey across Minnesota and celebrate the end of the campaign with us.",
+    "url": "https://give.savetheboundarywaters.org/a/pedal-polls-stillwater-grand-finale"
+  }
+]

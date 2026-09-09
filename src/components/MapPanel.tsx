@@ -9,7 +9,7 @@ import {
 } from 'maplibre-gl'
 import mapLibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { CloseIcon } from '../icons'
+import { ArrowRightIcon, CloseIcon } from '../icons'
 import { formatDateRange } from '../lib/format'
 import type { RideRoute, Sponsor, StopSponsor, TimelineEntry } from '../types'
 import { SponsorLogo } from './SponsorLogo'
@@ -97,6 +97,7 @@ export function MapPanel({
   stopSponsors,
 }: MapPanelProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const eventCardRef = useRef<HTMLElement>(null)
   const routeOverlayRef = useRef<SVGSVGElement>(null)
   const mapRef = useRef<MapLibreMap | null>(null)
   const markerRefs = useRef(new Map<string, { marker: Marker; element: HTMLButtonElement }>())
@@ -364,18 +365,36 @@ export function MapPanel({
 
   useEffect(() => {
     const map = mapRef.current
-    if (!map || !mapReady || !selectedEntry) {
+    const container = containerRef.current
+    const card = eventCardRef.current
+    if (!map || !mapReady || !selectedEntry || !isVisible || !container || !card) {
       return
     }
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    map.easeTo({
-      center: selectedEntry.event.coordinates,
-      zoom: Math.max(map.getZoom(), 8),
-      offset: window.innerWidth < 760 ? [0, -70] : [0, -40],
-      duration: prefersReducedMotion ? 0 : 600,
-    })
-  }, [mapReady, selectedEntry])
+    const centerSelectedEvent = () => {
+      map.resize()
+      let offsetY = -40
+      if (window.matchMedia('(max-width: 760px)').matches) {
+        const mapBounds = container.getBoundingClientRect()
+        const cardTop = card.getBoundingClientRect().top - mapBounds.top
+        // Leave room for the active pin's halo and nearby marker offsets.
+        offsetY = cardTop - 60 - mapBounds.height / 2
+      }
+      map.easeTo({
+        center: selectedEntry.event.coordinates,
+        zoom: Math.max(map.getZoom(), 8),
+        offset: [0, offsetY],
+        duration: prefersReducedMotion ? 0 : 600,
+      })
+    }
+
+    // Also recenter when the viewport or the card's content changes size.
+    const observer = new ResizeObserver(centerSelectedEvent)
+    observer.observe(container)
+    observer.observe(card)
+    return () => observer.disconnect()
+  }, [isVisible, mapReady, selectedEntry])
 
   return (
     <section className="map-panel" aria-label="Route map">
@@ -404,6 +423,7 @@ export function MapPanel({
 
       {selectedEntry?.event && (
         <article
+          ref={eventCardRef}
           id="map-event-details"
           className="map-event-card"
           style={{ '--route-color': selectedEntryRoute?.color } as React.CSSProperties}
@@ -422,7 +442,7 @@ export function MapPanel({
               {selectedEntry.event.number}
             </span>
             <div>
-              <span className="status-badge">Event stop</span>
+              <span className="status-badge">Event stop · Day {selectedEntry.event.dayNumber}</span>
               <h2>{selectedEntry.event.title}</h2>
             </div>
           </div>
@@ -450,7 +470,11 @@ export function MapPanel({
           </dl>
           <section className="map-event-card__description" aria-label="About this stop">
             <h3>About this stop</h3>
-            <p>{selectedEntry.event.description}</p>
+            <p>{selectedEntry.event.description.split(/(https:\/\/[^\s]+)/g).map((part, index) =>
+              part.startsWith('https://')
+                ? <a key={index} href={part} target="_blank" rel="noreferrer">Sign-up form</a>
+                : part,
+            )}</p>
           </section>
           {selectedStopSponsor && (
             <div className="map-event-card__sponsor">
@@ -458,15 +482,18 @@ export function MapPanel({
               <SponsorLogo sponsor={selectedStopSponsor} />
             </div>
           )}
-          {selectedEntry.event.url && (
+          {selectedEntry.event.url ? (
             <a
               className="event-link"
               href={selectedEntry.event.url}
               target="_blank"
               rel="noreferrer"
+              aria-label={`RSVP Here for ${selectedEntry.event.title} (opens in a new tab)`}
             >
-              Event details
+              RSVP Here <ArrowRightIcon />
             </a>
+          ) : (
+            <p className="event-rsvp-pending">RSVP link coming soon</p>
           )}
         </article>
       )}

@@ -319,7 +319,7 @@ function App() {
                 <dd>{formatMiles(data.stats.campaignMiles)}</dd>
               </div>
               <div>
-                <dt>Ride days</dt>
+                <dt>Campaign days</dt>
                 <dd>{data.stats.campaignDays}</dd>
               </div>
               <div>

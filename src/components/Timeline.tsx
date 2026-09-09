@@ -39,11 +39,23 @@ function TimelineCard({
   const content = (
     <>
       <div className="timeline-card__date">
-        <time dateTime={entry.startDate}>
-          {formatDateRange(entry.startDate, entry.endDate)}
+        <time dateTime={entry.event?.date ?? entry.startDate}>
+          {entry.event ? formatDateRange(entry.event.date) : formatDateRange(entry.startDate, entry.endDate)}
         </time>
-        <span className="timeline-card__day">Day {entry.order}</span>
+        <span className="timeline-card__day">
+          {entry.event
+            ? `Day ${entry.event.dayNumber}`
+            : entry.dayNumber === entry.endDayNumber
+              ? `Day ${entry.dayNumber}`
+              : `Days ${entry.dayNumber}–${entry.endDayNumber}`}
+        </span>
       </div>
+
+      {entry.event && (entry.event.date !== entry.startDate || entry.startDate !== entry.endDate) && (
+        <p className="timeline-card__ride-date">
+          Ride: {formatDateRange(entry.startDate, entry.endDate)}
+        </p>
+      )}
 
       <div className="timeline-card__route">
         <strong>{entry.from}</strong>
@@ -66,9 +78,6 @@ function TimelineCard({
               <span className="status-label">
                 {isSelected ? 'Selected stop' : 'Event stop'}
               </span>
-              <time className="timeline-card__event-date" dateTime={entry.event.date}>
-                {formatDateRange(entry.event.date)}
-              </time>
               <h3>{entry.event.title}</h3>
               <div className="timeline-card__event-facts">
                 <span>{entry.event.timeLabel ? `${entry.event.timeLabel} CT` : 'Time TBD'}</span>

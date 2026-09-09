@@ -753,6 +753,27 @@ summary:focus-visible {
   text-transform: uppercase;
 }
 
+.timeline-card__ride-date {
+  margin: 7px 0 0;
+  color: #536762;
+  font-size: 0.73rem;
+}
+
+.event-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.event-rsvp-pending {
+  margin: 12px 0 0;
+  color: #536762;
+  font-size: 0.75rem;
+}
+
+.map-event-card__description a {
+  text-decoration: underline;
+}
+
 .timeline-card__route {
   display: grid;
   grid-template-columns: minmax(0, auto) 18px minmax(0, 1fr);
@@ -839,14 +860,6 @@ summary:focus-visible {
   line-height: 1.16;
 }
 
-.timeline-card__event-date {
-  display: block;
-  margin: 2px 0 3px;
-  color: #657570;
-  font-size: 0.65rem;
-  font-weight: 750;
-}
-
 .timeline-card__event-facts {
   display: grid;
   gap: 2px;
@@ -886,18 +899,31 @@ summary:focus-visible {
   position: relative;
   z-index: 2;
   display: inline-flex;
-  min-height: 37px;
+  min-height: 44px;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin-top: 15px;
-  padding: 8px 11px;
+  padding: 10px 16px;
   color: var(--pine);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 850;
   text-decoration: none;
   text-underline-offset: 3px;
-  background: #e7f0ed;
-  border: 1px solid #afc5bc;
+  background: #efd197;
+  border: 1px solid #d6ae5f;
   border-radius: 3px;
+}
+
+.event-link:hover {
+  background: #ffe8b7;
+  border-color: #c0923f;
+}
+
+.map-event-card > .event-link {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
 }
 
 .timeline-empty {
@@ -2325,6 +2351,10 @@ summary:focus-visible {
     white-space: normal;
   }
 
+  .timeline-card__route {
+    grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
+  }
+
   .timeline-card--event.is-selected {
     width: 100%;
     transform: none;
@@ -2382,7 +2412,7 @@ summary:focus-visible {
     bottom: 96px;
     left: 12px;
     width: calc(100% - 24px);
-    max-height: min(68vh, calc(100% - 146px));
+    max-height: min(68vh, calc(100% - 216px));
     padding: 20px;
     overflow-y: auto;
   }
