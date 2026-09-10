@@ -29,6 +29,16 @@
       "monogram": "EOC",
       "url": "https://elyoutfittingcompany.com/",
       "logoUrl": "images/EOC.png"
+    },
+    {
+      "id": "garage-grown-gear",
+      "name": "Garage Grown Gear",
+      "shortName": "GGG",
+      "level": "Supporting sponsor",
+      "tier": "supporting",
+      "monogram": "GGG",
+      "url": "https://www.garagegrowngear.com/",
+      "logoUrl": "images/GGG%20logo.png"
     }
   ],
   "stopSponsors": {},
