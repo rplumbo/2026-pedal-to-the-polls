@@ -7,7 +7,7 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-09-14T14:02:31.452Z",
+    "generatedAt": "2026-09-14T21:29:52.437Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -19999,10 +19999,10 @@
         "date": "2026-10-12",
         "title": "Saint Cloud Door Knock for BWCA Champs",
         "description": "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
-        "timeLabel": null,
-        "venue": null,
+        "timeLabel": "5:00 PM",
+        "venue": "St. Cloud",
         "address": null,
-        "city": "Saint Cloud",
+        "city": "St. Cloud",
         "coordinates": [
           -94.163256,
           45.55794

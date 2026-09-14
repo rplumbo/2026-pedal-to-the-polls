@@ -112,7 +112,9 @@
       "date": "2026-10-12",
       "title": "Saint Cloud Door Knock for BWCA Champs",
       "description": "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
-      "city": "Saint Cloud",
+      "timeLabel": "5:00 PM",
+      "venue": "St. Cloud",
+      "city": "St. Cloud",
       "locationHint": [-94.16324, 45.55795],
       "dayNumber": 21,
       "url": "https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs"

@@ -587,7 +587,7 @@ test("every published event matches the master document audit and subsequent upd
   }
   assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 1, 2, 3, 7]);
   assert.equal(entries.filter(({ event }) => event.url).length, 19);
-  assert.deepEqual(entries.filter(({ event }) => !event.timeLabel).map(({ event }) => event.id), ["saint-cloud-door-knock"]);
+  assert.deepEqual(entries.filter(({ event }) => !event.timeLabel).map(({ event }) => event.id), []);
   for (const entry of data.timeline) {
     assert.equal(entry.dayNumber, campaignDay(entry.startDate));
     assert.equal(entry.endDayNumber, campaignDay(entry.endDate));

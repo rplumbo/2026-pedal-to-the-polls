@@ -463,7 +463,7 @@ export function MapPanel({
               <dt>Place</dt>
               <dd>{selectedEntry.event.venue ?? 'TBD'}</dd>
               {selectedEntry.event.address && <span>{selectedEntry.event.address}</span>}
-              {!selectedEntry.event.address && selectedEntry.event.city && (
+              {!selectedEntry.event.address && selectedEntry.event.city && selectedEntry.event.city !== selectedEntry.event.venue && (
                 <span>{selectedEntry.event.city}</span>
               )}
             </div>

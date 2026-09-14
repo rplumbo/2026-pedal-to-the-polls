@@ -17,7 +17,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 | 5 | 9 | Grand Rapids Community Gathering | 2026-09-30 | 5:00 PM – 7:00 PM | Klockow Brewing | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-grand-rapids-community-gathering-stop) |
 | 6 | 12 | Bemidji Door Knock BWCA Champion Reed Olson | 2026-10-03 | 1:00 PM – 3:00 PM | DFL Field Office | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-bemidji-door-knock-bwca-champion-reed-olson) |
 | 7 | 16 | Moorhead Community Gathering | 2026-10-07 | 6:00 PM – 7:30 PM | Swing Barrel Brewing | [RSVP](https://secure.everyaction.com/RBBB-EOuyU238YN4wqLq6A2) |
-| 8 | 21 | Saint Cloud Door Knock for BWCA Champs | 2026-10-12 | TBD | TBD | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs) |
+| 8 | 21 | Saint Cloud Door Knock for BWCA Champs | 2026-10-12 | 5:00 PM | St. Cloud | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs) |
 | 9 | 24 | Mankato Community Gathering | 2026-10-15 | 6:00 PM – 8:00 PM | LocAle Brewery | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-mankato-community-gathering) |
 | 10 | 26 | Northfield Community Gathering | 2026-10-17 | 1:00 PM – 3:00 PM | Seeds Farm | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-northfield-community-gathering) |
 | 11 | 28 | Rochester Community Gathering | 2026-10-19 | 6:00 PM – 8:00 PM | Cascade Meadows Wetlands and Environmental Science Center | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-rochester-community-gathering) |
@@ -33,7 +33,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 ## Source gaps and inconsistencies
 
 - Ely: the master now supplies an RSVP URL, added in the subsequent Ely update below.
-- Saint Cloud: time and venue remain TBD. Coon Rapids: venue remains TBD. Cloquet: only “Cloquet, MN” is supplied, with no street address.
+- Saint Cloud: location is “St. Cloud,” with no street address; the subsequent campaign update supplies 5:00 PM. Coon Rapids: venue remains TBD. Cloquet: only “Cloquet, MN” is supplied, with no street address.
 - Saint Paul: the document supplies 6:30–8:00 PM, despite the original request describing its time as an exception. The app follows the document.
 - Chaska: the master title and venue say Chaska/Firemans Park, while the description says Chanhassen. The app preserves the master copy.
 - Lake City: the new title and description say community gathering; the supplied RSVP URL still contains “author-talk-dave-and-amy.” The app uses the exact supplied URL.
@@ -126,4 +126,4 @@ Re-read the live Events List tab on September 9, 2026 and added its newly suppli
 
 ## Subsequent Saint Cloud update — September 14, 2026
 
-Per the campaign update, the Saint Cloud stop moved to Monday, October 12 (Day 21). Updated the event source and maintained audit fixture, and moved event stop 8 to the October 12–13 Saint Cloud schedule row in Leg 4. The tables above reflect this change.
+Per the campaign update, the Saint Cloud stop moved to Monday, October 12 (Day 21), at 5:00 PM CT, with the location displayed simply as “St. Cloud.” Updated the event source and maintained audit fixture, and moved event stop 8 to the October 12–13 Saint Cloud schedule row in Leg 4. The tables above reflect this change.
