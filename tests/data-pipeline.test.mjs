@@ -544,7 +544,7 @@ test("calendar day numbering spans grouped ride days and the full 41-day campaig
   assert.throws(() => campaignDay("2026-09-31"), /invalid calendar date/);
 });
 
-test("every published event matches the September 9 master document audit", async () => {
+test("every published event matches the master document audit and subsequent updates", async () => {
   const [data, master] = await Promise.all([
     readFile(GENERATED_DATA_PATH, "utf8").then(JSON.parse),
     readFile(path.join(PROJECT_ROOT, "tests/fixtures/master-events-2026-09-09.json"), "utf8").then(JSON.parse)
@@ -585,7 +585,7 @@ test("every published event matches the September 9 master document audit", asyn
     const route = data.routes.find((candidate) => candidate.id === routeId);
     assert.ok(event.date >= route.dateRange.startDate && event.date <= route.dateRange.endDate, event.id);
   }
-  assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 2, 1, 3, 7]);
+  assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 1, 2, 3, 7]);
   assert.equal(entries.filter(({ event }) => event.url).length, 19);
   assert.deepEqual(entries.filter(({ event }) => !event.timeLabel).map(({ event }) => event.id), ["saint-cloud-door-knock"]);
   for (const entry of data.timeline) {

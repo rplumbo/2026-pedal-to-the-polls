@@ -7,13 +7,13 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-09-09T18:42:14.341Z",
+    "generatedAt": "2026-09-14T14:02:31.452Z",
     "source": {
       "timeline": {
         "kind": "local",
         "label": "data/timeline-public.csv"
       },
-      "timelineSha256": "b7555903539716f6a04305e060d5b62e540fd0c3275b22ab92055f8d13943415",
+      "timelineSha256": "52413a1e44ddf72df3b20e6a9e41dad5249776e3ea7ab7d5dc81573709c39e1b",
       "routeManifest": "data/route-manifest.json"
     },
     "warnings": [
@@ -19976,26 +19976,7 @@
       "miles": 70,
       "milesLabel": "70 miles",
       "district": "SD 14",
-      "eventStatus": "confirmed",
-      "event": {
-        "id": "saint-cloud-door-knock",
-        "number": 8,
-        "date": "2026-10-11",
-        "title": "Saint Cloud Door Knock for BWCA Champs",
-        "description": "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
-        "timeLabel": null,
-        "venue": null,
-        "address": null,
-        "city": "Saint Cloud",
-        "coordinates": [
-          -94.17594,
-          45.55743
-        ],
-        "coordinateSource": "route-approximate",
-        "status": "confirmed",
-        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs",
-        "dayNumber": 20
-      }
+      "eventStatus": "none"
     },
     {
       "id": "day-2026-10-12-saint-cloud-saint-cloud",
@@ -20011,7 +19992,26 @@
       "miles": null,
       "milesLabel": null,
       "district": null,
-      "eventStatus": "none"
+      "eventStatus": "confirmed",
+      "event": {
+        "id": "saint-cloud-door-knock",
+        "number": 8,
+        "date": "2026-10-12",
+        "title": "Saint Cloud Door Knock for BWCA Champs",
+        "description": "Join Dave and Amy Freeman in Saint Cloud for a door knock to support Boundary Waters champions Abdi Daisane and Zach Dorholt!",
+        "timeLabel": null,
+        "venue": null,
+        "address": null,
+        "city": "Saint Cloud",
+        "coordinates": [
+          -94.163256,
+          45.55794
+        ],
+        "coordinateSource": "route-approximate",
+        "status": "confirmed",
+        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs",
+        "dayNumber": 21
+      }
     },
     {
       "id": "day-2026-10-15-saint-cloud-mankato",

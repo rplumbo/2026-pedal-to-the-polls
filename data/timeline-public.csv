@@ -13,8 +13,8 @@ Date,From,To,Miles (approx),Legislative District,Event Stop?
 "Tuesday, October 6th",Detroit Lakes,Moorhead,50,SD 4,No
 "Wednesday, October 7th-Thursday, 8th",Moorhead,Fergus Falls,56,,Yes
 "Friday, October 9th",Fergus Falls,Alexandria,48,,No
-"Saturday, October 10-Sunday, 11th",Alexandria,Saint Cloud,70,SD 14,Yes
-"Monday, October 12th and Tuesday, 13th",Saint Cloud,Saint Cloud,,,No
+"Saturday, October 10-Sunday, 11th",Alexandria,Saint Cloud,70,SD 14,No
+"Monday, October 12th and Tuesday, 13th",Saint Cloud,Saint Cloud,,,Yes
 "Thursday, October 15th",Saint Cloud,Mankato,120 over 3 days,SD 18,Yes
 "Friday, October 16th",Mankato,Faribault,40,,No
 "Saturday, October 17th",Faribault,Northfield,15,58A,Yes

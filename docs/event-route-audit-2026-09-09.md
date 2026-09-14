@@ -2,7 +2,7 @@
 
 Source: [master document, Events List tab](https://docs.google.com/document/d/1gRzKqc7Layg1XinjCOBbR8VhDfNr6JAf5Jpv-fSETR0/edit?tab=t.n9whrzjq5eor). Re-fetched in the final recovery session and independently parsed from the live text export; all 19 records exactly match the audit fixture. The supplied URL opens the Donate Form tab; the Events List tab in the same document is the event source.
 
-All 19 published events match the master for title (ignoring capitalization), date, campaign day number, time, venue, description, and supplied RSVP URL. The app includes all 19 supplied RSVP URLs and the additional Lakeville signup link embedded in the description. Event dates are shown prominently in the schedule and map details. Campaign days count calendar dates from September 22 (day 1) to November 1 (day 41).
+With the subsequent updates documented below, all 19 published events match the maintained fixture for title (ignoring capitalization), date, campaign day number, time, venue, description, and supplied RSVP URL. The app includes all 19 supplied RSVP URLs and the additional Lakeville signup link embedded in the description. Event dates are shown prominently in the schedule and map details. Campaign days count calendar dates from September 22 (day 1) to November 1 (day 41).
 
 ## Event comparison
 
@@ -17,7 +17,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 | 5 | 9 | Grand Rapids Community Gathering | 2026-09-30 | 5:00 PM – 7:00 PM | Klockow Brewing | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-grand-rapids-community-gathering-stop) |
 | 6 | 12 | Bemidji Door Knock BWCA Champion Reed Olson | 2026-10-03 | 1:00 PM – 3:00 PM | DFL Field Office | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-bemidji-door-knock-bwca-champion-reed-olson) |
 | 7 | 16 | Moorhead Community Gathering | 2026-10-07 | 6:00 PM – 7:30 PM | Swing Barrel Brewing | [RSVP](https://secure.everyaction.com/RBBB-EOuyU238YN4wqLq6A2) |
-| 8 | 20 | Saint Cloud Door Knock for BWCA Champs | 2026-10-11 | TBD | TBD | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs) |
+| 8 | 21 | Saint Cloud Door Knock for BWCA Champs | 2026-10-12 | TBD | TBD | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs) |
 | 9 | 24 | Mankato Community Gathering | 2026-10-15 | 6:00 PM – 8:00 PM | LocAle Brewery | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-mankato-community-gathering) |
 | 10 | 26 | Northfield Community Gathering | 2026-10-17 | 1:00 PM – 3:00 PM | Seeds Farm | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-northfield-community-gathering) |
 | 11 | 28 | Rochester Community Gathering | 2026-10-19 | 6:00 PM – 8:00 PM | Cascade Meadows Wetlands and Environmental Science Center | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-rochester-community-gathering) |
@@ -46,20 +46,20 @@ All six route legs and 32 schedule rows remain present, in their existing order.
 | --- | --- | --- | --- | --- |
 | Leg 1 | Ely to Grand Rapids | 2026-09-22–2026-09-30 | 6 | 5 |
 | Leg 2 | Grand Rapids to Detroit Lakes | 2026-10-01–2026-10-05 | 5 | 1 |
-| Leg 3 | Moorhead to Saint Cloud | 2026-10-06–2026-10-11 | 4 | 2 |
-| Leg 4 | Saint Cloud to Mankato | 2026-10-12–2026-10-15 | 2 | 1 |
+| Leg 3 | Moorhead to Saint Cloud | 2026-10-06–2026-10-11 | 4 | 1 |
+| Leg 4 | Saint Cloud to Mankato | 2026-10-12–2026-10-15 | 2 | 2 |
 | Leg 5 | Mankato to Winona | 2026-10-16–2026-10-20 | 5 | 3 |
 | Leg 6 | Winona to Stillwater | 2026-10-21–2026-11-01 | 10 | 7 |
 
 Event dates and existing travel dates differ on these cards; the app labels the travel dates separately:
 
-| Event | Master event date | Existing ride dates |
+| Event | Current event date | Existing ride dates |
 | --- | --- | --- |
 | Ely Launch Event | 2026-09-22 | 2026-09-23 |
 | Heck Fest | 2026-09-25 | 2026-09-24–2026-09-26 |
 | Duluth Public Lands Day Celebration | 2026-09-26 | 2026-09-27 |
 | Moorhead Community Gathering | 2026-10-07 | 2026-10-07–2026-10-08 |
-| Saint Cloud Door Knock for BWCA Champs | 2026-10-11 | 2026-10-10–2026-10-11 |
+| Saint Cloud Door Knock for BWCA Champs | 2026-10-12 | 2026-10-12–2026-10-13 |
 
 The Duluth travel row still arrives September 27, after the master’s September 26 event. The master provides no replacement travel itinerary. The existing CSV also has no separate October 14 or October 28 row and describes the October 15 Mankato leg as “120 miles over 3 days” without an explicit start date. These gaps are preserved rather than filled with invented dates.
 
@@ -85,8 +85,8 @@ All 32 rows below were checked in the browser against the generated data and loc
 | Leg 3 | 2026-10-06 | Detroit Lakes → Moorhead | 50 miles | — |
 | Leg 3 | 2026-10-07–2026-10-08 | Moorhead → Fergus Falls | 56 miles | 7 |
 | Leg 3 | 2026-10-09 | Fergus Falls → Alexandria | 48 miles | — |
-| Leg 3 | 2026-10-10–2026-10-11 | Alexandria → Saint Cloud | 70 miles | 8 |
-| Leg 4 | 2026-10-12–2026-10-13 | Saint Cloud → Saint Cloud | Not listed | — |
+| Leg 3 | 2026-10-10–2026-10-11 | Alexandria → Saint Cloud | 70 miles | — |
+| Leg 4 | 2026-10-12–2026-10-13 | Saint Cloud → Saint Cloud | Not listed | 8 |
 | Leg 4 | 2026-10-15 | Saint Cloud → Mankato | 120 miles over 3 days | 9 |
 | Leg 5 | 2026-10-16 | Mankato → Faribault | 40 miles | — |
 | Leg 5 | 2026-10-17 | Faribault → Northfield | 15 miles | 10 |
@@ -123,3 +123,7 @@ Per the final UI direction, RSVP controls now appear only in event popouts. The 
 ## Subsequent Ely update
 
 Re-read the live Events List tab on September 9, 2026 and added its newly supplied Ely RSVP URL: https://secure.everyaction.com/bRWw6xnPwUWh8Xw4QzDwyA2. Ely’s date, time, venue, and description already matched the document. Updated the source data and master fixture; all 19 events now have RSVP links. Earlier verification counts of 18 links describe the initial audit.
+
+## Subsequent Saint Cloud update — September 14, 2026
+
+Per the campaign update, the Saint Cloud stop moved to Monday, October 12 (Day 21). Updated the event source and maintained audit fixture, and moved event stop 8 to the October 12–13 Saint Cloud schedule row in Leg 4. The tables above reflect this change.
