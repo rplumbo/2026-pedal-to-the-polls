@@ -39,6 +39,16 @@
       "monogram": "GGG",
       "url": "https://www.garagegrowngear.com/",
       "logoUrl": "images/GGG%20logo.png"
+    },
+    {
+      "id": "cooke-custom-sewing",
+      "name": "Cooke Custom Sewing",
+      "shortName": "CCS",
+      "level": "Supporting sponsor",
+      "tier": "supporting",
+      "monogram": "CCS",
+      "url": "https://cookecustomsewing.com/",
+      "logoUrl": "images/CCS.png"
     }
   ],
   "stopSponsors": {},
