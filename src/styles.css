@@ -1150,6 +1150,14 @@ summary:focus-visible {
   height: 27px;
 }
 
+.sponsor-showcase__row--supporting .sponsor-showcase__logos--dense {
+  gap: 8px;
+}
+
+.sponsor-showcase__row--supporting .sponsor-showcase__logos--dense .sponsor-logo__image {
+  width: 60px;
+}
+
 .sponsor-logo {
   display: inline-flex;
   min-width: 0;
@@ -2380,6 +2388,22 @@ summary:focus-visible {
 
   .map-sponsor-stack .sponsor-showcase__eyebrow {
     font-size: 0.5rem;
+  }
+
+  .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense {
+    gap: 6px;
+  }
+
+  .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense .sponsor-logo__image {
+    width: 54px;
+  }
+
+  .map-sponsor-stack .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense {
+    gap: 5px;
+  }
+
+  .map-sponsor-stack .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense .sponsor-logo__image {
+    width: 50px;
   }
 
   .support-ride-button {

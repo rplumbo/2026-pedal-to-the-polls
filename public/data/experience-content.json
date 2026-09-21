@@ -49,6 +49,16 @@
       "monogram": "CCS",
       "url": "https://cookecustomsewing.com/",
       "logoUrl": "images/CCS.png"
+    },
+    {
+      "id": "trip-outside",
+      "name": "TripOutside",
+      "shortName": "TripOutside",
+      "level": "Supporting sponsor",
+      "tier": "supporting",
+      "monogram": "TO",
+      "url": "https://tripoutside.com/",
+      "logoUrl": "images/TripOutside_Logo.jpg"
     }
   ],
   "stopSponsors": {},

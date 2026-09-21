@@ -25,7 +25,11 @@ export function SponsorShowcase({ sponsors, includeSupporting = false }: Sponsor
 
       {includeSupporting && supportingSponsors.length > 0 && (
         <div className="sponsor-showcase__row sponsor-showcase__row--supporting">
-          <div className="sponsor-showcase__logos" role="group" aria-label="Supporting sponsors">
+          <div
+            className={`sponsor-showcase__logos${supportingSponsors.length > 3 ? ' sponsor-showcase__logos--dense' : ''}`}
+            role="group"
+            aria-label="Supporting sponsors"
+          >
             {supportingSponsors.map((sponsor) => (
               <SponsorLogo key={sponsor.id} sponsor={sponsor} />
             ))}
