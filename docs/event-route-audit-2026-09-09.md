@@ -10,7 +10,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 
 | Stop | Day | Event | Date | Time | Venue | RSVP |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1 | Ely Launch Event | 2026-09-22 | 4:00 PM – 7:00 PM | Puddle Jumper Park | [RSVP](https://secure.everyaction.com/bRWw6xnPwUWh8Xw4QzDwyA2) |
+| 1 | 1 | Ely Launch Event | 2026-09-22 | 5:00 PM – 7:00 PM | Puddle Jumper Park | [RSVP](https://secure.everyaction.com/bRWw6xnPwUWh8Xw4QzDwyA2) |
 | 2 | 4 | Heck Fest | 2026-09-25 | 5:00 PM – 7:00 PM | Spokengear | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-heck-fest-two-harbors) |
 | 3 | 5 | Duluth Public Lands Day Celebration | 2026-09-26 | 3:00 PM – 5:30 PM | Duluth Cider | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-duluth-public-lands-day-celebration) |
 | 4 | 7 | Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson | 2026-09-28 | 4:00 PM – 6:00 PM | Cloquet, MN | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-cloquet-door-knock-bwca-champions-mary-carlson-and-chris-swanson) |
@@ -32,7 +32,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 
 ## Source gaps and inconsistencies
 
-- Ely: the master now supplies an RSVP URL, added in the subsequent Ely update below.
+- Ely: the master now supplies an RSVP URL, added in the subsequent Ely update below. A September 21 campaign update moved the start time to 5:00 PM.
 - Saint Cloud: location is “St. Cloud,” with no street address; the subsequent campaign update supplies 5:00 PM. Coon Rapids: venue remains TBD. Cloquet: only “Cloquet, MN” is supplied, with no street address.
 - Saint Paul: the document supplies 6:30–8:00 PM, despite the original request describing its time as an exception. The app follows the document.
 - Chaska: the master title and venue say Chaska/Firemans Park, while the description says Chanhassen. The app preserves the master copy.
@@ -127,3 +127,7 @@ Re-read the live Events List tab on September 9, 2026 and added its newly suppli
 ## Subsequent Saint Cloud update — September 14, 2026
 
 Per the campaign update, the Saint Cloud stop moved to Monday, October 12 (Day 21), at 5:00 PM CT, with the location displayed simply as “St. Cloud.” Updated the event source and maintained audit fixture, and moved event stop 8 to the October 12–13 Saint Cloud schedule row in Leg 4. The tables above reflect this change.
+
+## Subsequent Ely time update — September 21, 2026
+
+Per the campaign update, the Ely Launch Event on September 22 now starts at 5:00 PM instead of 4:00 PM and still ends at 7:00 PM. Updated the event source and maintained audit fixture; the table above reflects this change.
