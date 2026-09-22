@@ -13,7 +13,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 | 1 | 1 | Ely Launch Event | 2026-09-22 | 5:00 PM – 7:00 PM | Puddle Jumper Park | [RSVP](https://secure.everyaction.com/bRWw6xnPwUWh8Xw4QzDwyA2) |
 | 2 | 4 | Heck Fest | 2026-09-25 | 5:00 PM – 7:00 PM | Spokengear | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-heck-fest-two-harbors) |
 | 3 | 5 | Duluth Public Lands Day Celebration | 2026-09-26 | 3:00 PM – 5:30 PM | Duluth Cider | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-duluth-public-lands-day-celebration) |
-| 4 | 7 | Cloquet Door Knock for BWCA Champions Mary Carlson and Chris Swanson | 2026-09-28 | 4:00 PM – 6:00 PM | Cloquet, MN | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-cloquet-door-knock-bwca-champions-mary-carlson-and-chris-swanson) |
+| 4 | 7 | Door Knock for BWCA Champions Trina Swanson, Mary Carlson, and Chris Swanson | 2026-09-28 | 4:00 PM – 6:00 PM | Cloquet, MN | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-cloquet-door-knock-bwca-champions-mary-carlson-and-chris-swanson) |
 | 5 | 9 | Grand Rapids Community Gathering | 2026-09-30 | 5:00 PM – 7:00 PM | Klockow Brewing | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-grand-rapids-community-gathering-stop) |
 | 6 | 12 | Bemidji Door Knock BWCA Champion Reed Olson | 2026-10-03 | 1:00 PM – 3:00 PM | DFL Field Office | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-bemidji-door-knock-bwca-champion-reed-olson) |
 | 7 | 16 | Moorhead Community Gathering | 2026-10-07 | 6:00 PM – 7:30 PM | Swing Barrel Brewing | [RSVP](https://secure.everyaction.com/RBBB-EOuyU238YN4wqLq6A2) |
@@ -131,3 +131,7 @@ Per the campaign update, the Saint Cloud stop moved to Monday, October 12 (Day 2
 ## Subsequent Ely time update — September 21, 2026
 
 Per the campaign update, the Ely Launch Event on September 22 now starts at 5:00 PM instead of 4:00 PM and still ends at 7:00 PM. Updated the event source and maintained audit fixture; the table above reflects this change.
+
+## Subsequent Cloquet candidate update — September 22, 2026
+
+Per the campaign update, added Trina Swanson to the Cloquet door knock title and description. Updated the event source and maintained audit fixture; the table above reflects this change.
