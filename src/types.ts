@@ -51,7 +51,7 @@ export interface Sponsor {
   name: string
   shortName: string
   level: string
-  tier: 'lead' | 'supporting'
+  tier: 'lead' | 'supporting' | 'community'
   monogram: string
   url?: string
   logoUrl?: string

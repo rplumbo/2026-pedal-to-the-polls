@@ -1093,34 +1093,39 @@ summary:focus-visible {
 .sponsor-showcase {
   display: grid;
   width: 100%;
+  overflow: hidden;
   color: var(--pine);
+  background: rgba(255, 253, 247, 0.96);
+  border: 1px solid rgba(151, 159, 153, 0.65);
+  border-radius: 4px;
   filter: drop-shadow(0 5px 8px rgba(29, 52, 46, 0.1));
 }
 
 .sponsor-showcase__row {
   display: grid;
-  gap: 7px;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 4px;
+  padding: 4px 10px 6px;
+  background: transparent;
+  border-top: 1px solid rgba(151, 159, 153, 0.42);
 }
 
 .sponsor-showcase__row--lead {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 13px 11px 11px;
-  background: rgba(255, 253, 247, 0.95);
-  border: 1px solid rgba(151, 159, 153, 0.65);
-  border-left: 3px solid #d6ae5f;
-  border-radius: 4px 4px 0 0;
+  padding-top: 3px;
+  border-top: 0;
+  box-shadow: inset 3px 0 #d6ae5f;
 }
 
 .sponsor-showcase__row--supporting {
-  box-sizing: border-box;
-  width: max-content;
-  padding: 5px 10px 6px;
-  background: rgba(255, 253, 247, 0.95);
-  border: 1px solid rgba(151, 159, 153, 0.65);
-  border-top: 0;
-  border-left: 3px solid #9ba7a3;
-  border-radius: 0 0 4px 4px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  box-shadow: inset 3px 0 #80938d;
+}
+
+.sponsor-showcase__row--community {
+  padding-top: 3px;
+  box-shadow: inset 3px 0 #b5bfbb;
 }
 
 .sponsor-showcase__eyebrow,
@@ -1134,28 +1139,51 @@ summary:focus-visible {
 }
 
 .sponsor-showcase__logos {
-  display: flex;
-  min-height: 38px;
+  display: grid;
   align-items: center;
-  gap: 12px;
+  justify-items: center;
 }
 
 .sponsor-showcase__logos .sponsor-logo {
-  flex: none;
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: center;
 }
 
-.sponsor-showcase__row--supporting .sponsor-logo__image {
-  width: 76px;
-  height: 27px;
+.sponsor-showcase__row--lead .sponsor-showcase__logos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 38px;
+  gap: 12px;
 }
 
-.sponsor-showcase__row--supporting .sponsor-showcase__logos--dense {
+.sponsor-showcase__row--supporting .sponsor-showcase__logos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 32px;
+  gap: 14px;
+}
+
+.sponsor-showcase__row--community .sponsor-showcase__logos {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: 36px;
   gap: 8px;
 }
 
-.sponsor-showcase__row--supporting .sponsor-showcase__logos--dense .sponsor-logo__image {
-  width: 60px;
+.sponsor-showcase__row--lead .sponsor-logo__image {
+  width: 104px;
+  height: 38px;
+}
+
+.sponsor-showcase__row--supporting .sponsor-logo__image {
+  width: 84px;
+  height: 32px;
+}
+
+.sponsor-showcase__row--community .sponsor-logo__image {
+  width: 68px;
+  height: 36px;
+}
+
+.sponsor-showcase__eyebrow {
+  padding: 9px 11px 5px;
 }
 
 .sponsor-logo {
@@ -1184,6 +1212,7 @@ summary:focus-visible {
 .sponsor-logo__image {
   display: block;
   width: 104px;
+  max-width: 100%;
   height: 38px;
   object-fit: contain;
   object-position: center;
@@ -1585,8 +1614,32 @@ summary:focus-visible {
 }
 
 .donate-page__sponsor .sponsor-showcase {
-  width: 292px;
+  width: 380px;
   max-width: 100%;
+}
+
+.donate-page__sponsor .sponsor-showcase__eyebrow {
+  padding: 11px 16px 7px;
+}
+
+.donate-page__sponsor .sponsor-showcase__row {
+  gap: 6px;
+  padding: 7px 16px 9px;
+}
+
+.donate-page__sponsor .sponsor-showcase__row--lead .sponsor-logo__image {
+  width: 124px;
+  height: 46px;
+}
+
+.donate-page__sponsor .sponsor-showcase__row--supporting .sponsor-logo__image {
+  width: 98px;
+  height: 38px;
+}
+
+.donate-page__sponsor .sponsor-showcase__row--community .sponsor-logo__image {
+  width: 80px;
+  height: 42px;
 }
 
 .impact-list {
@@ -2388,22 +2441,6 @@ summary:focus-visible {
 
   .map-sponsor-stack .sponsor-showcase__eyebrow {
     font-size: 0.5rem;
-  }
-
-  .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense {
-    gap: 6px;
-  }
-
-  .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense .sponsor-logo__image {
-    width: 54px;
-  }
-
-  .map-sponsor-stack .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense {
-    gap: 5px;
-  }
-
-  .map-sponsor-stack .sponsor-showcase__row--supporting .sponsor-showcase__logos--dense .sponsor-logo__image {
-    width: 50px;
   }
 
   .support-ride-button {

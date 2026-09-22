@@ -37,7 +37,11 @@ function assertExperienceContent(value: unknown): asserts value is ExperienceCon
     content.sponsors.every((sponsor) => {
       if (!sponsor || typeof sponsor !== 'object') return false
       const candidate = sponsor as Partial<Sponsor>
-      return candidate.tier === 'lead' || candidate.tier === 'supporting'
+      return (
+        candidate.tier === 'lead' ||
+        candidate.tier === 'supporting' ||
+        candidate.tier === 'community'
+      )
     })
   if (
     !sponsorsAreValid ||

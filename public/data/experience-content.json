@@ -44,8 +44,8 @@
       "id": "cooke-custom-sewing",
       "name": "Cooke Custom Sewing",
       "shortName": "CCS",
-      "level": "Supporting sponsor",
-      "tier": "supporting",
+      "level": "Community sponsor",
+      "tier": "community",
       "monogram": "CCS",
       "url": "https://cookecustomsewing.com/",
       "logoUrl": "images/CCS.png"
@@ -54,11 +54,21 @@
       "id": "trip-outside",
       "name": "TripOutside",
       "shortName": "TripOutside",
-      "level": "Supporting sponsor",
-      "tier": "supporting",
+      "level": "Community sponsor",
+      "tier": "community",
       "monogram": "TO",
       "url": "https://tripoutside.com/",
       "logoUrl": "images/TripOutside_Logo.jpg"
+    },
+    {
+      "id": "raven-words-press",
+      "name": "Raven Words Press",
+      "shortName": "Raven Words Press",
+      "level": "Community sponsor",
+      "tier": "community",
+      "monogram": "RWP",
+      "url": "https://www.ravenwordspress.com/",
+      "logoUrl": "images/Raven%20Words%20Press.jpg"
     }
   ],
   "stopSponsors": {},
