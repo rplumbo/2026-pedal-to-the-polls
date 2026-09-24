@@ -7,7 +7,7 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-09-22T19:16:27.857Z",
+    "generatedAt": "2026-09-24T13:42:42.530Z",
     "source": {
       "timeline": {
         "kind": "local",
@@ -19706,7 +19706,7 @@
         ],
         "coordinateSource": "provided",
         "status": "confirmed",
-        "url": "https://give.savetheboundarywaters.org/a/pedal-polls-duluth-public-lands-day-celebration",
+        "url": "https://www.boundarywatersaction.org/publiclandsday",
         "dayNumber": 5
       }
     },
