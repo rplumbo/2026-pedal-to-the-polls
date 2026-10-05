@@ -135,3 +135,35 @@ Per the campaign update, the Ely Launch Event on September 22 now starts at 5:00
 ## Subsequent Cloquet candidate update — September 22, 2026
 
 Per the campaign update, added Trina Swanson to the Cloquet door knock title and description. Updated the event source and maintained audit fixture; the table above reflects this change.
+
+## Subsequent Leg 6 route and mileage update — October 5, 2026
+
+The app now uses `Winona_to_Stillwater_(Week_6)-Updated.gpx`. Its 8,676 track points measure 251.5324 miles, displayed as 251.5, compared with 232.4 miles for the previous GPX. Leg 6's former daily estimates totaled 239 miles. The revised estimates below supersede the Leg 6 mileage in the historical schedule table above; other legs' mileage is unchanged. The full GPX total is now 1,165.4 miles and the listed itinerary total is 1,115.5 miles. The campaign headline remains 1,215 miles.
+
+These are estimated distances along the GPX between scheduled stops, not verified distances between overnight accommodations. Each intermediate anchor is projected onto the nearest track segment; the daily distance is the difference between cumulative track distances at successive anchors, rounded to one decimal. All anchors occur in schedule order. Haversine distances use the same 3,958.7613-mile Earth radius as the app's data pipeline. The rounded daily estimates sum to 251.5 miles without distributing an arbitrary adjustment.
+
+| Schedule date | Segment | Previous miles | Revised estimated miles |
+| --- | --- | ---: | ---: |
+| October 21 | Winona → Wabasha | 30 | 37.8 |
+| October 22 | Wabasha → Lake City | 32 | 15.9 |
+| October 23 | Lake City → Red Wing | 20 | 23.8 |
+| October 24 | Red Wing → Lakeville event in Burnsville | 42 | 52.9 |
+| October 25 | Burnsville → Chaska | 30 | 22.9 |
+| October 26 | Chaska → Minnetonka event in Spring Park | 15 | 16.3 |
+| October 27 | Spring Park → Coon Rapids | 20 | 33.9 |
+| October 29 | Coon Rapids → Saint Paul | 25 | 21.6 |
+| October 30–31 | Saint Paul stay | 0 | 0 |
+| November 1 | Saint Paul → Stillwater | 25 | 26.4 |
+| Total | | 239 | 251.5 |
+
+Anchors used (longitude, latitude):
+
+- Winona and Stillwater: the GPX's first and last track points, respectively `[-91.64701, 44.04438]` and `[-92.80859, 45.05544]`.
+- Wabasha: approximate town center `[-92.032, 44.3839]`, from [Mapcarta's OpenStreetMap town entry](https://mapcarta.com/Wabasha). No overnight address is supplied.
+- Lake City: the existing event coordinate `[-92.266258, 44.448039]`.
+- Red Wing: the GPX's Hannisch Bakery waypoint `[-92.53466033935547, 44.56494140625]`, used as a downtown reference, not a confirmed overnight stop.
+- Burnsville, Chaska, and Spring Park: the GPX waypoints at the corresponding event addresses: `[-93.283974, 44.774583]`, `[-93.603995, 44.789831]`, and `[-93.643963, 44.936363]`.
+- Coon Rapids: the existing approximate city hint `[-93.30301, 45.17324]`. The venue remains TBD, so this boundary can shift.
+- Saint Paul: the existing Patagonia event coordinate `[-93.170154, 44.939819]`. The GPX also contains an Edgcumbe Road waypoint about 1.8 track miles later; it has no assigned date, so it was not substituted for the scheduled event boundary.
+
+No off-track connectors are added. Lake City's venue is approximately 0.50 miles from the closest track point, and Patagonia is approximately 0.12 miles away; these are geographic separations, not road distances. The Stillwater GPX endpoint is used to retain the entire supplied track, rather than trimming it to the finale venue. The existing October 30–31 zero-mile stay is retained, and no new October 28 itinerary is inferred. Exact overnight addresses or a daily GPX split would allow these estimates to be refined.

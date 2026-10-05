@@ -21,13 +21,13 @@ Date,From,To,Miles (approx),Legislative District,Event Stop?
 "Sunday, October 18th",Northfield,Pine Island,40,,No
 "Monday, October 19th",Pine Island,Rochester,20,SD 25,Yes
 "Tuesday, October 20th",Rochester,Winona,50,26A,Yes
-"Wednesday, October 21st",Winona,Wabasha,30,,No
-"Thursday, October 22nd",Wabasha,Lake City,32,,Yes
-"Friday, October 23rd",Lake City,Red Wing,20,,No
-"Saturday, October 24th",Red Wing,Lakeville,42,SD 57,Yes
-"Sunday, October 25th",Lakeville,Chaska,30,SD 48,Yes
-"Monday, October 26th",Chaska,Minnetonka / Excelsior,15,45A,Yes
-"Tuesday, October 27th",Minnetonka / Excelsior,Coon Rapids,20,SD 35,Yes
-"Thursday, October 29th",Coon Rapids,Saint Paul,25,SD 64,Yes
+"Wednesday, October 21st",Winona,Wabasha,37.8,,No
+"Thursday, October 22nd",Wabasha,Lake City,15.9,,Yes
+"Friday, October 23rd",Lake City,Red Wing,23.8,,No
+"Saturday, October 24th",Red Wing,Lakeville,52.9,SD 57,Yes
+"Sunday, October 25th",Lakeville,Chaska,22.9,SD 48,Yes
+"Monday, October 26th",Chaska,Minnetonka / Excelsior,16.3,45A,Yes
+"Tuesday, October 27th",Minnetonka / Excelsior,Coon Rapids,33.9,SD 35,Yes
+"Thursday, October 29th",Coon Rapids,Saint Paul,21.6,SD 64,Yes
 "Friday, October 30th-31st",Saint Paul,Saint Paul,0,,No
-"Sunday, November 1st",Saint Paul,Stillwater,25,SD 41,Yes
+"Sunday, November 1st",Saint Paul,Stillwater,26.4,SD 41,Yes
