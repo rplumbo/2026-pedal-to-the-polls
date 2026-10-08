@@ -19,7 +19,7 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 | 7 | 16 | Moorhead Community Gathering | 2026-10-07 | 6:00 PM – 7:30 PM | Swing Barrel Brewing | [RSVP](https://secure.everyaction.com/RBBB-EOuyU238YN4wqLq6A2) |
 | 8 | 21 | Saint Cloud Door Knock for BWCA Champs | 2026-10-12 | 5:00 PM | St. Cloud | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-saint-cloud-door-knock-bwca-champs) |
 | 9 | 24 | Mankato Community Gathering | 2026-10-15 | 6:00 PM – 8:00 PM | LocAle Brewery | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-mankato-community-gathering) |
-| 10 | 26 | Northfield Community Gathering | 2026-10-17 | 1:00 PM – 3:00 PM | Seeds Farm | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-northfield-community-gathering) |
+| 10 | 26 | Northfield Community Gathering | 2026-10-17 | 3:00 PM – 4:30 PM | Seeds Farm | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-northfield-community-gathering) |
 | 11 | 28 | Rochester Community Gathering | 2026-10-19 | 6:00 PM – 8:00 PM | Cascade Meadows Wetlands and Environmental Science Center | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-rochester-community-gathering) |
 | 12 | 29 | Winona Community Gathering | 2026-10-20 | 6:00 PM – 8:00 PM | Two Fathoms Brewing | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-winona-community-gathering) |
 | 13 | 31 | Lake City Community Gathering | 2026-10-22 | 6:30 PM – 8:00 PM | Lake City Public Library | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-lake-city-author-talk-dave-and-amy) |
@@ -167,3 +167,19 @@ Anchors used (longitude, latitude):
 - Saint Paul: the existing Patagonia event coordinate `[-93.170154, 44.939819]`. The GPX also contains an Edgcumbe Road waypoint about 1.8 track miles later; it has no assigned date, so it was not substituted for the scheduled event boundary.
 
 No off-track connectors are added. Lake City's venue is approximately 0.50 miles from the closest track point, and Patagonia is approximately 0.12 miles away; these are geographic separations, not road distances. The Stillwater GPX endpoint is used to retain the entire supplied track, rather than trimming it to the finale venue. The existing October 30–31 zero-mile stay is retained, and no new October 28 itinerary is inferred. Exact overnight addresses or a daily GPX split would allow these estimates to be refined.
+
+## Ride with GPS source verification — October 5, 2026
+
+Compared the supplied [Ride with GPS route](https://ridewithgps.com/routes/54524214?via=taxMdnLPzBGddyjBZFxNkQ) and its public JSON route data with the imported updated GPX and generated app geometry. The live source reports its last update as October 1, 2026, at 12:05:44 UTC.
+
+- All 8,676 longitude/latitude pairs match the updated GPX exactly and in the same order, including both endpoints. There are no missing or changed track points.
+- All five GPX waypoint names and coordinates match the source's points of interest. These are reference waypoints, not five additional scheduled app events.
+- The generated app polyline exactly matches the source track after the app's existing 8-meter simplification and five-decimal coordinate rounding: 1,660 rendered points, unchanged endpoints, and approximately 8.03 meters maximum deviation from the original track in a local planar check.
+- Ride with GPS stores 405,253 meters (251.8125 miles), displayed as 251.8 miles. The app independently sums spherical Haversine distances between the identical track coordinates: 251.5324 miles, displayed as 251.5. The unrounded difference is approximately 0.28 miles (0.11%); it does not indicate a different route. The app's distance calculation and the existing daily estimates remain unchanged by this comparison.
+- The source contains five location waypoints and 352 navigation cues, but does not establish the campaign's dated daily or overnight boundaries. The earlier daily-mileage assumptions therefore remain estimates, not independently confirmed daily stages.
+
+No route geometry correction was needed. No commits or pushes were made as part of this verification.
+
+## Subsequent Northfield time update — October 8, 2026
+
+Per the campaign update, the Northfield Community Gathering on October 17 now runs from 3:00 PM to 4:30 PM CT. Updated the event source and maintained audit fixture; the event comparison table above reflects this change.
