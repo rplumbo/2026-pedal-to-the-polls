@@ -4,7 +4,7 @@ import type { DonationPageContent, Sponsor } from '../types'
 import { SponsorShowcase } from './SponsorShowcase'
 
 const EVERYACTION_PAY_ASSET_BASE = 'https://static.everyaction.com/plutus'
-const EVERYACTION_PERSONAL_HOST = 'https://secure.everyaction.com/wrSbblYkO0W-ocwl-jCGLw2'
+const EVERYACTION_PERSONAL_HOST = 'https://give.savetheboundarywaters.org/rl-7qtHo5UCgm_8Jn0xZDQ2'
 const EVERYACTION_ACTIONTAG_BASE = 'https://static.everyaction.com/ea-actiontag'
 const EVERYACTION_BUSINESS_FORM = 'https://secure.everyaction.com/v1/Forms/f9dWXtiRV0-LmWX9i3RUGQ2'
 const EVERYACTION_BUSINESS_LINK = 'https://secure.everyaction.com/f9dWXtiRV0-LmWX9i3RUGQ2'
