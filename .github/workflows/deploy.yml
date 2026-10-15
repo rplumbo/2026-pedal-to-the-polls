@@ -3,10 +3,6 @@ name: Build and deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch:
-  schedule:
-    # Rebuild from the public schedule four times a day without creating commits.
-    - cron: "17 */6 * * *"
 
 permissions:
   contents: read
