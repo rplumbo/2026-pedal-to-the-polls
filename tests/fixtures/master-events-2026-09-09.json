@@ -181,6 +181,16 @@
   },
   {
     "number": 19,
+    "dayNumber": 39,
+    "title": "Twin Cities Bike-Along",
+    "dateLabel": "Friday, October 30th",
+    "timeLabel": "5:00 PM meetup; 5:30 PM departure",
+    "place": "Angry Catfish Bicycle Shop, 2900 E 42nd St, Minneapolis, MN 55406",
+    "description": "Join the Twin Cities Bike-Along at Angry Catfish Bicycle Shop. Meet up at 5:00 PM for a 5:30 PM departure.",
+    "url": "https://www.angrycatfishbicycle.com/articles/group-ride-event-waiver-pg259.htm"
+  },
+  {
+    "number": 20,
     "dayNumber": 41,
     "title": "Stillwater Grand Finale",
     "dateLabel": "Sunday, November 1st",

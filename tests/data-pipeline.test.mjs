@@ -550,12 +550,13 @@ test("every published event matches the master document audit and subsequent upd
     readFile(path.join(PROJECT_ROOT, "tests/fixtures/master-events-2026-09-09.json"), "utf8").then(JSON.parse)
   ]);
   const entries = data.timeline.filter((entry) => entry.event);
-  assert.equal(entries.length, 19);
-  assert.equal(master.length, 19);
+  assert.equal(entries.length, 20);
+  assert.equal(master.length, 20);
   const normalizedTime = (value) => {
     if (!value || value === "TBD") return null;
     const parts = value.toUpperCase().replace(/\s/g, "").split(/[-–]/);
-    const meridiem = parts.at(-1).match(/[AP]M$/)[0];
+    const meridiem = parts.at(-1).match(/[AP]M$/)?.[0];
+    if (!meridiem) return parts.join("-");
     return parts.map((part) => /[AP]M$/.test(part) ? part : part + meridiem).join("-");
   };
   for (const [index, { event, routeId }] of entries.entries()) {
@@ -585,8 +586,8 @@ test("every published event matches the master document audit and subsequent upd
     const route = data.routes.find((candidate) => candidate.id === routeId);
     assert.ok(event.date >= route.dateRange.startDate && event.date <= route.dateRange.endDate, event.id);
   }
-  assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 1, 2, 3, 7]);
-  assert.equal(entries.filter(({ event }) => event.url).length, 19);
+  assert.deepEqual(data.routes.map((route) => entries.filter((entry) => entry.routeId === route.id).length), [5, 1, 1, 2, 3, 8]);
+  assert.equal(entries.filter(({ event }) => event.url).length, 20);
   assert.deepEqual(entries.filter(({ event }) => !event.timeLabel).map(({ event }) => event.id), []);
   for (const entry of data.timeline) {
     assert.equal(entry.dayNumber, campaignDay(entry.startDate));

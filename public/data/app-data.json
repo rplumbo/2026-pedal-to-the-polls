@@ -7,13 +7,13 @@
     "startDate": "2026-09-22",
     "endDate": "2026-11-01",
     "dateRange": "September 22 – November 1, 2026",
-    "generatedAt": "2026-10-08T21:01:43.047Z",
+    "generatedAt": "2026-10-28T22:51:30.956Z",
     "source": {
       "timeline": {
         "kind": "local",
         "label": "data/timeline-public.csv"
       },
-      "timelineSha256": "443b8077339501a712c5c87a9121ceeea74b2185801806acaeec0025591b4b74",
+      "timelineSha256": "9f206f1c14d3bf1148698fac6321c1901ab34b993a4ae18899bf406b2916b7e5",
       "routeManifest": "data/route-manifest.json"
     },
     "warnings": [
@@ -24,8 +24,8 @@
   "stats": {
     "routeCount": 6,
     "timelineEntryCount": 32,
-    "eventCount": 19,
-    "confirmedEventCount": 19,
+    "eventCount": 20,
+    "confirmedEventCount": 20,
     "tentativeEventCount": 0,
     "campaignMiles": 1215,
     "campaignDays": 41,
@@ -21081,7 +21081,26 @@
       "miles": 0,
       "milesLabel": "0 miles",
       "district": null,
-      "eventStatus": "none"
+      "eventStatus": "confirmed",
+      "event": {
+        "id": "twin-cities-bike-along",
+        "number": 19,
+        "date": "2026-10-30",
+        "title": "Twin Cities Bike-Along",
+        "description": "Join the Twin Cities Bike-Along at Angry Catfish Bicycle Shop. Meet up at 5:00 PM for a 5:30 PM departure.",
+        "timeLabel": "5:00 PM meetup; 5:30 PM departure",
+        "venue": "Angry Catfish Bicycle Shop",
+        "address": "2900 E 42nd St, Minneapolis, MN 55406",
+        "city": "Minneapolis",
+        "coordinates": [
+          -93.230515,
+          44.92722
+        ],
+        "coordinateSource": "provided",
+        "status": "confirmed",
+        "url": "https://www.angrycatfishbicycle.com/articles/group-ride-event-waiver-pg259.htm",
+        "dayNumber": 39
+      }
     },
     {
       "id": "day-2026-11-01-saint-paul-stillwater",
@@ -21100,7 +21119,7 @@
       "eventStatus": "confirmed",
       "event": {
         "id": "stillwater-grand-finale",
-        "number": 19,
+        "number": 20,
         "date": "2026-11-01",
         "title": "Stillwater Grand Finale",
         "description": "At the Grand Finale of the 2026 Pedal to the Polls campaign, hear from Amy and Dave Freeman about their journey across Minnesota and celebrate the end of the campaign with us.",

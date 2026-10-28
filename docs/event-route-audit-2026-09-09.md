@@ -2,7 +2,7 @@
 
 Source: [master document, Events List tab](https://docs.google.com/document/d/1gRzKqc7Layg1XinjCOBbR8VhDfNr6JAf5Jpv-fSETR0/edit?tab=t.n9whrzjq5eor). Re-fetched in the final recovery session and independently parsed from the live text export; all 19 records exactly match the audit fixture. The supplied URL opens the Donate Form tab; the Events List tab in the same document is the event source.
 
-With the subsequent updates documented below, all 19 published events match the maintained fixture for title (ignoring capitalization), date, campaign day number, time, venue, description, and supplied RSVP URL. The app includes all 19 supplied RSVP URLs and the additional Lakeville signup link embedded in the description. Event dates are shown prominently in the schedule and map details. Campaign days count calendar dates from September 22 (day 1) to November 1 (day 41).
+With the subsequent updates documented below, all 20 published events match the maintained fixture for title (ignoring capitalization), date, campaign day number, time, venue, description, and supplied RSVP URL. The app includes all 20 supplied RSVP URLs and the additional Lakeville signup link embedded in the description. Event dates are shown prominently in the schedule and map details. Campaign days count calendar dates from September 22 (day 1) to November 1 (day 41).
 
 ## Event comparison
 
@@ -28,7 +28,8 @@ Times below are Central Time. “Pending” means the master has no RSVP URL.
 | 16 | 35 | Minnetonka Community Gathering | 2026-10-26 | 6:00 PM – 8:00 PM | Back Channel Brewing | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-minnetonka-community-gathering) |
 | 17 | 36 | Coon Rapids Door Knock for BWCA Champs | 2026-10-27 | 4:00 PM – 6:00 PM | TBD | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-coon-rapids-door-knock-bwca-champs) |
 | 18 | 38 | Saint Paul Community Gathering | 2026-10-29 | 6:30 PM – 8:00 PM | Patagonia | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-st-paul-community-gathering) |
-| 19 | 41 | Stillwater Grand Finale | 2026-11-01 | 3:00 PM – 5:00 PM | River Siren Brewery | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-stillwater-grand-finale) |
+| 19 | 39 | Twin Cities Bike-Along | 2026-10-30 | 5:00 PM meetup; 5:30 PM departure | Angry Catfish Bicycle Shop | [Sign up](https://www.angrycatfishbicycle.com/articles/group-ride-event-waiver-pg259.htm) |
+| 20 | 41 | Stillwater Grand Finale | 2026-11-01 | 3:00 PM – 5:00 PM | River Siren Brewery | [RSVP](https://give.savetheboundarywaters.org/a/pedal-polls-stillwater-grand-finale) |
 
 ## Source gaps and inconsistencies
 
@@ -49,7 +50,7 @@ All six route legs and 32 schedule rows remain present, in their existing order.
 | Leg 3 | Moorhead to Saint Cloud | 2026-10-06–2026-10-11 | 4 | 1 |
 | Leg 4 | Saint Cloud to Mankato | 2026-10-12–2026-10-15 | 2 | 2 |
 | Leg 5 | Mankato to Winona | 2026-10-16–2026-10-20 | 5 | 3 |
-| Leg 6 | Winona to Stillwater | 2026-10-21–2026-11-01 | 10 | 7 |
+| Leg 6 | Winona to Stillwater | 2026-10-21–2026-11-01 | 10 | 8 |
 
 Event dates and existing travel dates differ on these cards; the app labels the travel dates separately:
 
@@ -101,8 +102,8 @@ All 32 rows below were checked in the browser against the generated data and loc
 | Leg 6 | 2026-10-26 | Chaska → Minnetonka / Excelsior | 15 miles | 16 |
 | Leg 6 | 2026-10-27 | Minnetonka / Excelsior → Coon Rapids | 20 miles | 17 |
 | Leg 6 | 2026-10-29 | Coon Rapids → Saint Paul | 25 miles | 18 |
-| Leg 6 | 2026-10-30–2026-10-31 | Saint Paul → Saint Paul | 0 miles | — |
-| Leg 6 | 2026-11-01 | Saint Paul → Stillwater | 25 miles | 19 |
+| Leg 6 | 2026-10-30–2026-10-31 | Saint Paul → Saint Paul | 0 miles | 19 |
+| Leg 6 | 2026-11-01 | Saint Paul → Stillwater | 25 miles | 20 |
 
 ## Verification
 
@@ -183,3 +184,9 @@ No route geometry correction was needed. No commits or pushes were made as part 
 ## Subsequent Northfield time update — October 8, 2026
 
 Per the campaign update, the Northfield Community Gathering on October 17 now runs from 3:00 PM to 4:30 PM CT. Updated the event source and maintained audit fixture; the event comparison table above reflects this change.
+
+## Twin Cities Bike-Along addition — October 28, 2026
+
+Added Twin Cities Bike-Along for Friday, October 30 (Day 39), with a 5:00 PM meetup and 5:30 PM departure, both Central Time, at Angry Catfish Bicycle Shop. Its signup link is the supplied [group ride and event waiver](https://www.angrycatfishbicycle.com/articles/group-ride-event-waiver-pg259.htm). The shop’s [official location page](https://www.angrycatfishbicycle.com/about/find-us-pg141.htm) confirms 2900 E 42nd St, Minneapolis, MN 55406 and supplies the map coordinates (44.9272197, -93.2305150); the event uses that venue pin rather than snapping it to the campaign GPX.
+
+The event is attached to the existing October 30–31 Saint Paul stay row in Leg 6, with the event itself dated October 30. The travel row and its zero campaign-transfer miles are unchanged; no bike-along route or distance was supplied. There are now 20 events, with Twin Cities Bike-Along as stop 19 and Stillwater as stop 20. The maintained fixture and route event-count checks include the new event. Earlier verification counts describe the original audit.

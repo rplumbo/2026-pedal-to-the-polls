@@ -267,6 +267,21 @@
       "timeLabel": "6:30 PM – 8:00 PM",
       "url": "https://give.savetheboundarywaters.org/a/pedal-polls-st-paul-community-gathering"
     },
+    "2026-10-30": {
+      "id": "twin-cities-bike-along",
+      "published": true,
+      "status": "confirmed",
+      "date": "2026-10-30",
+      "title": "Twin Cities Bike-Along",
+      "description": "Join the Twin Cities Bike-Along at Angry Catfish Bicycle Shop. Meet up at 5:00 PM for a 5:30 PM departure.",
+      "timeLabel": "5:00 PM meetup; 5:30 PM departure",
+      "venue": "Angry Catfish Bicycle Shop",
+      "city": "Minneapolis",
+      "address": "2900 E 42nd St, Minneapolis, MN 55406",
+      "coordinates": [-93.230515, 44.92722],
+      "dayNumber": 39,
+      "url": "https://www.angrycatfishbicycle.com/articles/group-ride-event-waiver-pg259.htm"
+    },
     "2026-11-01": {
       "id": "stillwater-grand-finale",
       "published": true,
